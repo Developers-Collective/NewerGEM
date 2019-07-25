@@ -1,1 +1,1 @@
-__Please note: Level files are need for the Reggie patch to work.__
+__Please note: Level files are needed for the Reggie patch to work.__
