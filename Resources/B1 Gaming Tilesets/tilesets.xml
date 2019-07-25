@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<tilesets>
+	<slot num="0" sorted="true">
+		<tileset filename="Pa0_OhFuckIhopeThisWorks" name="Train Wheels" />
+		<tileset filename="Pa0_WSELTS" name="Standard (Blue)" />
+	</slot>
+	<slot num="1">
+		<category name="Overworld">
+			<tileset filename="Pa1_autumnmega" name="Goldwood (Minimega)" />
+			<tileset filename="Pa1_bluegake" name="Desert (Blue)" />
+			<tileset filename="Pa1_cracks" name="Minimega (Mini)" />
+			<tileset filename="Pa1_daishizenkuri" name="Forest (Dark)" />
+			<tileset filename="Pa1_darkmtmush" name="Mushroom Peaks (Dark)" />
+			<tileset filename="Pa1_dessert" name="Desert (Rubble Ruins)" />
+			<tileset filename="Pa1_e3setsugen" name="Snow (E3)" />
+			<tileset filename="Pa1_graveyard" name="Graveyard" />
+			<tileset filename="Pa1_koopa_out" name="Koopa Planet/Koopa Core" />
+			<tileset filename="Pa1_Kyandi" name="Candy (Unused)" />
+			<tileset filename="Pa1_magicsnow" name="Snow (Freezeflame Glacier)" />
+			<tileset filename="Pa1_Mountainb" name="Mountains (Gray)" />
+			<tileset filename="Pa1_Mountains" name="Mountains (Newer)" />
+			<tileset filename="Pa1_mtmush" name="Mushroom Peaks" />
+			<tileset filename="Pa1_newnohara" name="Bombard Cliffs" />
+			<tileset filename="Pa1_pumpkin" name="Pumpkin Boneyard" />
+			<tileset filename="Pa1_pyramid2" name="Pyramid" />
+			<tileset filename="Pa1_redcave" name="Koopa Planet (Red)" />
+			<tileset filename="Pa1_risingsun" name="Sakura Village" />
+			<tileset filename="Pa1_space" name="Space" />
+			<tileset filename="Pa1_springwater" name="Brown Ground" />
+			<tileset filename="Pa1_StarHaven" name="Star Haven" />
+			<tileset filename="Pa1_StarRoad" name="Sky City" />
+		</category>
+		<category name="Underground">
+			<tileset filename="Pa1_chika2" name="Underground (Sewer/Gold)" />
+			<tileset filename="Pa1_dokan_naibu_prpl" name="Sewer (Purple)" />
+			<tileset filename="Pa1_kurayami_chika" name="Underground (Crystal Caves)" />
+			<tileset filename="Pa1_lavaglow" name="Koopa Core" />
+			<tileset filename="Pa1_sabaku_chika" name="Soggy Sewers" />
+			<tileset filename="Pa1_suichu_lightblue" name="Underwater (Light Blue)" />
+			<tileset filename="Pa1_suichu_prp" name="Underwater (Purple)" />
+		</category>
+		<category name="Tower" sorted="true">
+			<tileset filename="Pa1_metaltower" name="Tower (Metal)" />
+			<tileset filename="Pa1_mushtower" name="Tower (Mushroom Peaks)" />
+		</category>
+		<category name="Castle">
+			<tileset filename="Pa1_autumncastle" name="Castle (Goldwood)" />
+			<tileset filename="Pa1_japantemple" name="Castle (Japanese Temple)" />
+			<tileset filename="Pa1_jungleruins" name="Castle (Jungle Ruins)" />
+			<tileset filename="Pa1_mushcastle" name="Castle (Mushroom Peaks)" />
+			<tileset filename="Pa1_snowfort" name="Castle (Snow)" />
+		</category>
+		<category name="Airship">
+			<tileset filename="Pa1_ghostship" name="Airship (Sunken)" />
+			<tileset filename="Pa1_shroomship" name="Airship (Mushroom)" />
+			<tileset filename="Pa1_snowship" name="Airship (Snow)" />
+		</category>
+		<category name="Ghost House" sorted="true">
+			<tileset filename="Pa1_obake_soto_plus" name="Ghost House Exterior w/ Slopes" />
+		</category>
+		<category name="Minigame/Other">
+			<tileset filename="Pa1_CreditsMishMash" name="Credits" />
+			<tileset filename="Pa1_sinkybg" name="Dark Final Castle Tiles" />
+			<tileset filename="Pa1_tanks" name="Tanks (Koopa Planet)" />
+			<tileset filename="Pa1_toytown2" name="Switch Palace" />
+			<tileset filename="Pa1_tswele" name="Warp Zone" />
+		</category>
+		<category name="Pa1 Tileset Pack by B1_Gaming">
+			<tileset filename="Pa1_chika_u" name="Underground (Blue)" />
+			<tileset filename="Pa1_chika2_u" name="Underground (Desert)" />
+			<tileset filename="Pa1_chikal_u" name="Underground (NSLU)" />
+			<tileset filename="Pa1_daishizen_obake_u" name="Forest (Dark)" />
+			<tileset filename="Pa1_daishizen_toso_u" name="Forest (Painted)" />
+			<tileset filename="Pa1_daishizen_u" name="Forest" />
+			<tileset filename="Pa1_gake_u" name="Mountain" />
+			<tileset filename="Pa1_hikousen_u" name="Airship" />
+			<tileset filename="Pa1_kaigan_u" name="Beach" />
+			<tileset filename="Pa1_kazan_u" name="Lava Underground" />
+			<tileset filename="Pa1_koopa_out_u" name="Lava Overworld" />
+			<tileset filename="Pa1_nohara_u" name="Grassland" />
+			<tileset filename="Pa1_nohara2_u" name="Sky Grassland (Blueish)" />
+			<tileset filename="Pa1_nohara3_u" name="Sky Grassland (Green)" />
+			<tileset filename="Pa1_nohara4_u" name="Sky Grassland (Sunset)" />
+			<tileset filename="Pa1_noharal_u" name="Grassland (NSLU)" />
+			<tileset filename="Pa1_obake_soto_u" name="Ghost House Exterior (Extended)" />
+			<tileset filename="Pa1_obake_u" name="Ghost House Interior" />
+			<tileset filename="Pa1_sabaku_u" name="Desert (Deco by Stage13-10)" />
+			<tileset filename="Pa1_setsugen_u" name="Snow" />
+			<tileset filename="Pa1_setsugenl_u" name="Snow (NSLU)" />
+			<tileset filename="Pa1_shiro_peach_u" name="Peach's Castle (Lava)" />
+			<tileset filename="Pa1_shiro_peach2_u" name="Final Castle (Lava)" />
+			<tileset filename="Pa1_shiro_u" name="Castle (Blue)" />
+			<tileset filename="Pa1_shiro2_u" name="Castle (Lava)" />
+			<tileset filename="Pa1_shiro3_u" name="Castle (Dark/Sky)" />
+			<tileset filename="Pa1_suichu_u" name="Underwater" />
+			<tileset filename="Pa1_suichul_u" name="Underwater (Overground)" />
+			<tileset filename="Pa1_toride_gake_u" name="Tower (Rock Candy Mines)" />
+			<tileset filename="Pa1_toride_kori_u" name="Tower (Frosted Glacier)" />
+			<tileset filename="Pa1_toride_sabaku_u" name="Tower (Layer Cake Desert)" />
+			<tileset filename="Pa1_toride_u" name="Tower" />
+		</category>
+	</slot>
+	<slot num="2">
+		<category name="Rocks" sorted="true">
+			<tileset filename="Pa2_darkcave" name="Brown Rock (Newer)" />
+			<tileset filename="Pa2_doukutu_prpl" name="Purple Rock" />
+			<tileset filename="Pa2_doukutu5" name="Orange Rock (Wavy)" />
+			<tileset filename="Pa2_volcanobg" name="Volcano Rock" />
+		</category>
+		<category name="Ice">
+			<tileset filename="Pa2_bgmagicsnow" name="Freezeflame Background" />
+			<tileset filename="Pa2_dbkori_freezeflameundgrnd_t" name="Ice (Dark)" />
+			<tileset filename="Pa2_ice" name="Ice (Alt)" />
+			<tileset filename="Pa2_icyledges" name="Ice (Climbable Walls)" />
+		</category>
+		<category name="Doomship">
+			<tileset filename="Pa2_ghostship" name="Airship (Sunken)" />
+			<tileset filename="Pa2_hikousen_coal" name="Airship (With Coal)" />
+			<tileset filename="Pa2_hikousen2" name="Airship (Purple)" />
+			<tileset filename="Pa2_hikousen2swap" name="Airship (Purple) (Alt)" />
+			<tileset filename="Pa2_shroomship" name="Airship (Mushroom)" />
+			<tileset filename="Pa2_snowship" name="Airship (Snow)" />
+		</category>
+		<category name="Other">
+			<tileset filename="Pa2_bigpipes" name="Giant Pipes" />
+			<tileset filename="Pa2_Brickz" name="Castle (Unused)" />
+			<tileset filename="Pa2_bridge++" name="Bridges" />
+			<tileset filename="Pa2_castle_final" name="Bowser's Castle" />
+			<tileset filename="Pa2_clouds" name="Clouds" />
+			<tileset filename="Pa2_CreditsMishMashUgh" name="Credits" />
+			<tileset filename="Pa2_springwater" name="Trees &amp; Ground Leaves" />
+			<tileset filename="Pa2_statues" name="Pyramid Castle Statues" />
+			<tileset filename="Pa2_tank" name="Tanks (Koopa Planet)" />
+			<tileset filename="Pa2_ToadHouse" name="Toad House Exterior" />
+			<tileset filename="Pa2_yoshihaus" name="Yoshi House" />
+		</category>
+		<category name="Backgrounds">
+			<tileset filename="Pa2_ClockBG" name="Giant Clock Background" />
+			<tileset filename="Pa2_forestobake" name="Ghost House Exterior (Mirrored)" />
+			<tileset filename="Pa2_mtbushb" name="Dark Trees &amp; Bushes" />
+			<tileset filename="Pa2_sewerpipes" name="Soggy Sewers Backgrounds" />
+			<tileset filename="Pa2_sinkypyramid" name="Pyramid Backgrounds" />
+			<tileset filename="Pa2_StarBackdrop" name="Sky City Backgrounds" />
+		</category>
+		<category name="Stage Tileset Extentions">
+			<tileset filename="Pa2_autumn4" name="Goldwood Leaves &amp; Trees" />
+			<tileset filename="Pa2_crystalcave" name="Castle (Crystal Caves)" />
+			<tileset filename="Pa2_dokan_naibu_PRPL" name="Sewer (Purple)" />
+			<tileset filename="Pa2_ghostcastle" name="Ghost Castle" />
+			<tileset filename="Pa2_ghostwoods" name="Ghost Trees &amp; Leaves" />
+			<tileset filename="Pa2_japantemple_bg" name="Castle (Japanese Temple)" />
+			<tileset filename="Pa2_lavasnow" name="Red Glowing Snow" />
+			<tileset filename="Pa2_lessopacolors" name="Switch Palace" />
+			<tileset filename="Pa2_magicsnow" name="Snow (Freezeflame Glacier)" />
+			<tileset filename="Pa2_Pa2mega" name="Minimega" />
+			<tileset filename="Pa2_Pyramid" name="Pyramid" />
+			<tileset filename="Pa2_risingsunPT" name="Sakura Village" />
+			<tileset filename="Pa2_risingsuntemple" name="Sakura Village (Houses)" />
+			<tileset filename="Pa2_stalagmites" name="Crystal Caves (Stalagmites)" />
+			<tileset filename="Pa2_Tangletree" name="Grassland &amp; Light Trees" />
+		</category>
+		<category name="Pa2 Tileset Pack by B1_Gaming">
+			<tileset filename="Pa2_daishizen_obake_u" name="Forest (Dark) Extention" />
+			<tileset filename="Pa2_daishizen_u" name="Forest Extention" />
+			<tileset filename="Pa2_doukutu_u" name="Brown Rocks" />
+			<tileset filename="Pa2_doukutu2_u" name="Blue Rocks" />
+			<tileset filename="Pa2_doukutu3_u" name="Dark Brown Rocks" />
+			<tileset filename="Pa2_doukutu4_u" name="Snow Rocks" />
+			<tileset filename="Pa2_doukutu5_u" name="Sky Rocks" />
+			<tileset filename="Pa2_doukutu6_u" name="Mountain Rocks" />
+			<tileset filename="Pa2_doukutu7_u" name="Lava Rocks" />
+			<tileset filename="Pa2_doukutu8_u" name="Lava Rocks (Glowing)" />
+			<tileset filename="Pa2_gake_u" name="Mountain Extention" />
+			<tileset filename="Pa2_ishi_u" name="Stones" />
+			<tileset filename="Pa2_kaigan_u" name="Beach Extention" />
+			<tileset filename="Pa2_koraru_u" name="Corals/Underwater Deco" />
+			<tileset filename="Pa2_kori_u" name="Ice" />
+			<tileset filename="Pa2_matsunoki_u" name="Pinetrees" />
+			<tileset filename="Pa2_niji_u" name="Rainbow Paths" />
+			<tileset filename="Pa2_nohara_u" name="Grassland Semisolids" />
+			<tileset filename="Pa2_obake_u" name="Ghost House Interior" />
+			<tileset filename="Pa2_ruto_obake_u" name="Roots (Dark)" />
+			<tileset filename="Pa2_ruto_u" name="Roots" />
+			<tileset filename="Pa2_sabaku_u" name="Desert Extention" />
+			<tileset filename="Pa2_shiro2_bg_u" name="Castle Background (Lava)" />
+			<tileset filename="Pa2_sora_u" name="Rainbow Blocks (Bonus)" />
+			<tileset filename="Pa2_toridegakewalls_u" name="Tower Walls (Rock Candy Mines)" />
+			<tileset filename="Pa2_toridekoriwalls_u" name="Tower Walls (Frosted Glacier)" />
+			<tileset filename="Pa2_toridesabakuwalls_u" name="Tower Walls (Layer Cake Desert)" />
+			<tileset filename="Pa2_toridewalls_u" name="Tower Walls" />
+		</category>
+	</slot>
+	<slot num="3">
+		<category name="Line Guides &amp; Fences">
+			<tileset filename="Pa3_rail" name="Fences &amp; 30-Red-Ring Barrier" />
+			<tileset filename="Pa3_rail_white" name="Fences &amp; Gears" />
+			<tileset filename="Pa3_daishizen" name="Forest Hills" />
+		</category>
+		<category name="Other">
+			<tileset filename="Pa3_hanatari_saka" name="Pyramid" />
+			<tileset filename="Pa3_beehive" name="Honeycombs &amp; Forest" />
+			<tileset filename="Pa3_Bent_Shrooms" name="Slanted Mushroom Stalks" />
+			<tileset filename="Pa3_bigpipes" name="Giant Pipes" />
+			<tileset filename="Pa3_bigpipesb" name="Giant Pipes (Blue)" />
+			<tileset filename="Pa3_CreditsMishMashFinally" name="Credits" />
+			<tileset filename="Pa3_falls" name="Water/Poison/Lava Falls" />
+			<tileset filename="Pa3_finalcastlestuff2012" name="Bowser's Keep" />
+			<tileset filename="Pa3_magicsnow" name="Snow (Freezeflame Glacier)" />
+			<tileset filename="Pa3_passthroughredstair" name="Stairs (Red)" />
+			<tileset filename="Pa3_sandpitkgn" name="Beach Sand" />
+			<tileset filename="Pa3_starblok" name="Star-Spawning Block" />
+			<tileset filename="Pa3_Traps" name="Pyramid Traps" />
+			<tileset filename="Pa3_vines" name="Vines" />
+			<tileset filename="Pa3_waterworks" name="Pipes/Factory" />
+			<tileset filename="Pa3_webs" name="Spiderwebs" />
+		</category>
+		<category name="Backgrounds">
+			<tileset filename="Pa3_autumnbg" name="Rocks (Goldwood)" />
+			<tileset filename="Pa3_ClockBG" name="Giant Clock Background" />
+			<tileset filename="Pa3_doukutu" name="Brown Rock" />
+			<tileset filename="Pa3_doukutu5" name="Orange Rock" />
+			<tileset filename="Pa3_doukutu6" name="Blue Rock (Dark)" />
+			<tileset filename="Pa3_mtbush" name="Bushes (Mountain)" />
+			<tileset filename="Pa3_mtbush_vines" name="Bushes (Mountain) (Improved)" />
+			<tileset filename="Pa3_springwater" name="Bushes (Dark)" />
+			<tileset filename="Pa3_yoshiforest" name="Trees and Leaves" />
+		</category>
+		<category name="Stage Tileset Extentions">
+			<tileset filename="Pa3_autumncastle" name="Castle (Goldwood)" />
+			<tileset filename="Pa3_desertoasis" name="Beach Grass &amp; Wood Platforms" />
+			<tileset filename="Pa3_ghostship" name="Airship (Sunken)" />
+			<tileset filename="Pa3_graves" name="Graveyard" />
+			<tileset filename="Pa3_graveyars" name="Graveyard (Alt)" />
+			<tileset filename="Pa3_japantemple_specifictile" name="Castle (Japanese Temple) (Dark)" />
+			<tileset filename="Pa3_jungleruins" name="Castle (Jungle)" />
+			<tileset filename="Pa3_pumpkin" name="Graveyard (Trees)" />
+			<tileset filename="Pa3_Railglow" name="Koopa Core" />
+			<tileset filename="Pa3_Railglow_noanim" name="Koopa Core (no animations)" />
+		</category>
+		<category name="Pa3 Tileset Pack by B1_Gaming">
+			<tileset filename="Pa3_daishizen_obake_u" name="Forest (Dark) Logs" />
+			<tileset filename="Pa3_gake_u" name="Mountain Extention" />
+			<tileset filename="Pa3_gakel_u" name="Wood Scaffhold (Mountain Extention)" />
+			<tileset filename="Pa3_ishi_u" name="Stones" />
+			<tileset filename="Pa3_kaigan_u" name="Beach Extention" />
+			<tileset filename="Pa3_kori_u" name="Ice Extention" />
+			<tileset filename="Pa3_oka_u" name="Flower Hills (NSLU)" />
+			<tileset filename="Pa3_puranto_u" name="Plants" />
+			<tileset filename="Pa3_ruto_chika_u" name="Roots (Underground)" />
+			<tileset filename="Pa3_ruto_obake_u" name="Roots (Dark) Extention" />
+			<tileset filename="Pa3_sabaku_u" name="Desert Extention" />
+			<tileset filename="Pa3_sora_u" name="Rainbow Blocks (Bonus) (Extention)" />
+			<tileset filename="Pa3_toride_gake_junior_u" name="Bowser Jr. Faces (Tower (Mountain))" />
+			<tileset filename="Pa3_toride_junior_u" name="Bowser Jr. Faces (Tower)" />
+			<tileset filename="Pa3_toride_kori_junior_u" name="Bowser Jr. Faces (Tower (Ice))" />
+			<tileset filename="Pa3_toride_sabaku_junior_u" name="Bowser Jr. Faces (Tower (Desert))" />
+			<tileset filename="Pa3_yukidaruma_u" name="Snowmen" />
+		</category>
+	</slot>
+</tilesets>
