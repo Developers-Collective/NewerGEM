@@ -1,4 +1,4 @@
-# Newer General Engine Mod #
+# Newer General Engine Mod (Resources)#
 NewerGEM aims to unify different mods and patches made for Newer Super Mario Bros. Wii.
 In addition to this, NewerGEM also includes tilesets from all major tileset packs, and in the future, backgrounds, model edits, and more.
 To download those additional resources, please visit https://github.com/Zement/NewerGEM.
