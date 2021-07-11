@@ -54,13 +54,14 @@ https://github.com/Newer-Team/NewerSMBW
 
 ## Credits ##
 - B1_Gaming - Tileset Pack
-- CLF78 - Game Patch, Tileset Pack - https://github.com/CLF78
+- Bahlp (Chickensaver) - Reverse Engineering, Coding - https://github.com/Bahlph/actor-spawner
+- CLF78 - Game Patch, Tileset Pack, Reverse Engineering, Coding - https://github.com/CLF78
 - Danster64 - Tileset Pack - https://github.com/Danster64
 - God4Live - Tileset Pack
 - Grop - Reverse Engineering, Coding - https://github.com/TheGrop
 - RedStoneMatt, RSM - Reverse Engineering, Coding - https://github.com/RedStoneMatt
 - Titovision - Tileset Pack
 
-- Newer Team - https://github.com/Newer-Team
+- Newer Team - Treeki, Tempus, megazig, Pop006, skawo - https://github.com/Newer-Team
 
 - Nintendo - www.nintendo.com
