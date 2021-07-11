@@ -34,14 +34,13 @@ Tileset packs:
 ## Installation ##
 
 ### Reggie ###
-Copy the game patch "NewerGEM" to your Reggie\reggiedata\patches directory.
+- Copy the game patch "NewerGEM" to your Reggie\reggiedata\patches directory.
 All NewerGEM features and included assets should show up when loading the game patch.
 
 ### riivolution ###
 - Copy the game root directory (\riivolution\NewerGEM) to the root of your SD. Compiled NewerRes and all assets are included.
 - Also, make sure to copy the folder with the .xml file to your SD as well (\riivolution\riivolution\NewerGEM.xml).
-
-To create an ISO, the usual method can be used with Newer_Mod_ISO_Builder.
+The usual method with Newer_Mod_ISO_Builder works well to create an ISO.
 
 ### Resources ###
 In this folder you can find animation data, randomization data, readme's, and other files that belong to the tileset packs.
@@ -53,15 +52,14 @@ Please follow the steps on the Newer Kamek repository.
 
 
 ## Credits ##
+- Nintendo - www.nintendo.com
 
 - B1_Gaming - Tileset Pack
-- CLF78 - Game Patch, Tileset Pack
-- Danster64 - Tileset Pack
+- CLF78 - Game Patch, Tileset Pack - https://github.com/CLF78
+- Danster64 - Tileset Pack - https://github.com/Danster64
 - God4Live - Tileset Pack
-- Grop - Reverse Engineering, Coding
-- RedStoneMatt, RSM - Reverse Engineering, Coding
+- Grop - Reverse Engineering, Coding - https://github.com/TheGrop
+- RedStoneMatt, RSM - Reverse Engineering, Coding - https://github.com/RedStoneMatt
 - Titovision - Tileset Pack
 
-- Newer Team
-
-- Nintendo
+- Newer Team - https://github.com/Newer-Team
