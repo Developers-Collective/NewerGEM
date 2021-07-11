@@ -54,7 +54,7 @@ https://github.com/Newer-Team/NewerSMBW
 
 ## Credits ##
 - B1_Gaming - Tileset Pack
-- Bahlp (Chickensaver) - Reverse Engineering, Coding - https://github.com/Bahlph/actor-spawner
+- Bahlph (Chickensaver) - Reverse Engineering, Coding - https://github.com/Bahlph/actor-spawner
 - CLF78 - Game Patch, Tileset Pack, Reverse Engineering, Coding - https://github.com/CLF78
 - Danster64 - Tileset Pack - https://github.com/Danster64
 - God4Live - Tileset Pack
