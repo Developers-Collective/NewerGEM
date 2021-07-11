@@ -49,6 +49,7 @@ The actual resources (tilesets) are already included in the game patch.
 ### Kamek (Clang) ###
 All tools should be available to build NewerGEM yourself.
 Please follow the steps on the Newer Kamek repository.
+
 https://github.com/Newer-Team/NewerSMBW
 
 ## Credits ##
