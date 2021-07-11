@@ -1,0 +1,649 @@
+hooks:
+- branch_type: bl
+  name: TryAndFixScoreGlitch
+  src_addr_jpn: 2148585092
+  src_addr_jpn2: 2148585092
+  src_addr_ntsc: 2148585220
+  src_addr_ntsc2: 2148585220
+  src_addr_pal: &id001 2148585492
+  src_addr_pal2: *id001
+  target_func: TryAndFixScoreGlitch
+  type: branch_insn
+- branch_type: bl
+  name: ReplaceExceptionOccurred
+  src_addr_jpn: 2149796272
+  src_addr_jpn2: 2149796272
+  src_addr_ntsc: 2149796768
+  src_addr_ntsc2: 2149796768
+  src_addr_pal: &id002 2149797088
+  src_addr_pal2: *id002
+  target_func: ReplaceExceptionOccurred
+  type: branch_insn
+- addr_jpn: 2150944304
+  addr_jpn2: 2150944304
+  addr_ntsc: 2150944976
+  addr_ntsc2: 2150944976
+  addr_pal: &id003 2150945808
+  addr_pal2: *id003
+  data: '00000000'
+  name: DeleteMainInfo
+  type: patch
+- addr_jpn: 2150944688
+  addr_jpn2: 2150944688
+  addr_ntsc: 2150945360
+  addr_ntsc2: 2150945360
+  addr_pal: &id004 2150946192
+  addr_pal2: *id004
+  data: '00000000'
+  name: DeleteTrace
+  type: patch
+- addr_jpn: 2150944728
+  addr_jpn2: 2150944728
+  addr_ntsc: 2150945400
+  addr_ntsc2: 2150945400
+  addr_pal: &id005 2150946232
+  addr_pal2: *id005
+  data: '00000000'
+  name: DeleteTraceHeadings
+  type: patch
+- addr_jpn: 2150944820
+  addr_jpn2: 2150944820
+  addr_ntsc: 2150945492
+  addr_ntsc2: 2150945492
+  addr_pal: &id006 2150946324
+  addr_pal2: *id006
+  data: '00000000'
+  name: DeleteContextExc
+  type: patch
+- addr_jpn: 2150944852
+  addr_jpn2: 2150944852
+  addr_ntsc: 2150945524
+  addr_ntsc2: 2150945524
+  addr_pal: &id007 2150946356
+  addr_pal2: *id007
+  data: '00000000'
+  name: DeleteContext
+  type: patch
+- addr_jpn: 2150945168
+  addr_jpn2: 2150945168
+  addr_ntsc: 2150945840
+  addr_ntsc2: 2150945840
+  addr_pal: &id008 2150946672
+  addr_pal2: *id008
+  data: '00000000'
+  name: DeleteDsisrDar
+  type: patch
+- branch_type: b
+  name: RedRingEventControl
+  src_addr_jpn: 2158569784
+  src_addr_jpn2: 2158569816
+  src_addr_ntsc: 2158571608
+  src_addr_ntsc2: 2158571640
+  src_addr_pal: 2158571576
+  src_addr_pal2: 2158571608
+  target_func: RedRingEventControl
+  type: branch_insn
+- addr_jpn: 2157750808
+  addr_jpn2: 2157750840
+  addr_ntsc: 2157752632
+  addr_ntsc2: 2157752664
+  addr_pal: 2157752600
+  addr_pal2: 2157752632
+  data: 2C1C0003
+  name: HigherBobombTileExplosionRadius
+  type: patch
+- addr_jpn: &id009 2148067064
+  addr_jpn2: *id009
+  addr_ntsc: *id009
+  addr_ntsc2: *id009
+  addr_pal: *id009
+  addr_pal2: *id009
+  data: '38600000'
+  name: DisableTerrainShading
+  type: patch
+- branch_type: bl
+  name: TitleScreenFucker
+  src_addr_jpn: 2148538252
+  src_addr_jpn2: 2148538252
+  src_addr_ntsc: 2148538380
+  src_addr_ntsc2: 2148538380
+  src_addr_pal: &id010 2148538652
+  src_addr_pal2: *id010
+  target_func: TitleScreenFucker
+  type: branch_insn
+- addr_jpn: 2148914464
+  addr_jpn2: 2148914464
+  addr_ntsc: 2148914960
+  addr_ntsc2: 2148914960
+  addr_pal: &id011 2148915280
+  addr_pal2: *id011
+  data: '38600000'
+  name: AnotherTSThing
+  type: patch
+- addr_jpn: 2150582256
+  addr_jpn2: 2150582256
+  addr_ntsc: 2150582736
+  addr_ntsc2: 2150582736
+  addr_pal: &id012 2150583504
+  addr_pal2: *id012
+  data: 0402 0002 0101 0104 0202 0002 0301 0306 0400 0402 0501 0503 0104 0900 0900
+  name: TitleReplayLevels
+  type: patch
+- area_jpn: 2155355784
+  area_jpn2: 2155355848
+  area_ntsc: &id013 2155356088
+  area_ntsc2: 2155356152
+  area_pal: *id013
+  area_pal2: 2155356152
+  name: NoTitleScreenMovie
+  type: nop_insn
+- area_jpn: 2148783936
+  area_jpn2: 2148783936
+  area_ntsc: 2148784432
+  area_ntsc2: 2148784432
+  area_pal: &id014 2148784752
+  area_pal2: *id014
+  name: MPDeathPauseFix
+  type: nop_insn
+- addr_jpn: 2148422224
+  addr_jpn2: 2148422224
+  addr_ntsc: 2148422352
+  addr_ntsc2: 2148422352
+  addr_pal: &id015 2148422624
+  addr_pal2: *id015
+  data: 4E800020
+  name: FixMemoryLeaks
+  type: patch
+- branch_type: bl
+  name: ClimbSounds
+  src_addr_jpn: 2148740044
+  src_addr_jpn2: 2148740044
+  src_addr_ntsc: 2148740540
+  src_addr_ntsc2: 2148740540
+  src_addr_pal: &id016 2148740860
+  src_addr_pal2: *id016
+  target_func: newClimbSounds
+  type: branch_insn
+- branch_type: bl
+  name: ClimbSoundsJumpS
+  src_addr_jpn: 2148740592
+  src_addr_jpn2: 2148740592
+  src_addr_ntsc: 2148741088
+  src_addr_ntsc2: 2148741088
+  src_addr_pal: &id017 2148741408
+  src_addr_pal2: *id017
+  target_func: newClimbSoundsJumpS
+  type: branch_insn
+- branch_type: bl
+  name: ClimbSoundsJumpSS
+  src_addr_jpn: 2148740612
+  src_addr_jpn2: 2148740612
+  src_addr_ntsc: 2148741108
+  src_addr_ntsc2: 2148741108
+  src_addr_pal: &id018 2148741428
+  src_addr_pal2: *id018
+  target_func: newClimbSoundsJumpSS
+  type: branch_insn
+- branch_type: bl
+  name: ClimbSoundsJump
+  src_addr_jpn: 2148740632
+  src_addr_jpn2: 2148740632
+  src_addr_ntsc: 2148741128
+  src_addr_ntsc2: 2148741128
+  src_addr_pal: &id019 2148741448
+  src_addr_pal2: *id019
+  target_func: newClimbSoundsJump
+  type: branch_insn
+- branch_type: bl
+  name: ClimbSoundsLand
+  src_addr_jpn: 2148739000
+  src_addr_jpn2: 2148739000
+  src_addr_ntsc: 2148739496
+  src_addr_ntsc2: 2148739496
+  src_addr_pal: &id020 2148739816
+  src_addr_pal2: *id020
+  target_func: newClimbSoundsLand
+  type: branch_insn
+- branch_type: bl
+  name: ClimbSoundsAttack
+  src_addr_jpn: 2148741556
+  src_addr_jpn2: 2148741556
+  src_addr_ntsc: 2148742052
+  src_addr_ntsc2: 2148742052
+  src_addr_pal: &id021 2148742372
+  src_addr_pal2: *id021
+  target_func: newClimbSoundsAttack
+  type: branch_insn
+- branch_type: b
+  name: MusicHax
+  src_addr_jpn: &id022 2148066788
+  src_addr_jpn2: *id022
+  src_addr_ntsc: *id022
+  src_addr_ntsc2: *id022
+  src_addr_pal: *id022
+  src_addr_pal2: *id022
+  target_func: after_course_getMusicForZone
+  type: branch_insn
+- addr_jpn: 2150590184
+  addr_jpn2: 2150590184
+  addr_ntsc: 2150590664
+  addr_ntsc2: 2150590664
+  addr_pal: &id023 2150591432
+  addr_pal2: *id023
+  data: 00000000 00000000 00000000 00000000
+  name: MusicNukeBahpsNormal1
+  type: patch
+- addr_jpn: 2150590208
+  addr_jpn2: 2150590208
+  addr_ntsc: 2150590688
+  addr_ntsc2: 2150590688
+  addr_pal: &id024 2150591456
+  addr_pal2: *id024
+  data: 00000000 00000000
+  name: MusicNukeBahpsNormal2
+  type: patch
+- addr_jpn: 2150590256
+  addr_jpn2: 2150590256
+  addr_ntsc: 2150590736
+  addr_ntsc2: 2150590736
+  addr_pal: &id025 2150591504
+  addr_pal2: *id025
+  data: 00000000 00000000
+  name: MusicNukeBahpsNormal3
+  type: patch
+- addr_jpn: 2150590416
+  addr_jpn2: 2150590416
+  addr_ntsc: 2150590896
+  addr_ntsc2: 2150590896
+  addr_pal: &id026 2150591664
+  addr_pal2: *id026
+  data: 00000000 00000000 00000000 00000000
+  name: MusicNukeBahpsFast1
+  type: patch
+- addr_jpn: 2150590440
+  addr_jpn2: 2150590440
+  addr_ntsc: 2150590920
+  addr_ntsc2: 2150590920
+  addr_pal: &id027 2150591688
+  addr_pal2: *id027
+  data: 00000000 00000000
+  name: MusicNukeBahpsFast2
+  type: patch
+- addr_jpn: 2150590488
+  addr_jpn2: 2150590488
+  addr_ntsc: 2150590968
+  addr_ntsc2: 2150590968
+  addr_pal: &id028 2150591736
+  addr_pal2: *id028
+  data: 00000000 00000000
+  name: MusicNukeBahpsFast3
+  type: patch
+- branch_type: b
+  name: Fix38WithJumpCoin
+  src_addr_jpn: 2155788780
+  src_addr_jpn2: 2155788796
+  src_addr_ntsc: &id029 2155789404
+  src_addr_ntsc2: 2155789420
+  src_addr_pal: *id029
+  src_addr_pal2: 2155789420
+  target_func: fix38WithJumpCoin
+  type: branch_insn
+- addr_jpn: 2148629884
+  addr_jpn2: 2148629884
+  addr_ntsc: 2148630380
+  addr_ntsc2: 2148630380
+  addr_pal: &id030 2148630700
+  addr_pal2: *id030
+  data: '38000003'
+  name: 1-1 BG Fix
+  type: patch
+- addr_jpn: &id031 2147813624
+  addr_jpn2: *id031
+  addr_ntsc: *id031
+  addr_ntsc2: *id031
+  addr_pal: *id031
+  addr_pal2: *id031
+  data: A01E0010540007FF41820014A0E300043807FFFEB01F042C4800000C38000001B01F042CA0A30002A89F042C80C6003C7C052214540020367CA60214A8850002
+  name: PipeFix_NodeCalc
+  type: patch
+- addr_jpn: &id032 2147813980
+  addr_jpn2: *id032
+  addr_ntsc: *id032
+  addr_ntsc2: *id032
+  addr_pal: *id032
+  addr_pal2: *id032
+  data: '88030013'
+  name: PipeFix_ExitPatch1
+  type: patch
+- addr_jpn: &id033 2147813984
+  addr_jpn2: *id033
+  addr_ntsc: *id033
+  addr_ntsc2: *id033
+  addr_pal: *id033
+  addr_pal2: *id033
+  data: 2C000000
+  name: PipeFix_ExitPatch2
+  type: patch
+- addr_jpn: &id034 2147813992
+  addr_jpn2: *id034
+  addr_ntsc: *id034
+  addr_ntsc2: *id034
+  addr_pal: *id034
+  addr_pal2: *id034
+  data: 2C000001
+  name: PipeFix_ExitPatch3
+  type: patch
+- addr_jpn: &id035 2147814000
+  addr_jpn2: *id035
+  addr_ntsc: *id035
+  addr_ntsc2: *id035
+  addr_pal: *id035
+  addr_pal2: *id035
+  data: 2C000002
+  name: PipeFix_ExitPatch4
+  type: patch
+- addr_jpn: &id036 2147814008
+  addr_jpn2: *id036
+  addr_ntsc: *id036
+  addr_ntsc2: *id036
+  addr_pal: *id036
+  addr_pal2: *id036
+  data: 2C000003
+  name: PipeFix_ExitPatch5
+  type: patch
+- addr_jpn: &id037 2147814024
+  addr_jpn2: *id037
+  addr_ntsc: *id037
+  addr_ntsc2: *id037
+  addr_pal: *id037
+  addr_pal2: *id037
+  data: 389F065C
+  name: PipeFix_ExitPatch6
+  type: patch
+- addr_jpn: 2150670320
+  addr_jpn2: 2150670320
+  addr_ntsc: 2150670800
+  addr_ntsc2: 2150670800
+  addr_pal: &id038 2150671568
+  addr_pal2: *id038
+  data: 00C8 0000 00000008 FFFFFFF0 00000000 00000000 0000000A 0000000A 0000 0000
+    0000 0000 0002 0000
+  name: ChestnutGoombaForTargets
+  type: patch
+- addr_jpn: 2155746400
+  addr_jpn2: 2155746416
+  addr_ntsc: &id039 2155747024
+  addr_ntsc2: 2155747040
+  addr_pal: *id039
+  addr_pal2: 2155747040
+  data: 88D2038F
+  name: TileGodLayerFix
+  type: patch
+- addr_jpn: &id040 2147612988
+  addr_jpn2: *id040
+  addr_ntsc: *id040
+  addr_ntsc2: *id040
+  addr_pal: *id040
+  addr_pal2: *id040
+  data: '48000014'
+  name: EN_BIGPILEFix
+  type: patch
+- addr_jpn: 2156564952
+  addr_jpn2: 2156564968
+  addr_ntsc: &id041 2156565576
+  addr_ntsc2: 2156565592
+  addr_pal: *id041
+  addr_pal2: 2156565592
+  data: '60000000'
+  name: RockyWrenchFix
+  type: patch
+- name: StarsDontKillSpikesUD
+  src_addr_jpn: 2159013336
+  src_addr_jpn2: 2159013368
+  src_addr_ntsc: 2159015160
+  src_addr_ntsc2: 2159015192
+  src_addr_pal: 2159015128
+  src_addr_pal2: 2159015160
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesD
+  src_addr_jpn: 2159014020
+  src_addr_jpn2: 2159014052
+  src_addr_ntsc: 2159015844
+  src_addr_ntsc2: 2159015876
+  src_addr_pal: 2159015812
+  src_addr_pal2: 2159015844
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesU
+  src_addr_jpn: 2159014704
+  src_addr_jpn2: 2159014736
+  src_addr_ntsc: 2159016528
+  src_addr_ntsc2: 2159016560
+  src_addr_pal: 2159016496
+  src_addr_pal2: 2159016528
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesLR
+  src_addr_jpn: 2159015388
+  src_addr_jpn2: 2159015420
+  src_addr_ntsc: 2159017212
+  src_addr_ntsc2: 2159017244
+  src_addr_pal: 2159017180
+  src_addr_pal2: 2159017212
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesR
+  src_addr_jpn: 2159016072
+  src_addr_jpn2: 2159016104
+  src_addr_ntsc: 2159017896
+  src_addr_ntsc2: 2159017928
+  src_addr_pal: 2159017864
+  src_addr_pal2: 2159017896
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesL
+  src_addr_jpn: 2159016756
+  src_addr_jpn2: 2159016788
+  src_addr_ntsc: 2159018580
+  src_addr_ntsc2: 2159018612
+  src_addr_pal: 2159018548
+  src_addr_pal2: 2159018580
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: DisableBowserPow
+  src_addr_jpn: 2159534420
+  src_addr_jpn2: 2159534452
+  src_addr_ntsc: 2159536244
+  src_addr_ntsc2: 2159536276
+  src_addr_pal: 2159536212
+  src_addr_pal2: 2159536244
+  target_func: ReturnNone
+  type: add_func_pointer
+- branch_type: b
+  name: PowEvent1
+  src_addr_jpn: 2156473228
+  src_addr_jpn2: 2156473244
+  src_addr_ntsc: &id042 2156473852
+  src_addr_ntsc2: 2156473868
+  src_addr_pal: *id042
+  src_addr_pal2: 2156473868
+  target_func: PowEvent
+  type: branch_insn
+- branch_type: b
+  name: PowEvent2
+  src_addr_jpn: 2156473812
+  src_addr_jpn2: 2156473828
+  src_addr_ntsc: &id043 2156474436
+  src_addr_ntsc2: 2156474452
+  src_addr_pal: *id043
+  src_addr_pal2: 2156474452
+  target_func: PowEvent
+  type: branch_insn
+- branch_type: b
+  name: AlwaysDrawPictureFontWhite
+  src_addr_jpn: 2148423644
+  src_addr_jpn2: 2148423644
+  src_addr_ntsc: 2148423772
+  src_addr_ntsc2: 2148423772
+  src_addr_pal: &id044 2148424044
+  src_addr_pal2: *id044
+  target_func: TextWriterCrap
+  type: branch_insn
+- branch_type: b
+  name: DebugSCM
+  src_addr_jpn: &id045 2147919556
+  src_addr_jpn2: *id045
+  src_addr_ntsc: *id045
+  src_addr_ntsc2: *id045
+  src_addr_pal: *id045
+  src_addr_pal2: *id045
+  target_func: EndSCM
+  type: branch_insn
+- addr_jpn: 2158817184
+  addr_jpn2: 2158817216
+  addr_ntsc: 2158819008
+  addr_ntsc2: 2158819040
+  addr_pal: 2158818976
+  addr_pal2: 2158819008
+  data: 45ABE000
+  name: FrontCrow
+  type: patch
+- addr_jpn: 2157668336
+  addr_jpn2: 2157668368
+  addr_ntsc: 2157670160
+  addr_ntsc2: 2157670192
+  addr_pal: 2157670128
+  addr_pal2: 2157670160
+  data: '38600000'
+  name: DisableBigMetPenguinSlideIgnoring
+  type: patch
+- addr_jpn: 2157668288
+  addr_jpn2: 2157668320
+  addr_ntsc: 2157670112
+  addr_ntsc2: 2157670144
+  addr_pal: 2157670080
+  addr_pal2: 2157670112
+  data: '38600000'
+  name: DisableBigMetFireballIgnoring
+  type: patch
+- addr_jpn: 2157668272
+  addr_jpn2: 2157668304
+  addr_ntsc: 2157670096
+  addr_ntsc2: 2157670128
+  addr_pal: 2157670064
+  addr_pal2: 2157670096
+  data: '38600000'
+  name: DisableBigMetIceballIgnoring
+  type: patch
+- branch_type: b
+  name: GiganticBackgrounds
+  src_addr_jpn: 2148631116
+  src_addr_jpn2: 2148631116
+  src_addr_ntsc: 2148631612
+  src_addr_ntsc2: 2148631612
+  src_addr_pal: &id046 2148631932
+  src_addr_pal2: *id046
+  target_func: GiganticBackgrounds
+  type: branch_insn
+- branch_type: b
+  name: FixFireballSensorSetup
+  src_addr_jpn: 2148639996
+  src_addr_jpn2: 2148639996
+  src_addr_ntsc: 2148640492
+  src_addr_ntsc2: 2148640492
+  src_addr_pal: &id047 2148640812
+  src_addr_pal2: *id047
+  target_func: FixFireballSensorSetup
+  type: branch_insn
+- branch_type: b
+  name: BigMetSlidingFix
+  src_addr_jpn: 2157668448
+  src_addr_jpn2: 2157668480
+  src_addr_ntsc: 2157670272
+  src_addr_ntsc2: 2157670304
+  src_addr_pal: 2157670240
+  src_addr_pal2: 2157670272
+  target_func: BigMetSlidingFix
+  type: branch_insn
+- branch_type: bl
+  name: FuckLineLiftWithARake
+  src_addr_jpn: 2156107620
+  src_addr_jpn2: 2156107636
+  src_addr_ntsc: &id048 2156108244
+  src_addr_ntsc2: 2156108260
+  src_addr_pal: *id048
+  src_addr_pal2: 2156108260
+  target_func: FuckLineLiftWithARake
+  type: branch_insn
+- branch_type: b
+  name: AlsoFuckTheLineLiftActivation
+  src_addr_jpn: 2156107920
+  src_addr_jpn2: 2156107936
+  src_addr_ntsc: &id049 2156108544
+  src_addr_ntsc2: 2156108560
+  src_addr_pal: *id049
+  src_addr_pal2: 2156108560
+  target_func: AlsoFuckTheLineLiftActivation
+  type: branch_insn
+- branch_type: b
+  name: ThwompNewAutoDestruction
+  src_addr_jpn: 2157926212
+  src_addr_jpn2: 2157926244
+  src_addr_ntsc: 2157928036
+  src_addr_ntsc2: 2157928068
+  src_addr_pal: 2157928004
+  src_addr_pal2: 2157928036
+  target_func: ThwompNewAutoDestruction
+  type: branch_insn
+- area_jpn: 2157926208
+  area_jpn2: 2157926240
+  area_ntsc: 2157928032
+  area_ntsc2: 2157928064
+  area_pal: 2157928000
+  area_pal2: 2157928032
+  name: ThwompNeverDieOutOfZone
+  type: nop_insn
+- name: FixRunAnimTypo
+  src_addr_jpn: 2150573420
+  src_addr_jpn2: 2150573420
+  src_addr_ntsc: 2150573900
+  src_addr_ntsc2: 2150573900
+  src_addr_pal: &id050 2150574668
+  src_addr_pal2: *id050
+  target_func: Rrun
+  type: add_func_pointer
+- addr_jpn: 2157882244
+  addr_jpn2: 2157882276
+  addr_ntsc: 2157884068
+  addr_ntsc2: 2157884100
+  addr_pal: 2157884036
+  addr_pal2: 2157884068
+  data: '60000000'
+  name: BroozerCrashAvoidance2
+  type: patch
+- addr_jpn: 2157887156
+  addr_jpn2: 2157887188
+  addr_ntsc: 2157888980
+  addr_ntsc2: 2157889012
+  addr_pal: 2157888948
+  addr_pal2: 2157888980
+  data: '38600001'
+  name: BroozerCrashAvoidance3
+  type: patch
+- branch_type: bl
+  name: JrFloorFireHax
+  src_addr_jpn: 2155962624
+  src_addr_jpn2: 2155962640
+  src_addr_ntsc: &id051 2155963248
+  src_addr_ntsc2: 2155963264
+  src_addr_pal: *id051
+  src_addr_pal2: 2155963264
+  target_func: JrFloorFireHax
+  type: branch_insn
+source_files:
+- ../src/randomcrap.S
+- ../src/music.cpp
+- ../src/fix38.S
+- ../src/nullsub.S
+- ../src/newer.cpp

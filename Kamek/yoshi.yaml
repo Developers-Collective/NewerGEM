@@ -1,0 +1,102 @@
+---
+source_files: [../src/yoshiFire.S, ../src/yoshiFly.cpp, ../src/yoshiFly.S, ../src/yoshiStomp.cpp]
+
+hooks:
+  # daYoshi_c
+  - name: MakeKoopasIntoFire
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8014FA28 #Actually 8014f8e8 in the dolphin debugger (NTSC)
+    target_func: 'addMoreFireBalls'
+
+  - name: ExpandYoshiStruc
+    type: patch
+    addr_pal: 0x8014B408 #Actually 8014b2c8 in the dolphin debugger (NTSC)
+    data: '386017FC' # orig: 386017c8 -> li r3, 0x17C8
+
+  # - name: YoshiCtorYW
+  #   type: branch_insn
+  #   target_func: 'YoshiCtorYW'
+  #   src_addr_pal: 0x8014B564 #80e40370
+  #   branch_type: b
+
+  # - name: YoshiDtorYWReplace
+  #   type: add_func_pointer
+  #   target_func: 'YoshiDtorYW'
+  #   src_addr_pal: 0x80326B24 #80e403a4
+
+  # - name: YoshiSetMeUpYW
+  #   type: branch_insn
+  #   target_func: 'YoshiSetMeUpYW'
+  #   src_addr_pal: 0x8014B978 #80e403f8
+  #   branch_type: b
+
+  # - name: YoshiDrawYW
+  #   type: branch_insn
+  #   target_func: 'YoshiDrawYW'
+  #   src_addr_pal: 0x80150F08 #80e4041c
+  #   branch_type: b
+
+  # daYoshiFire_c
+  - name: MakeMoreRoom
+    type: patch
+    addr_pal: 0x809125E8
+    data: '38600508' # li r3, 0x508
+
+  - name: MakeFireMove
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x809129DC
+    target_func: 'GetThoseSiblingsMoving'
+
+  - name: EditXSpeedPositiveFloat
+    type: patch
+    addr_pal: 0x8093DB8C
+    data: '40800000' # orig: 40000000 = 2.0 | new: 40800000 = 4.0 | (https://gregstoll.com/~gregstoll/floattohex/) 
+
+  - name: EditXSpeedNegativeFloat
+    type: patch
+    addr_pal: 0x8093DB90
+    data: 'C0800000' # orig: C0000000 = -2.0 | new: C0800000 = -4.0 | (https://gregstoll.com/~gregstoll/floattohex/) 
+
+  #Stomp Yoshi
+  - name: Yoshi_DoJaugesChecks
+    type: add_func_pointer
+    src_addr_pal: 0x80326AFC
+    target_func: 'daYoshi_c::newOnExecute()'
+
+  - name: disableShellTrigger
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8015094C #actually 803267b4 in dolphin debugger (NTSC)
+    target_func: 'disableShellTrigger'
+
+  - name: GDisplay_EnableHideJauges
+    type: add_func_pointer
+    src_addr_pal: 0x80327A40 #Actually 803276f8 in dolphin debugger (NTSC)
+    target_func: 'dGameDisplay_c::newOnCreate()'
+
+  - name: GDisplay_ProcessHideJauges
+    type: add_func_pointer
+    src_addr_pal: 0x80327A58
+    target_func: 'dGameDisplay_c::newOnExecute()'
+
+  - name: TriggerPowEffectWhenGroundpoundStage4
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80049540
+    target_func: 'daPlBase_c::newHipAttackStage4()'
+
+  - name: ResetPowEffectFlagWhenGroundpoundEnds
+    type: add_func_pointer
+    src_addr_pal: 0x80326DE8
+    target_func: 'daYoshi_c::newEndState_HipAttack()'
+
+  #Fly Yoshi
+  - name: BlueYoshiFly
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80054B48
+    target_func: 'flyNowMyCuteYoshi'
+
+

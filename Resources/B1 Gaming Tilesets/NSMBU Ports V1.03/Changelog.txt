@@ -1,0 +1,32 @@
+--Beta - V1.00--
+First beta release
+--Beta - V1.01--
+Updated some missing tileset collisions (Snow Tilesets, Tower Tilesets, Beach (Pa3), Castle)
+--Beta - V1.02--
+Added a tileset XML that you can copy and paste into your tileset.xml in the reggiedata folder. Updated the README.txt file
+--Beta - V1.03--
+Updated the Pa1_obake_soto_u tileset with some new tiles. Randomizations got updated. All forest tilesets got added to the pack (Except the painted version).
+--Beta - V1.04--
+Added more Tilesets (Mountain, Bowser Jr. Tower Faces, Volcano) to this tileset pack which means the randomization and the tileset list files got updated!
+--Beta - V1.05--
+Improved some tilings from the Pa1_nohara_u and Pa1_noharal_u Tileset. Added cave entrances to the Pa1_noharal_u tileset. The hills from this tileset got moved to a new, seperate tileset called Pa3_oka_u.
+--Beta - V1.06--
+Pa1_shiro_peach_u got an update which fixed some minor tiling errors. Painted Forest got added. Updated some Tileset Images.
+--Beta - V1.07--
+Added the Airship, the Rainbow Path and the Rainbow Blocks Tileset. Fixed some minor collision bugs. First official release soon!
+--Beta - V1.08--
+Added the wooden Scaffhold from the Mountain Tileset. Renamed some tilesets (Nothing special). Fixed some small collision and tiling bugs.
+--Beta - V1.08--
+Fixed more collison bugs (Especially in the Pa3_gakel_u tileset). Added an animtiles.bin file. Changed some tiling (Nothing too special) in the forest tileset Pa1_daishizen_u.
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________
+
+--Release - V1.00--
+The first official and also maybe final release. Everything is done that needs to be done. Updated many tilesets and added around 15 missing tilesets.
+Some tilesets got some tile order changes and some got even redone.
+--Release - V1.01--
+Changed the flowers because they were a bit pixelated in the tileset images and FINALLY added animated forest flowers. Renamed Pa3_gakel_u to Pa2 AND Pa3_mokuzai_u which means I split it up into two tilesets because some tiles of the original were still missing. Improved some tilesets. Especially the Pa1_obake_soto_u Tileset. Added an extended Version of the Credits tileset.
+--Release - V1.02--
+Added the source code of the RandTiles.bin file called randtilegen.rb if you want to add other tilesets with randomization. Fixed some typos in the readme.
+--Release - V1.03--
+Updated the credits tileset to have the 14x2 and 15x2 long grass tiles as well (Thanks to AboodXD (MasterVermilli0n#7241)).

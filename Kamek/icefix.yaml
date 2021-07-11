@@ -1,0 +1,11 @@
+---
+#Yoshi's Iceball Effect Fix by RedStoneMatt
+
+
+source_files: [../src/icefix.S]
+hooks:
+  - name: icefix
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80912828
+    target_func: 'ice'

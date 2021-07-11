@@ -1,0 +1,15 @@
+---
+# Replaces LIFT_TORIDE_ROLL
+source_files: [../src/effectvideo.cpp, ../src/effectvideo.S]
+hooks:
+  - name: EffectVideoAdd
+    type: add_func_pointer
+    src_addr_pal: 0x80969E78
+    target_func: 'EffectVideo::build()'
+
+# Allow loading the breff for whatever sprite we want
+  - name: BreffLoadPatch
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x809201EC
+    target_func: 'BreffLoadPatch'

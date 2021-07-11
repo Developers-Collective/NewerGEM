@@ -1,0 +1,21 @@
+hooks:
+- name: ObjKinoko_Create
+  src_addr_jpn: 2157394700
+  src_addr_jpn2: 2157394716
+  src_addr_ntsc: &id001 2157396516
+  src_addr_ntsc2: 2157396532
+  src_addr_pal: *id001
+  src_addr_pal2: 2157396532
+  target_func: daObjKinoko_c::creationHook()
+  type: add_func_pointer
+- name: ObjKinoko_Hook
+  src_addr_jpn: 2157394736
+  src_addr_jpn2: 2157394752
+  src_addr_ntsc: &id002 2157396552
+  src_addr_ntsc2: 2157396568
+  src_addr_pal: *id002
+  src_addr_pal2: 2157396568
+  target_func: daObjKinoko_c::drawHook()
+  type: add_func_pointer
+source_files:
+- ../src/objkinoko.cpp

@@ -1,0 +1,8 @@
+---
+source_files: [../src/goalPole.cpp]
+hooks:
+  - name: CheckDisableWall
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80a09b40
+    target_func: 'daEnGlpole_c_initInvisibleWallIfSet(ActivePhysics*, daEnGlpole_c*, ActivePhysics::Info*)'

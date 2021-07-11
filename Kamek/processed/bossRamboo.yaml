@@ -1,0 +1,12 @@
+hooks:
+- name: RambooBuild
+  src_addr_jpn: 2158958720
+  src_addr_jpn2: 2158958752
+  src_addr_ntsc: 2158960544
+  src_addr_ntsc2: 2158960576
+  src_addr_pal: 2158960512
+  src_addr_pal2: 2158960544
+  target_func: daRamboo_c::build()
+  type: add_func_pointer
+source_files:
+- ../src/bossRamboo.cpp

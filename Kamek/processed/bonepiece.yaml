@@ -1,0 +1,22 @@
+hooks:
+- name: BuildBonePiece
+  src_addr_jpn: 2157470768
+  src_addr_jpn2: 2157470784
+  src_addr_ntsc: &id001 2157472584
+  src_addr_ntsc2: 2157472600
+  src_addr_pal: *id001
+  src_addr_pal2: 2157472600
+  target_func: daBonePiece_c::build()
+  type: add_func_pointer
+- addr_jpn: 2150670640
+  addr_jpn2: 2150670640
+  addr_ntsc: 2150671120
+  addr_ntsc2: 2150671120
+  addr_pal: &id002 2150671888
+  addr_pal2: *id002
+  data: 0289 0000  00000000 00000000  00000000 00000000 00000100 00000100  0000 0000
+    0000 0000  0002 0000
+  name: UpdateBonePieceSpriteInfo
+  type: patch
+source_files:
+- ../src/bonepiece.cpp

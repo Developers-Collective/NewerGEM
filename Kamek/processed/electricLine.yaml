@@ -1,0 +1,12 @@
+hooks:
+- name: electricLineBuild
+  src_addr_jpn: 2157321184
+  src_addr_jpn2: 2157321200
+  src_addr_ntsc: &id001 2157323000
+  src_addr_ntsc2: 2157323016
+  src_addr_pal: *id001
+  src_addr_pal2: 2157323016
+  target_func: daElectricLine::build()
+  type: add_func_pointer
+source_files:
+- ../src/electricLine.cpp

@@ -1,0 +1,32 @@
+---
+source_files: [../src/portal.S]
+hooks:
+  - name: PortalHook_1
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80162c40
+    target_func: 'PortalHook_1'    
+
+  - name: PortalHook_2
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80064350
+    target_func: 'PortalHook_2'
+
+  - name: PortalHook_3
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x800e3ad4
+    target_func: 'PortalHook_3'
+
+  - name: PortalHook_4
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80095950
+    target_func: 'PortalHook_4'
+
+  - name: PortalHook_5
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80095980
+    target_func: 'PortalHook_5'

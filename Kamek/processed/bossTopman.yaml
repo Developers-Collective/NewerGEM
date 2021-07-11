@@ -1,0 +1,21 @@
+hooks:
+- name: BossTopmanBuild
+  src_addr_jpn: 2157426088
+  src_addr_jpn2: 2157426104
+  src_addr_ntsc: &id001 2157427904
+  src_addr_ntsc2: 2157427920
+  src_addr_pal: *id001
+  src_addr_pal2: 2157427920
+  target_func: daDreidel::build()
+  type: add_func_pointer
+- name: BossTopmanSpriteFileInfo
+  src_addr_jpn: 2150738496
+  src_addr_jpn2: 2150738496
+  src_addr_ntsc: 2150738976
+  src_addr_ntsc2: 2150738976
+  src_addr_pal: &id002 2150739768
+  src_addr_pal2: *id002
+  target_func: TMarcNameList
+  type: add_func_pointer
+source_files:
+- ../src/bossTopman.cpp

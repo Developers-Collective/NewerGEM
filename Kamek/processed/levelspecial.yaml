@@ -1,0 +1,59 @@
+hooks:
+- name: LevelSpecial_Create
+  src_addr_jpn: 2157430308
+  src_addr_jpn2: 2157430324
+  src_addr_ntsc: &id001 2157432124
+  src_addr_ntsc2: 2157432140
+  src_addr_pal: *id001
+  src_addr_pal2: 2157432140
+  target_func: LevelSpecial_Create(LevelSpecial*)
+  type: add_func_pointer
+- name: LevelSpecial_Execute
+  src_addr_jpn: 2157430332
+  src_addr_jpn2: 2157430348
+  src_addr_ntsc: &id002 2157432148
+  src_addr_ntsc2: 2157432164
+  src_addr_pal: *id002
+  src_addr_pal2: 2157432164
+  target_func: LevelSpecial_Execute(LevelSpecial*)
+  type: add_func_pointer
+- branch_type: b
+  name: ResetAfterLevel
+  src_addr_jpn: 2157074208
+  src_addr_jpn2: 2157074224
+  src_addr_ntsc: &id003 2157074912
+  src_addr_ntsc2: 2157074928
+  src_addr_pal: *id003
+  src_addr_pal2: 2157074928
+  target_func: ResetAfterLevel(bool)
+  type: branch_insn
+- addr_jpn: 2156578056
+  addr_jpn2: 2156578072
+  addr_ntsc: &id004 2156578680
+  addr_ntsc2: 2156578696
+  addr_pal: *id004
+  addr_pal2: 2156578696
+  data: '38600400'
+  name: LevelSpecial_MemFix
+  type: patch
+- name: MarioStateChanger
+  src_addr_jpn: 2150781980
+  src_addr_jpn2: 2150781980
+  src_addr_ntsc: 2150782644
+  src_addr_ntsc2: 2150782644
+  src_addr_pal: &id005 2150783484
+  src_addr_pal2: *id005
+  target_func: MarioStateChanger(void*, dStateBase_c*, unsigned int)
+  type: add_func_pointer
+- branch_type: b
+  name: FuckinBubbles
+  src_addr_jpn: 2157076288
+  src_addr_jpn2: 2157076304
+  src_addr_ntsc: &id006 2157076992
+  src_addr_ntsc2: 2157077008
+  src_addr_pal: *id006
+  src_addr_pal2: 2157077008
+  target_func: FuckinBubbles()
+  type: branch_insn
+source_files:
+- ../src/levelspecial.cpp

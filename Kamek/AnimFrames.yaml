@@ -1,0 +1,33 @@
+source_files: [../src/AnimFrames.S, ../src/BlockAnim.cpp]
+
+hooks:
+#  - name: ChangeAnimTileFrameDelay
+#    type: branch_insn
+#    branch_type: b
+#    src_addr_pal: 0x80087650
+#    target_func: 'AnimTileFrameDelayChange'
+
+  - name: ChangeBlockType
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80088460
+    target_func: 'dBlockMgr_c_getBlockType(int, int)'
+    # Commented out after here
+    
+#  - name: ChangeAnimationBlock
+#    type: patch
+#    addr_pal: 0x80ACE2A0
+#    #      0    1    2    3    4    5    6    7    8
+#    data: '0031 0030 0032 0032 0032 00F0 0032 0032 0032'
+
+#  - name: SpawnF0WhenNyb9IsSet # doing this properly would take too much effort
+#    type: branch_insn
+#    branch_type: bl
+#    src_addr_pal: 0x809BFD90
+#    target_func: 'EndSpawnTile'
+
+#  - name: PatchTileTable
+#    type: patch
+#    addr_pal: 0x802F01E2
+#    data: '00F0 0000'
+

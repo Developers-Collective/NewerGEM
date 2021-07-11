@@ -1,0 +1,53 @@
+
+---
+source_files: [../src/smw_shellThrow.S, ../src/smw_bombThrow.S, ../src/smw_glowThrow.S]
+
+hooks:
+  # daEnShell_c
+  - name: DropShellWhenDownIsPressed
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x8003A768
+    target_func: 'MakeTheShellNotMove'
+
+  - name: ThrowUpWhenUpIsPressed
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8003B2E8
+    target_func: 'ThrowShellInTheAir'
+
+  - name: SleepIfNotMoving
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8003B9C0
+    target_func: 'SleepIfNotMoving'
+
+  - name: FixSOTInstantSleep
+    type: nop_insn
+    area_pal: 0x8003B9B0
+
+  - name: PlayerCollisionFix
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80038A64
+    target_func: 'AddUpthrowCheck'
+
+  - name: BreakBlockFix
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8003B66C
+    target_func: 'BreakBlocksFromBelow'
+
+  # daEnBomhei_c
+  - name: DoBombUpThrow
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x809CBC88
+    target_func: 'ThrowBombUp'
+
+  # daLightBlock_c
+  - name: ThrowThatGlow
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x808566A8
+    target_func: 'GlowThrowUp'

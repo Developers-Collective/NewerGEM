@@ -1,0 +1,71 @@
+hooks:
+- addr_jpn: 2158651588
+  addr_jpn2: 2158651620
+  addr_ntsc: 2158653412
+  addr_ntsc2: 2158653444
+  addr_pal: 2158653380
+  addr_pal2: 2158653412
+  data: '60000000'
+  name: DisableBlockSnakeIce
+  type: patch
+- area_jpn:
+  - 2158650600
+  - 2158650720
+  area_jpn2:
+  - 2158650632
+  - 2158650752
+  area_ntsc:
+  - 2158652424
+  - 2158652544
+  area_ntsc2:
+  - 2158652456
+  - 2158652576
+  area_pal:
+  - 2158652392
+  - 2158652512
+  area_pal2:
+  - 2158652424
+  - 2158652544
+  name: DisableBlockSnakeAnmTexSrt
+  type: nop_insn
+- area_jpn:
+  - 2158650940
+  - 2158650956
+  area_jpn2:
+  - 2158650972
+  - 2158650988
+  area_ntsc:
+  - 2158652764
+  - 2158652780
+  area_ntsc2:
+  - 2158652796
+  - 2158652812
+  area_pal:
+  - 2158652732
+  - 2158652748
+  area_pal2:
+  - 2158652764
+  - 2158652780
+  name: DisableBlockSnakeAnmTexSrt2
+  type: nop_insn
+- area_jpn:
+  - 2158651032
+  - 2158651048
+  area_jpn2:
+  - 2158651064
+  - 2158651080
+  area_ntsc:
+  - 2158652856
+  - 2158652872
+  area_ntsc2:
+  - 2158652888
+  - 2158652904
+  area_pal:
+  - 2158652824
+  - 2158652840
+  area_pal2:
+  - 2158652856
+  - 2158652872
+  name: DisableBlockSnakeAnmTexSrt3
+  type: nop_insn
+source_files: []

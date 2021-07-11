@@ -1,0 +1,350 @@
+hooks:
+- addr_jpn: 2155355788
+  addr_jpn2: 2155355852
+  addr_ntsc: &id001 2155356092
+  addr_ntsc2: 2155356156
+  addr_pal: *id001
+  addr_pal2: 2155356156
+  data: 60000000 60000000 60000000
+  name: RemoveTitleReplay
+  type: patch
+- addr_jpn: 2156902068
+  addr_jpn2: 2156902084
+  addr_ntsc: &id002 2156902772
+  addr_ntsc2: 2156902788
+  addr_pal: *id002
+  addr_pal2: 2156902788
+  data: '60000000'
+  name: RemoveToadHouseMsg1
+  type: patch
+- addr_jpn: 2156902056
+  addr_jpn2: 2156902072
+  addr_ntsc: &id003 2156902760
+  addr_ntsc2: 2156902776
+  addr_pal: *id003
+  addr_pal2: 2156902776
+  data: '60000000'
+  name: RemoveToadHouseMsg2
+  type: patch
+- addr_jpn: 2150675640
+  addr_jpn2: 2150675640
+  addr_ntsc: 2150676120
+  addr_ntsc2: 2150676120
+  addr_pal: &id004 2150676888
+  addr_pal2: *id004
+  data: 00BC0000000000100000001000000000000000000000080000000800000000000000000000000000
+  name: UpdateChompModelInfo
+  type: patch
+- branch_type: b
+  name: Fix38WithJumpCoin
+  src_addr_jpn: 2155788780
+  src_addr_jpn2: 2155788796
+  src_addr_ntsc: &id005 2155789404
+  src_addr_ntsc2: 2155789420
+  src_addr_pal: *id005
+  src_addr_pal2: 2155789420
+  target_func: fix38WithJumpCoin
+  type: branch_insn
+- name: PreventW5Vine
+  src_addr_jpn: 2157476748
+  src_addr_jpn2: 2157476764
+  src_addr_ntsc: &id006 2157478564
+  src_addr_ntsc2: 2157478580
+  src_addr_pal: *id006
+  src_addr_pal2: 2157478580
+  target_func: ReturnTrue
+  type: add_func_pointer
+- addr_jpn: 2156908504
+  addr_jpn2: 2156908520
+  addr_ntsc: &id007 2156909208
+  addr_ntsc2: 2156909224
+  addr_pal: *id007
+  addr_pal2: 2156909224
+  data: '60000000'
+  name: PreventW5VineSound
+  type: patch
+- name: BuildYourOwnModel
+  src_addr_jpn: 2157508532
+  src_addr_jpn2: 2157508548
+  src_addr_ntsc: 2157510348
+  src_addr_ntsc2: 2157510364
+  src_addr_pal: 2157510316
+  src_addr_pal2: 2157510332
+  target_func: dMakeYourOwn::build()
+  type: add_func_pointer
+- addr_jpn: 2150670360
+  addr_jpn2: 2150670360
+  addr_ntsc: 2150670840
+  addr_ntsc2: 2150670840
+  addr_pal: &id008 2150671608
+  addr_pal2: *id008
+  data: 0010 0000  00000000 00000000  FFFFFF80 FFFFFF80 00000080 00000080  0080 0080
+    0000 0000  0000 0000
+  name: UpdateModelSpriteInfo
+  type: patch
+- addr_jpn: 2148422224
+  addr_jpn2: 2148422224
+  addr_ntsc: 2148422352
+  addr_ntsc2: 2148422352
+  addr_pal: &id009 2148422624
+  addr_pal2: *id009
+  data: 4E800020
+  name: FixMemoryLeaks
+  type: patch
+- addr_jpn: 2148629884
+  addr_jpn2: 2148629884
+  addr_ntsc: 2148630380
+  addr_ntsc2: 2148630380
+  addr_pal: &id010 2148630700
+  addr_pal2: *id010
+  data: '38000003'
+  name: 1-1 BG Fix
+  type: patch
+- addr_jpn: &id011 2147813624
+  addr_jpn2: *id011
+  addr_ntsc: *id011
+  addr_ntsc2: *id011
+  addr_pal: *id011
+  addr_pal2: *id011
+  data: A01E0010540007FF41820014A0E300043807FFFEB01F042C4800000C38000001B01F042CA0A30002A89F042C80C6003C7C052214540020367CA60214A8850002
+  name: PipeFix_NodeCalc
+  type: patch
+- addr_jpn: &id012 2147813980
+  addr_jpn2: *id012
+  addr_ntsc: *id012
+  addr_ntsc2: *id012
+  addr_pal: *id012
+  addr_pal2: *id012
+  data: '88030013'
+  name: PipeFix_ExitPatch1
+  type: patch
+- addr_jpn: &id013 2147813984
+  addr_jpn2: *id013
+  addr_ntsc: *id013
+  addr_ntsc2: *id013
+  addr_pal: *id013
+  addr_pal2: *id013
+  data: 2C000000
+  name: PipeFix_ExitPatch2
+  type: patch
+- addr_jpn: &id014 2147813992
+  addr_jpn2: *id014
+  addr_ntsc: *id014
+  addr_ntsc2: *id014
+  addr_pal: *id014
+  addr_pal2: *id014
+  data: 2C000001
+  name: PipeFix_ExitPatch3
+  type: patch
+- addr_jpn: &id015 2147814000
+  addr_jpn2: *id015
+  addr_ntsc: *id015
+  addr_ntsc2: *id015
+  addr_pal: *id015
+  addr_pal2: *id015
+  data: 2C000002
+  name: PipeFix_ExitPatch4
+  type: patch
+- addr_jpn: &id016 2147814008
+  addr_jpn2: *id016
+  addr_ntsc: *id016
+  addr_ntsc2: *id016
+  addr_pal: *id016
+  addr_pal2: *id016
+  data: 2C000003
+  name: PipeFix_ExitPatch5
+  type: patch
+- addr_jpn: &id017 2147814024
+  addr_jpn2: *id017
+  addr_ntsc: *id017
+  addr_ntsc2: *id017
+  addr_pal: *id017
+  addr_pal2: *id017
+  data: 389F065C
+  name: PipeFix_ExitPatch6
+  type: patch
+- addr_jpn: 2155746400
+  addr_jpn2: 2155746416
+  addr_ntsc: &id018 2155747024
+  addr_ntsc2: 2155747040
+  addr_pal: *id018
+  addr_pal2: 2155747040
+  data: 88D2038F
+  name: TileGodLayerFix
+  type: patch
+- addr_jpn: &id019 2147612988
+  addr_jpn2: *id019
+  addr_ntsc: *id019
+  addr_ntsc2: *id019
+  addr_pal: *id019
+  addr_pal2: *id019
+  data: '48000014'
+  name: EN_BIGPILEFix
+  type: patch
+- name: StarsDontKillSpikesUD
+  src_addr_jpn: 2159013336
+  src_addr_jpn2: 2159013368
+  src_addr_ntsc: 2159015160
+  src_addr_ntsc2: 2159015192
+  src_addr_pal: 2159015128
+  src_addr_pal2: 2159015160
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesD
+  src_addr_jpn: 2159014020
+  src_addr_jpn2: 2159014052
+  src_addr_ntsc: 2159015844
+  src_addr_ntsc2: 2159015876
+  src_addr_pal: 2159015812
+  src_addr_pal2: 2159015844
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesU
+  src_addr_jpn: 2159014704
+  src_addr_jpn2: 2159014736
+  src_addr_ntsc: 2159016528
+  src_addr_ntsc2: 2159016560
+  src_addr_pal: 2159016496
+  src_addr_pal2: 2159016528
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesLR
+  src_addr_jpn: 2159015388
+  src_addr_jpn2: 2159015420
+  src_addr_ntsc: 2159017212
+  src_addr_ntsc2: 2159017244
+  src_addr_pal: 2159017180
+  src_addr_pal2: 2159017212
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesR
+  src_addr_jpn: 2159016072
+  src_addr_jpn2: 2159016104
+  src_addr_ntsc: 2159017896
+  src_addr_ntsc2: 2159017928
+  src_addr_pal: 2159017864
+  src_addr_pal2: 2159017896
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: StarsDontKillSpikesL
+  src_addr_jpn: 2159016756
+  src_addr_jpn2: 2159016788
+  src_addr_ntsc: 2159018580
+  src_addr_ntsc2: 2159018612
+  src_addr_pal: 2159018548
+  src_addr_pal2: 2159018580
+  target_func: ReturnNone
+  type: add_func_pointer
+- addr_jpn: 2157304260
+  addr_jpn2: 2157304276
+  addr_ntsc: &id020 2157306076
+  addr_ntsc2: 2157306092
+  addr_pal: *id020
+  addr_pal2: 2157306092
+  data: 576D5F6D725F7761746572776176655F696E00
+  name: WaterEffectsWm_ob_sandpillar02
+  type: patch
+- addr_jpn: 2157304280
+  addr_jpn2: 2157304296
+  addr_ntsc: &id021 2157306096
+  addr_ntsc2: 2157306112
+  addr_pal: *id021
+  addr_pal2: 2157306112
+  data: 576D5F6D725F7761746572776176655F6F757400
+  name: WaterEffectsWm_ob_sandpillar01
+  type: patch
+- addr_jpn: 2157303580
+  addr_jpn2: 2157303596
+  addr_ntsc: &id022 2157305396
+  addr_ntsc2: 2157305412
+  addr_pal: *id022
+  addr_pal2: 2157305412
+  data: '00000000'
+  name: WaterEffectsWm_ob_spillarsign01
+  type: patch
+- addr_jpn: 2157303600
+  addr_jpn2: 2157303616
+  addr_ntsc: &id023 2157305416
+  addr_ntsc2: 2157305432
+  addr_pal: *id023
+  addr_pal2: 2157305432
+  data: '00000000'
+  name: WaterEffectsWm_ob_spillarsign02
+  type: patch
+- addr_jpn: 2157303544
+  addr_jpn2: 2157303560
+  addr_ntsc: &id024 2157305360
+  addr_ntsc2: 2157305376
+  addr_pal: *id024
+  addr_pal2: 2157305376
+  data: 576D5F6D725F77666C6F617473706C61736800
+  name: WaterEffectsWm_en_sphitsmoke
+  type: patch
+- addr_jpn: 2155884252
+  addr_jpn2: 2155884268
+  addr_ntsc: &id025 2155884876
+  addr_ntsc2: 2155884892
+  addr_pal: *id025
+  addr_pal2: 2155884892
+  data: '60000000'
+  name: PreventSandPillarSoundA
+  type: patch
+- addr_jpn: 2155884764
+  addr_jpn2: 2155884780
+  addr_ntsc: &id026 2155885388
+  addr_ntsc2: 2155885404
+  addr_pal: *id026
+  addr_pal2: 2155885404
+  data: '60000000'
+  name: PreventSandPillarSoundB
+  type: patch
+- name: UrchinDoNotDieFireIce
+  src_addr_jpn: 2159069240
+  src_addr_jpn2: 2159069272
+  src_addr_ntsc: 2159071064
+  src_addr_ntsc2: 2159071096
+  src_addr_pal: 2159071032
+  src_addr_pal2: 2159071064
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: UrchinDoNotDieFireIceB
+  src_addr_jpn: 2159069244
+  src_addr_jpn2: 2159069276
+  src_addr_ntsc: 2159071068
+  src_addr_ntsc2: 2159071100
+  src_addr_pal: 2159071036
+  src_addr_pal2: 2159071068
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: UrchinDoNotDieStar
+  src_addr_jpn: 2159069240
+  src_addr_jpn2: 2159069272
+  src_addr_ntsc: 2159071064
+  src_addr_ntsc2: 2159071096
+  src_addr_pal: 2159071032
+  src_addr_pal2: 2159071064
+  target_func: ReturnNone
+  type: add_func_pointer
+- addr_jpn: 2158725564
+  addr_jpn2: 2158725596
+  addr_ntsc: 2158727388
+  addr_ntsc2: 2158727420
+  addr_pal: 2158727356
+  addr_pal2: 2158727388
+  data: '60000000'
+  name: UrchinDoNotTurn
+  type: patch
+- addr_jpn: 2158728416
+  addr_jpn2: 2158728448
+  addr_ntsc: 2158730240
+  addr_ntsc2: 2158730272
+  addr_pal: 2158730208
+  addr_pal2: 2158730240
+  data: 4E800020
+  name: UrchinDoNotTurnB
+  type: patch
+source_files:
+- ../src/summermodel.cpp
+- ../src/fix38.S
+- ../src/nullsub.S
+- ../src/soundPlayer.S

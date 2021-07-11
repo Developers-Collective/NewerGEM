@@ -1,0 +1,21 @@
+hooks:
+- name: ThwompaDompBuild
+  src_addr_jpn: 2158933664
+  src_addr_jpn2: 2158933696
+  src_addr_ntsc: 2158935488
+  src_addr_ntsc2: 2158935520
+  src_addr_pal: 2158935456
+  src_addr_pal2: 2158935488
+  target_func: daEnMegaDosun_c::build()
+  type: add_func_pointer
+- addr_jpn: 2150682836
+  addr_jpn2: 2150682836
+  addr_ntsc: 2150683316
+  addr_ntsc2: 2150683316
+  addr_pal: &id001 2150684084
+  addr_pal2: *id001
+  data: 0002 0000
+  name: UpdateThwompBossSpriteInfo
+  type: patch
+source_files:
+- ../src/bossThwompaDomp.cpp

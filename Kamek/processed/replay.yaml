@@ -1,0 +1,63 @@
+hooks:
+- branch_type: b
+  name: ReplayHookStart
+  src_addr_jpn: 2157069344
+  src_addr_jpn2: 2157069360
+  src_addr_ntsc: &id001 2157070048
+  src_addr_ntsc2: 2157070064
+  src_addr_pal: *id001
+  src_addr_pal2: 2157070064
+  target_func: replayStart
+  type: branch_insn
+- branch_type: bl
+  name: ReplayHookEnd
+  src_addr_jpn: 2148540584
+  src_addr_jpn2: 2148540584
+  src_addr_ntsc: 2148540712
+  src_addr_ntsc2: 2148540712
+  src_addr_pal: &id002 2148540984
+  src_addr_pal2: *id002
+  target_func: replayEnd
+  type: branch_insn
+- branch_type: b
+  name: GetAndSaveRandomSeed
+  src_addr_jpn: 2157049456
+  src_addr_jpn2: 2157049472
+  src_addr_ntsc: &id003 2157050160
+  src_addr_ntsc2: 2157050176
+  src_addr_pal: *id003
+  src_addr_pal2: 2157050176
+  target_func: getAndSaveRandomSeed
+  type: branch_insn
+- branch_type: bl
+  name: ReplayInitPatch1
+  src_addr_jpn: 2157051492
+  src_addr_jpn2: 2157051508
+  src_addr_ntsc: &id004 2157052196
+  src_addr_ntsc2: 2157052212
+  src_addr_pal: *id004
+  src_addr_pal2: 2157052212
+  target_func: ChooseReplayStateIfNeeded
+  type: branch_insn
+- branch_type: bl
+  name: ReplayInitPatch2
+  src_addr_jpn: 2157051564
+  src_addr_jpn2: 2157051580
+  src_addr_ntsc: &id005 2157052268
+  src_addr_ntsc2: 2157052284
+  src_addr_pal: *id005
+  src_addr_pal2: 2157052284
+  target_func: ChooseReplayStateIfNeeded
+  type: branch_insn
+- branch_type: b
+  name: ReplayPrepareSkip
+  src_addr_jpn: 2157048872
+  src_addr_jpn2: 2157048888
+  src_addr_ntsc: &id006 2157049576
+  src_addr_ntsc2: 2157049592
+  src_addr_pal: *id006
+  src_addr_pal2: 2157049592
+  target_func: SkipReplayPrepareIfNeeded
+  type: branch_insn
+source_files:
+- ../src/replay.S

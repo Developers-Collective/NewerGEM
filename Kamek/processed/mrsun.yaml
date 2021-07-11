@@ -1,0 +1,21 @@
+hooks:
+- name: BuildMrSun
+  src_addr_jpn: 2159073440
+  src_addr_jpn2: 2159073472
+  src_addr_ntsc: 2159075264
+  src_addr_ntsc2: 2159075296
+  src_addr_pal: 2159075232
+  src_addr_pal2: 2159075264
+  target_func: daMrSun_c::build()
+  type: add_func_pointer
+- name: MrSunSpriteFileInfo
+  src_addr_jpn: 2150738620
+  src_addr_jpn2: 2150738620
+  src_addr_ntsc: 2150739100
+  src_addr_ntsc2: 2150739100
+  src_addr_pal: &id001 2150739892
+  src_addr_pal2: *id001
+  target_func: MSarcNameList
+  type: add_func_pointer
+source_files:
+- ../src/mrsun.cpp

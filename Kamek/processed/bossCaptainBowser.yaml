@@ -1,0 +1,246 @@
+hooks:
+- name: BossCaptainBoswerBuild
+  src_addr_jpn: 2157269600
+  src_addr_jpn2: 2157269616
+  src_addr_ntsc: &id001 2157271416
+  src_addr_ntsc2: 2157271432
+  src_addr_pal: *id001
+  src_addr_pal2: 2157271432
+  target_func: daCaptainBowser::build()
+  type: add_func_pointer
+- addr_jpn: 2150678444
+  addr_jpn2: 2150678444
+  addr_ntsc: 2150678924
+  addr_ntsc2: 2150678924
+  addr_pal: &id002 2150679692
+  addr_pal2: *id002
+  data: 00000010 00000010  00000000 00000000 00000200 00000200  0000 0000 0200 0200
+    0002 0000
+  name: UpdateaptainBoswerSpriteInfo
+  type: patch
+- name: CaptainBowserSpriteFileInfo
+  src_addr_jpn: 2150738344
+  src_addr_jpn2: 2150738344
+  src_addr_ntsc: 2150738824
+  src_addr_ntsc2: 2150738824
+  src_addr_pal: &id003 2150739616
+  src_addr_pal2: *id003
+  target_func: CBarcNameList
+  type: add_func_pointer
+- addr_jpn: 2155948564
+  addr_jpn2: 2155948580
+  addr_ntsc: &id004 2155949188
+  addr_ntsc2: 2155949204
+  addr_pal: *id004
+  addr_pal2: 2155949204
+  data: '38600000'
+  name: NeverLetCarDismountPlayerIfItTouchesTheGround
+  type: patch
+- name: KoopaThrowBuild
+  src_addr_jpn: 2157449800
+  src_addr_jpn2: 2157449816
+  src_addr_ntsc: &id005 2157451616
+  src_addr_ntsc2: 2157451632
+  src_addr_pal: *id005
+  src_addr_pal2: 2157451632
+  target_func: daKoopaThrow::build()
+  type: add_func_pointer
+- addr_jpn: 2150670320
+  addr_jpn2: 2150670320
+  addr_ntsc: 2150670800
+  addr_ntsc2: 2150670800
+  addr_pal: &id006 2150671568
+  addr_pal2: *id006
+  data: 029F 0000  00000010 00000010  00000000 00000000 00000020 00000020  0040 0040
+    0000 0000  0000 0000
+  name: UpdateKoopaThrowSpriteInfo
+  type: patch
+- name: KoopaThrowSpriteFileInfo
+  src_addr_jpn: 2150737532
+  src_addr_jpn2: 2150737532
+  src_addr_ntsc: 2150738012
+  src_addr_ntsc2: 2150738012
+  src_addr_pal: &id007 2150738804
+  src_addr_pal2: *id007
+  target_func: KPTarcNameList
+  type: add_func_pointer
+- name: KFlameThrowerBuild
+  src_addr_jpn: 2157450020
+  src_addr_jpn2: 2157450036
+  src_addr_ntsc: &id008 2157451836
+  src_addr_ntsc2: 2157451852
+  src_addr_pal: *id008
+  src_addr_pal2: 2157451852
+  target_func: daKoopaBreath::build()
+  type: add_func_pointer
+- addr_jpn: 2150670480
+  addr_jpn2: 2150670480
+  addr_ntsc: 2150670960
+  addr_ntsc2: 2150670960
+  addr_pal: &id009 2150671728
+  addr_pal2: *id009
+  data: 0271 0000  00000010 00000010  00000000 00000000 00000020 00000020  0040 0040
+    0000 0000  0000 0000
+  name: UpdateKoopaThrowSpriteInfo
+  type: patch
+- addr_jpn: 2155939792
+  addr_jpn2: 2155939808
+  addr_ntsc: &id010 2155940416
+  addr_ntsc2: 2155940432
+  addr_pal: *id010
+  addr_pal2: 2155940432
+  data: '60000000'
+  name: ClownCarFloor
+  type: patch
+- addr_jpn: 2157148064
+  addr_jpn2: 2157148080
+  addr_ntsc: &id011 2157148768
+  addr_ntsc2: 2157148784
+  addr_pal: *id011
+  addr_pal2: 2157148784
+  data: 471C4000
+  name: ClownCarWalls
+  type: patch
+- addr_jpn: 2155935400
+  addr_jpn2: 2155935416
+  addr_ntsc: &id012 2155936024
+  addr_ntsc2: 2155936040
+  addr_pal: *id012
+  addr_pal2: 2155936040
+  data: 386017D0
+  name: ClownCarAllocation
+  type: patch
+- addr_jpn: 2150670440
+  addr_jpn2: 2150670440
+  addr_ntsc: 2150670920
+  addr_ntsc2: 2150670920
+  addr_pal: &id013 2150671688
+  addr_pal2: *id013
+  data: 012B 0000
+  name: UpdateClownCarSpriteInfo
+  type: patch
+- name: ClownCarSpriteFileInfo
+  src_addr_jpn: 2150737544
+  src_addr_jpn2: 2150737544
+  src_addr_ntsc: 2150738024
+  src_addr_ntsc2: 2150738024
+  src_addr_pal: &id014 2150738816
+  src_addr_pal2: *id014
+  target_func: PCCarcNameList
+  type: add_func_pointer
+- branch_type: bl
+  name: ClownCarCtor
+  src_addr_jpn: 2155935420
+  src_addr_jpn2: 2155935436
+  src_addr_ntsc: &id015 2155936044
+  src_addr_ntsc2: 2155936060
+  src_addr_pal: *id015
+  src_addr_pal2: 2155936060
+  target_func: newClownCtor(dEn_c*)
+  type: branch_insn
+- name: ClownCarDtor
+  src_addr_jpn: 2157312024
+  src_addr_jpn2: 2157312040
+  src_addr_ntsc: &id016 2157313840
+  src_addr_ntsc2: 2157313856
+  src_addr_pal: *id016
+  src_addr_pal2: 2157313856
+  target_func: newClownDtor(dEn_c*, unsigned int)
+  type: add_func_pointer
+- name: ClownCarMoveExecute
+  src_addr_jpn: 2157312620
+  src_addr_jpn2: 2157312636
+  src_addr_ntsc: &id017 2157314436
+  src_addr_ntsc2: 2157314452
+  src_addr_pal: *id017
+  src_addr_pal2: 2157314452
+  target_func: CConExecuteMove(dEn_c*)
+  type: add_func_pointer
+- name: ClownCarAfterCreate
+  src_addr_jpn: 2157311968
+  src_addr_jpn2: 2157311984
+  src_addr_ntsc: &id018 2157313784
+  src_addr_ntsc2: 2157313800
+  src_addr_pal: *id018
+  src_addr_pal2: 2157313800
+  target_func: CCafterCreate(dEn_c*, unsigned int)
+  type: add_func_pointer
+- name: ClownCarOnExecute
+  src_addr_jpn: 2157311984
+  src_addr_jpn2: 2157312000
+  src_addr_ntsc: &id019 2157313800
+  src_addr_ntsc2: 2157313816
+  src_addr_pal: *id019
+  src_addr_pal2: 2157313816
+  target_func: CConExecute(dEn_c*)
+  type: add_func_pointer
+- name: ClownCarOnDraw
+  src_addr_jpn: 2157311996
+  src_addr_jpn2: 2157312012
+  src_addr_ntsc: &id020 2157313812
+  src_addr_ntsc2: 2157313828
+  src_addr_pal: *id020
+  src_addr_pal2: 2157313828
+  target_func: CConDraw(dEn_c*)
+  type: add_func_pointer
+- branch_type: b
+  name: ClownCarDetectAdjacents
+  src_addr_jpn: 2155945616
+  src_addr_jpn2: 2155945632
+  src_addr_ntsc: &id021 2155946240
+  src_addr_ntsc2: 2155946256
+  src_addr_pal: *id021
+  src_addr_pal2: 2155946256
+  target_func: ClownCarDetectAdjacents
+  type: branch_insn
+- name: ClownCarPlayAccelSound
+  src_addr_jpn: 2157312896
+  src_addr_jpn2: 2157312912
+  src_addr_ntsc: &id022 2157314712
+  src_addr_ntsc2: 2157314728
+  src_addr_pal: *id022
+  src_addr_pal2: 2157314728
+  target_func: JrClownForPlayer_playAccelSound
+  type: add_func_pointer
+- name: ClownShotBuild
+  src_addr_jpn: 2157478428
+  src_addr_jpn2: 2157478444
+  src_addr_ntsc: &id023 2157480244
+  src_addr_ntsc2: 2157480260
+  src_addr_pal: *id023
+  src_addr_pal2: 2157480260
+  target_func: daClownShot::build()
+  type: add_func_pointer
+- name: ClownShotKillAmp
+  src_addr_jpn: 2158862236
+  src_addr_jpn2: 2158862268
+  src_addr_ntsc: 2158864060
+  src_addr_ntsc2: 2158864092
+  src_addr_pal: 2158864028
+  src_addr_pal2: 2158864060
+  target_func: Amp_NewPreSpriteCollision
+  type: add_func_pointer
+- name: ClownShotKillLineAmp
+  src_addr_jpn: 2158992892
+  src_addr_jpn2: 2158992924
+  src_addr_ntsc: 2158994716
+  src_addr_ntsc2: 2158994748
+  src_addr_pal: 2158994684
+  src_addr_pal2: 2158994716
+  target_func: Amp_NewPreSpriteCollision
+  type: add_func_pointer
+- name: ClownShotKillKazanRock
+  src_addr_jpn: 2157149416
+  src_addr_jpn2: 2157149432
+  src_addr_ntsc: &id024 2157150120
+  src_addr_ntsc2: 2157150136
+  src_addr_pal: *id024
+  src_addr_pal2: 2157150136
+  target_func: KazanRock_CollisionCallback
+  type: add_func_pointer
+source_files:
+- ../src/bossPlayerClown.cpp
+- ../src/bossPlayerClown.S
+- ../src/bossCaptainBowser.cpp
+- ../src/bossKoopaThrow.cpp
+- ../src/bossFlameThrower.cpp

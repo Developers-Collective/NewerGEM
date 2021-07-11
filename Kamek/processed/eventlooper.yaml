@@ -1,0 +1,12 @@
+hooks:
+- name: BuildEventLooper
+  src_addr_jpn: 2158942840
+  src_addr_jpn2: 2158942872
+  src_addr_ntsc: 2158944664
+  src_addr_ntsc2: 2158944696
+  src_addr_pal: 2158944632
+  src_addr_pal2: 2158944664
+  target_func: daEventLooper_c::build()
+  type: add_func_pointer
+source_files:
+- ../src/eventlooper_v2.cpp

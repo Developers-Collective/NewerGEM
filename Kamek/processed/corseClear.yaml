@@ -1,0 +1,13 @@
+hooks:
+- branch_type: bl
+  name: GenericCorseClear
+  src_addr_jpn: &id001 2155321896
+  src_addr_jpn2: 2155321960
+  src_addr_ntsc: *id001
+  src_addr_ntsc2: 2155321960
+  src_addr_pal: *id001
+  src_addr_pal2: 2155321960
+  target_func: GenericCorseClear
+  type: branch_insn
+source_files:
+- ../src/corseClear.S

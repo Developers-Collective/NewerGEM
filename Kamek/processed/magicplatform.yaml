@@ -1,0 +1,22 @@
+hooks:
+- name: BuildMagicPlatform
+  src_addr_jpn: 2159050544
+  src_addr_jpn2: 2159050576
+  src_addr_ntsc: 2159052368
+  src_addr_ntsc2: 2159052400
+  src_addr_pal: 2159052336
+  src_addr_pal2: 2159052368
+  target_func: daEnMagicPlatform_c::build()
+  type: add_func_pointer
+- addr_jpn: 2150676680
+  addr_jpn2: 2150676680
+  addr_ntsc: 2150677160
+  addr_ntsc2: 2150677160
+  addr_pal: &id001 2150677928
+  addr_pal2: *id001
+  data: 00C4 0000  00000000 00000000  00000000 00000000 00000100 00000100  0000 0000
+    0000 0000  0002 0000
+  name: UpdateMagicPlatformSpriteInfo
+  type: patch
+source_files:
+- ../src/magicplatform.cpp

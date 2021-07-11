@@ -1,50 +1,55 @@
-# Newer General Engine Mod (Resources) #
+# Newer General Engine Mod (NewerGEM) Main Branch #
 NewerGEM aims to unify different mods and patches made for Newer Super Mario Bros. Wii.
-In addition to this, NewerGEM also includes tilesets from all major tileset packs, and in the future, backgrounds, model edits, and more.
-To download those additional resources, please visit https://github.com/Zement/NewerGEM.
-The compiled patches that go into the *NewerRes* folder can also be found there (they'll be provided once they are bug-free).
+In addition to this, NewerGEM also includes tilesets from all major tileset packs.
+
+Please note that two different branches are planned for NewerGEM:
+- The main branch with features that work pretty well (some bugs are known). This branch is released.
+- The Power-Up Jam branch, which will have new features, several new power-ups, etc...
 
 ## Features ##
-
-### Patches ###
-- Shell Mod (with new version you can hit sprites, but currently causes bugs)
-- Glow Block Mod (same thing, you can throw it upwards)
-- Yoshi Mod (partially complete)
-- Message Block Mod (trigger via events)
-- Credits Controller Mod (many useful features)
-- Sfx/Gfx Mod (full range of 1004 Gfx can be spawned)
+- More SpriteTex (additional models for sprites; by RSM)
+- Throw some actors in the air (Shells, Bob-omb, Glow Block; by Grop)
+- Yoshi Mod (blue = fly, yellow = stomp, light blue = ice, red = fire, all others = neutral; see ? block; by Grop and RSM)
+- Message Box Mod (trigger via events; by Grop)
+- Credits Controller Mod (show system text, teleport players; by Grop)
+- Sfx/Gfx Mod (full range of 1600 Gfx can be spawned)
 - Music Slots Mod (40 additional music slots)
-- Mod for custom Pa0 Bricks and ?-Blocks that are not on the usual spot (on demand)
+- Goal Pole Mod (disable barrier)
+- Event Block Mod
+- Actor Spawner Mod (by Chickensaver): https://github.com/Bahlph/actor-spawner
+- Event Looper Fix (by Grop and RSM)
+- Restart Feature (Quick level restart; by RSM, idea by Mullkaw)*
+- More Sprite IDs Mod*
+- Mod for custom Pa0 Bricks and ?-Blocks that are not on the usual spot
 - Better block_anime Animation (more frames for Brick Block)
-### Resources ###
+*Ready to be included for next version
+
+## Resource ##
 Tileset packs:
-- Tileset Pack by B1_Gaming
+- Tileset Pack by B1_Gaming (NSMBU) V1.03
+- Tileset Pack by B1_Gaming (NSMBW) V1.03
 - Tilesets by CLF78
 - Tilesets (NSMBU) by Titovision, Danster, and God4Live
 
+## Installation ##
 
-## Mods explained in more detail: ##
-1) Shell Mod SMW Style:
-Shells can be thrown up while grabbed and UP is pressed. Koopa/Buzzy Beetle/Spiny shells are supported. Brand new: Bob-ombs and Glow Blocks.
-Grabbing the shell again after throwing it was beautifully implemented by Grop. Also, the forward-movement of the shell allows to throw and catch it at any (Mario) speed, even max speed. At slower speeds, the throw arc is reduced accordingly.
+### Reggie ###
+Copy the game patch "NewerGEM" to your Reggie\reggiedata\patches directory.
+All NewerGEM features and included assets should show up when loading the game patch.
 
-2) Yoshi Mod:
-Green Shell = Shoots shell
-Red Shell: Shoots triple-fire
-Shell from blue-coated Koopas = Shoots triple-ice
-^^-- this works so far // not implemented --vv
-Yellow Shell: Can stomp enemies in a small radius where Yoahi lands
-Blue Shell: Can fly (would need to be time-gated)
+### riivolution ###
+- Copy the game root directory (\riivolution\NewerGEM) to the root of your SD. Compiled NewerRes and all assets are included.
+- Also, make sure to copy the folder with the .xml file to your SD as well (\riivolution\riivolution\NewerGEM.xml).
 
-If down is pressed: Can place shell on the ground (only green/yellow/blue). Does not work yet.
+To create an ISO, the usual method can be used with Newer_Mod_ISO_Builder.
 
-3) Msg Box Mod. Trigger message via events. Works.
+### Resources ###
+In this folder you can find animation data, randomization data, readme's, and other files that belong to the tileset packs.
+The actual resources (tilesets) are already included in the game patch.
 
-4) Credits Editor Mod and Newer Credits Editor Mod. Allows to have one StaffRoll file per level. In combination with the new functions (Wait Forever; Listen for Event and Switch to Scene; Switch Scene and Release Camera) it's possible, to quickly move the player to any other position in the level, show a custom-made image while transitioning (or leave blank), and release the camera at the destination. Or a combination of those features.
-It also allows, to show event-triggered text anywhere on screen.
-All of this works. But many aspects still untested.
-
-5) Brick Block Mod: More frames! :slight_smile:
+### Kamek (Clang) ###
+All tools should be available to build NewerGEM yourself.
+Please follow the steps on the Newer Kamek repository.
 
 
 ## Credits ##
@@ -54,4 +59,9 @@ All of this works. But many aspects still untested.
 - Danster64 - Tileset Pack
 - God4Live - Tileset Pack
 - Grop - Reverse Engineering, Coding
+- RedStoneMatt, RSM - Reverse Engineering, Coding
 - Titovision - Tileset Pack
+
+- Newer Team
+
+- Nintendo

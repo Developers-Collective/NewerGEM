@@ -1,0 +1,13 @@
+hooks:
+- branch_type: b
+  name: DrawAPhysics
+  src_addr_jpn: 2156071272
+  src_addr_jpn2: 2156071288
+  src_addr_ntsc: &id001 2156071896
+  src_addr_ntsc2: 2156071912
+  src_addr_pal: *id001
+  src_addr_pal2: 2156071912
+  target_func: APDebugDraw()
+  type: branch_insn
+source_files:
+- ../src/apDebug.cpp

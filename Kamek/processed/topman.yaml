@@ -1,0 +1,21 @@
+hooks:
+- name: TopmanBuild
+  src_addr_jpn: 2157430960
+  src_addr_jpn2: 2157430976
+  src_addr_ntsc: &id001 2157432776
+  src_addr_ntsc2: 2157432792
+  src_addr_pal: *id001
+  src_addr_pal2: 2157432792
+  target_func: daTopman::build()
+  type: add_func_pointer
+- name: TopmanSpriteFileInfo
+  src_addr_jpn: 2150738332
+  src_addr_jpn2: 2150738332
+  src_addr_ntsc: 2150738812
+  src_addr_ntsc2: 2150738812
+  src_addr_pal: &id002 2150739604
+  src_addr_pal2: *id002
+  target_func: TMarcNameList
+  type: add_func_pointer
+source_files:
+- ../src/topman.cpp

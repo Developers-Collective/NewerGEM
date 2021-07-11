@@ -1,0 +1,12 @@
+hooks:
+- addr_jpn: 2150679444
+  addr_jpn2: 2150679444
+  addr_ntsc: 2150679924
+  addr_ntsc2: 2150679924
+  addr_pal: &id001 2150680692
+  addr_pal2: *id001
+  data: 00000008 FFFFFFF0 00000000 00000008 00000010 00000010 0000 0000 0000 0000
+    0002 0000
+  name: UpdateEventBlockSpriteInfo
+  type: patch
+source_files: []

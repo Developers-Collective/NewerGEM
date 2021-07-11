@@ -1,0 +1,92 @@
+---
+source_files: [../src/profile.cpp, ../src/profile.S]
+hooks:
+  - name: SpriteList_r30
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80068410
+    target_func: 'SpriteList_r30'
+  - name: SpriteList_r30_nop
+    type: nop_insn
+    area_pal: 0x80068414
+
+  - name: SpriteList_r9
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80068dfc
+    target_func: 'SpriteList_r9'
+  - name: SpriteList_r9_nop
+    type: nop_insn
+    area_pal: 0x80068dfc
+
+  - name: SpriteList_r3
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80068f34
+    target_func: 'SpriteList_r3'
+  - name: SpriteList_r3_nop
+    type: nop_insn
+    area_pal: 0x80068f38
+
+  - name: SpriteList_r7
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x807fc8bc
+    target_func: 'SpriteList_r7'
+  - name: SpriteList_r7_nop
+    type: nop_insn
+    area_pal: 0x807fc8cc
+
+  - name: SpriteList_r29
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8085f67c
+    target_func: 'SpriteList_r29'
+  - name: SpriteList_r29_nop
+    type: nop_insn
+    area_pal: 0x8085f68c
+
+  - name: SpriteList_r30_2
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8085f7f4
+    target_func: 'SpriteList_r30'
+  - name: SpriteList_r30_nop_2
+    type: nop_insn
+    area_pal: 0x8085f804
+
+  - name: SpriteList_r28
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8085fc5c
+    target_func: 'SpriteList_r28'
+  - name: SpriteList_r28_nop
+    type: nop_insn
+    area_pal: 0x8085fc6c
+
+  - name: SpriteList_r30_3
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8085fe04
+    target_func: 'SpriteList_r30'
+  - name: SpriteList_r30_nop_3
+    type: nop_insn
+    area_pal: 0x8085fe14
+
+  - name: SetObjectProfileList
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80768690
+    target_func: 'SetObjectProfileList()'
+
+  - name: SetSpriteFileList
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x8091fd34
+    target_func: 'SetSpriteFileList'
+
+  - name: GetProfileName
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x801018c0
+    target_func: 'GetProfileName(unsigned int)'

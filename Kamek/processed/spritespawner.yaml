@@ -1,0 +1,12 @@
+hooks:
+- name: BuildSpriteSpawner
+  src_addr_jpn: 2158879488
+  src_addr_jpn2: 2158879520
+  src_addr_ntsc: 2158881312
+  src_addr_ntsc2: 2158881344
+  src_addr_pal: 2158881280
+  src_addr_pal2: 2158881312
+  target_func: dSpriteSpawner_c::build()
+  type: add_func_pointer
+source_files:
+- ../src/spritespawner.cpp

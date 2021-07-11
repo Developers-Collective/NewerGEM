@@ -1,0 +1,30 @@
+hooks:
+- name: ShyGuyBuild
+  src_addr_jpn: 2157282672
+  src_addr_jpn2: 2157282688
+  src_addr_ntsc: &id001 2157284488
+  src_addr_ntsc2: 2157284504
+  src_addr_pal: *id001
+  src_addr_pal2: 2157284504
+  target_func: daShyGuy::build()
+  type: add_func_pointer
+- addr_jpn: 2150683972
+  addr_jpn2: 2150683972
+  addr_ntsc: 2150684452
+  addr_ntsc2: 2150684452
+  addr_pal: &id002 2150685220
+  addr_pal2: *id002
+  data: 00000000 FFFFFFC0 00000010 00000040  0040 0040 0000 0000  0000 0000
+  name: UpdateShyGuySpriteInfo
+  type: patch
+- name: ShyGuySpriteFileInfo
+  src_addr_jpn: 2150738896
+  src_addr_jpn2: 2150738896
+  src_addr_ntsc: 2150739376
+  src_addr_ntsc2: 2150739376
+  src_addr_pal: &id003 2150740168
+  src_addr_pal2: *id003
+  target_func: SGarcNameList
+  type: add_func_pointer
+source_files:
+- ../src/shyguy.cpp

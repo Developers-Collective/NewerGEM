@@ -1,0 +1,10 @@
+---
+#Replaces Actor 487 EN_RAIL_POLYGON (Sprite 132)
+
+
+source_files: [../src/test.cpp]
+hooks:
+  - name: daSidestepper_cBuild
+    type: add_func_pointer
+    src_addr_pal: 0x80B04A90
+    target_func: 'daSidestepper_c::build()'

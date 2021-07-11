@@ -1,0 +1,451 @@
+hooks:
+- name: FSDisBrlan1
+  src_addr_jpn: 2157196660
+  src_addr_jpn2: 2157196676
+  src_addr_ntsc: &id001 2157197940
+  src_addr_ntsc2: 2157197956
+  src_addr_pal: *id001
+  src_addr_pal2: 2157197956
+  target_func: FSDummyBrlanName
+  type: add_func_pointer
+- name: FSDisBrlan2
+  src_addr_jpn: 2157196724
+  src_addr_jpn2: 2157196740
+  src_addr_ntsc: &id002 2157198004
+  src_addr_ntsc2: 2157198020
+  src_addr_pal: *id002
+  src_addr_pal2: 2157198020
+  target_func: FSDummyBrlanName
+  type: add_func_pointer
+- name: FSDisBrlan3
+  src_addr_jpn: 2157196728
+  src_addr_jpn2: 2157196744
+  src_addr_ntsc: &id003 2157198008
+  src_addr_ntsc2: 2157198024
+  src_addr_pal: *id003
+  src_addr_pal2: 2157198024
+  target_func: FSDummyBrlanName
+  type: add_func_pointer
+- name: FSDisBrlan4
+  src_addr_jpn: 2157196732
+  src_addr_jpn2: 2157196748
+  src_addr_ntsc: &id004 2157198012
+  src_addr_ntsc2: 2157198028
+  src_addr_pal: *id004
+  src_addr_pal2: 2157198028
+  target_func: FSDummyBrlanName
+  type: add_func_pointer
+- name: FSDisBrlan5
+  src_addr_jpn: 2157196736
+  src_addr_jpn2: 2157196752
+  src_addr_ntsc: &id005 2157198016
+  src_addr_ntsc2: 2157198032
+  src_addr_pal: *id005
+  src_addr_pal2: 2157198032
+  target_func: FSDummyBrlanName
+  type: add_func_pointer
+- name: FSDisBrlan6
+  src_addr_jpn: 2157196740
+  src_addr_jpn2: 2157196756
+  src_addr_ntsc: &id006 2157198020
+  src_addr_ntsc2: 2157198036
+  src_addr_pal: *id006
+  src_addr_pal2: 2157198036
+  target_func: FSDummyBrlanName
+  type: add_func_pointer
+- name: FSDisGroup1a
+  src_addr_jpn: 2157196936
+  src_addr_jpn2: 2157196952
+  src_addr_ntsc: &id007 2157198216
+  src_addr_ntsc2: 2157198232
+  src_addr_pal: *id007
+  src_addr_pal2: 2157198232
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup1b
+  src_addr_jpn: 2157196940
+  src_addr_jpn2: 2157196956
+  src_addr_ntsc: &id008 2157198220
+  src_addr_ntsc2: 2157198236
+  src_addr_pal: *id008
+  src_addr_pal2: 2157198236
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup2a
+  src_addr_jpn: 2157197020
+  src_addr_jpn2: 2157197036
+  src_addr_ntsc: &id009 2157198300
+  src_addr_ntsc2: 2157198316
+  src_addr_pal: *id009
+  src_addr_pal2: 2157198316
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup2b
+  src_addr_jpn: 2157197024
+  src_addr_jpn2: 2157197040
+  src_addr_ntsc: &id010 2157198304
+  src_addr_ntsc2: 2157198320
+  src_addr_pal: *id010
+  src_addr_pal2: 2157198320
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup3a
+  src_addr_jpn: 2157197028
+  src_addr_jpn2: 2157197044
+  src_addr_ntsc: &id011 2157198308
+  src_addr_ntsc2: 2157198324
+  src_addr_pal: *id011
+  src_addr_pal2: 2157198324
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup3b
+  src_addr_jpn: 2157197032
+  src_addr_jpn2: 2157197048
+  src_addr_ntsc: &id012 2157198312
+  src_addr_ntsc2: 2157198328
+  src_addr_pal: *id012
+  src_addr_pal2: 2157198328
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup4a
+  src_addr_jpn: 2157197036
+  src_addr_jpn2: 2157197052
+  src_addr_ntsc: &id013 2157198316
+  src_addr_ntsc2: 2157198332
+  src_addr_pal: *id013
+  src_addr_pal2: 2157198332
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup4b
+  src_addr_jpn: 2157197040
+  src_addr_jpn2: 2157197056
+  src_addr_ntsc: &id014 2157198320
+  src_addr_ntsc2: 2157198336
+  src_addr_pal: *id014
+  src_addr_pal2: 2157198336
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup5a
+  src_addr_jpn: 2157197044
+  src_addr_jpn2: 2157197060
+  src_addr_ntsc: &id015 2157198324
+  src_addr_ntsc2: 2157198340
+  src_addr_pal: *id015
+  src_addr_pal2: 2157198340
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDisGroup5b
+  src_addr_jpn: 2157197048
+  src_addr_jpn2: 2157197064
+  src_addr_ntsc: &id016 2157198328
+  src_addr_ntsc2: 2157198344
+  src_addr_pal: *id016
+  src_addr_pal2: 2157198344
+  target_func: FSDummyGroup
+  type: add_func_pointer
+- name: FSDummyPane1
+  src_addr_jpn: 2157197148
+  src_addr_jpn2: 2157197164
+  src_addr_ntsc: &id017 2157198428
+  src_addr_ntsc2: 2157198444
+  src_addr_pal: *id017
+  src_addr_pal2: 2157198444
+  target_func: FSDummyPane
+  type: add_func_pointer
+- addr_jpn: 2155359752
+  addr_jpn2: 2155359816
+  addr_ntsc: &id018 2155360056
+  addr_ntsc2: 2155360120
+  addr_pal: *id018
+  addr_pal2: 2155360120
+  data: 38E00007
+  name: FSCutOffSomeBmgs
+  type: patch
+- addr_jpn: 2155359772
+  addr_jpn2: 2155359836
+  addr_ntsc: &id019 2155360076
+  addr_ntsc2: 2155360140
+  addr_pal: *id019
+  addr_pal2: 2155360140
+  data: 38C00002
+  name: FSCutOffSomeTexts
+  type: patch
+- area_jpn: 2155359808
+  area_jpn2: 2155359872
+  area_ntsc: &id020 2155360112
+  area_ntsc2: 2155360176
+  area_pal: *id020
+  area_pal2: 2155360176
+  name: FSNoBackBmg
+  type: nop_insn
+- area_jpn: 2155359848
+  area_jpn2: 2155359912
+  area_ntsc: &id021 2155360152
+  area_ntsc2: 2155360216
+  area_pal: *id021
+  area_pal2: 2155360216
+  name: FSNoWindows
+  type: nop_insn
+- area_jpn: 2155361016
+  area_jpn2: 2155361080
+  area_ntsc: &id022 2155361320
+  area_ntsc2: 2155361384
+  area_pal: *id022
+  area_pal2: 2155361384
+  name: FSShowOrHideNBackNop1
+  type: nop_insn
+- area_jpn: 2155361040
+  area_jpn2: 2155361104
+  area_ntsc: &id023 2155361344
+  area_ntsc2: 2155361408
+  area_pal: *id023
+  area_pal2: 2155361408
+  name: FSShowOrHideNBackNop2
+  type: nop_insn
+- area_jpn: 2155361064
+  area_jpn2: 2155361128
+  area_ntsc: &id024 2155361368
+  area_ntsc2: 2155361432
+  area_pal: *id024
+  area_pal2: 2155361432
+  name: FSShowOrHideNBackNop3
+  type: nop_insn
+- area_jpn: 2155361084
+  area_jpn2: 2155361148
+  area_ntsc: &id025 2155361388
+  area_ntsc2: 2155361452
+  area_pal: *id025
+  area_pal2: 2155361452
+  name: FSShowOrHideNBackNop4
+  type: nop_insn
+- addr_jpn: 2155363284
+  addr_jpn2: 2155363348
+  addr_ntsc: &id026 2155363588
+  addr_ntsc2: 2155363652
+  addr_pal: *id026
+  addr_pal2: 2155363652
+  data: 4800001C
+  name: FSDontMoveDown
+  type: patch
+- addr_jpn: 2155363312
+  addr_jpn2: 2155363376
+  addr_ntsc: &id027 2155363616
+  addr_ntsc2: 2155363680
+  addr_pal: *id027
+  addr_pal2: 2155363680
+  data: 548007BD
+  name: FSMoveLeftToUp
+  type: patch
+- addr_jpn: 2155363340
+  addr_jpn2: 2155363404
+  addr_ntsc: &id028 2155363644
+  addr_ntsc2: 2155363708
+  addr_pal: *id028
+  addr_pal2: 2155363708
+  data: 548007FF
+  name: FSMoveRightToDown
+  type: patch
+- addr_jpn: 2155365436
+  addr_jpn2: 2155365500
+  addr_ntsc: &id029 2155365740
+  addr_ntsc2: 2155365804
+  addr_pal: *id029
+  addr_pal2: 2155365804
+  data: 540007BD
+  name: FS2MoveLeftToUp
+  type: patch
+- addr_jpn: 2155365480
+  addr_jpn2: 2155365544
+  addr_ntsc: &id030 2155365784
+  addr_ntsc2: 2155365848
+  addr_pal: *id030
+  addr_pal2: 2155365848
+  data: 540007FF
+  name: FS2MoveRightToDown
+  type: patch
+- addr_jpn: 2155366872
+  addr_jpn2: 2155366936
+  addr_ntsc: &id031 2155367176
+  addr_ntsc2: 2155367240
+  addr_pal: *id031
+  addr_pal2: 2155367240
+  data: 540007BD
+  name: FS3MoveLeftToUp
+  type: patch
+- addr_jpn: 2155366928
+  addr_jpn2: 2155366992
+  addr_ntsc: &id032 2155367232
+  addr_ntsc2: 2155367296
+  addr_pal: *id032
+  addr_pal2: 2155367296
+  data: 540007FF
+  name: FS3MoveRightToDown
+  type: patch
+- name: FSFixWindowName
+  src_addr_jpn: 2157196884
+  src_addr_jpn2: 2157196900
+  src_addr_ntsc: &id033 2157198164
+  src_addr_ntsc2: 2157198180
+  src_addr_pal: *id033
+  src_addr_pal2: 2157198180
+  target_func: A00_window
+  type: add_func_pointer
+- name: FSShowRlan
+  src_addr_jpn: 2157196748
+  src_addr_jpn2: 2157196764
+  src_addr_ntsc: &id034 2157198028
+  src_addr_ntsc2: 2157198044
+  src_addr_pal: *id034
+  src_addr_pal2: 2157198044
+  target_func: ShowEraseCopy
+  type: add_func_pointer
+- name: FSHideRlan
+  src_addr_jpn: 2157196752
+  src_addr_jpn2: 2157196768
+  src_addr_ntsc: &id035 2157198032
+  src_addr_ntsc2: 2157198048
+  src_addr_pal: *id035
+  src_addr_pal2: 2157198048
+  target_func: HideEraseCopy
+  type: add_func_pointer
+- addr_jpn: 2155359668
+  addr_jpn2: 2155359732
+  addr_ntsc: &id036 2155359972
+  addr_ntsc2: 2155360036
+  addr_pal: *id036
+  addr_pal2: 2155360036
+  data: 38A0001F
+  name: FSInitExtraRlans
+  type: patch
+- name: FSCDHolderGrpA
+  src_addr_jpn: 2157197052
+  src_addr_jpn2: 2157197068
+  src_addr_ntsc: &id037 2157198332
+  src_addr_ntsc2: 2157198348
+  src_addr_pal: *id037
+  src_addr_pal2: 2157198348
+  target_func: CDHolderGroup
+  type: add_func_pointer
+- name: FSCDHolderGrpB
+  src_addr_jpn: 2157197056
+  src_addr_jpn2: 2157197072
+  src_addr_ntsc: &id038 2157198336
+  src_addr_ntsc2: 2157198352
+  src_addr_pal: *id038
+  src_addr_pal2: 2157198352
+  target_func: CDHolderGroup
+  type: add_func_pointer
+- addr_jpn: 2157133676
+  addr_jpn2: 2157133692
+  addr_ntsc: &id039 2157134380
+  addr_ntsc2: 2157134396
+  addr_pal: *id039
+  addr_pal2: 2157134396
+  data: 0000001D0000001E
+  name: FSRlanIdx
+  type: patch
+- area_jpn: 2155364592
+  area_jpn2: 2155364656
+  area_ntsc: &id040 2155364896
+  area_ntsc2: 2155364960
+  area_pal: *id040
+  area_pal2: 2155364960
+  name: FSDisMulti1
+  type: nop_insn
+- area_jpn: 2155364608
+  area_jpn2: 2155364672
+  area_ntsc: &id041 2155364912
+  area_ntsc2: 2155364976
+  area_pal: *id041
+  area_pal2: 2155364976
+  name: FSDisMulti2
+  type: nop_insn
+- addr_jpn: 2155361504
+  addr_jpn2: 2155361568
+  addr_ntsc: &id042 2155361808
+  addr_ntsc2: 2155361872
+  addr_pal: *id042
+  addr_pal2: 2155361872
+  data: 3880002A
+  name: FSResetAnim
+  type: patch
+- branch_type: b
+  name: FSShowCDa
+  src_addr_jpn: 2155362016
+  src_addr_jpn2: 2155362080
+  src_addr_ntsc: &id043 2155362320
+  src_addr_ntsc2: 2155362384
+  src_addr_pal: *id043
+  src_addr_pal2: 2155362384
+  target_func: FSShowCD_OpenWait
+  type: branch_insn
+- addr_jpn: 2155362340
+  addr_jpn2: 2155362404
+  addr_ntsc: &id044 2155362644
+  addr_ntsc2: 2155362708
+  addr_pal: *id044
+  addr_pal2: 2155362708
+  data: 3880002A
+  name: FSShowCDOverrideA
+  type: patch
+- addr_jpn: 2155362428
+  addr_jpn2: 2155362492
+  addr_ntsc: &id045 2155362732
+  addr_ntsc2: 2155362796
+  addr_pal: *id045
+  addr_pal2: 2155362796
+  data: 3880002A
+  name: FSShowCDOverrideB
+  type: patch
+- branch_type: b
+  name: FSHideCD
+  src_addr_jpn: 2155364560
+  src_addr_jpn2: 2155364624
+  src_addr_ntsc: &id046 2155364864
+  src_addr_ntsc2: 2155364928
+  src_addr_pal: *id046
+  src_addr_pal2: 2155364928
+  target_func: FSHideCD
+  type: branch_insn
+- branch_type: bl
+  name: DFNiceTitle
+  src_addr_jpn: 2155335444
+  src_addr_jpn2: 2155335508
+  src_addr_ntsc: &id047 2155335748
+  src_addr_ntsc2: 2155335812
+  src_addr_pal: *id047
+  src_addr_pal2: 2155335812
+  target_func: DFNiceTitle
+  type: branch_insn
+- branch_type: bl
+  name: DFNiceWorldName
+  src_addr_jpn: 2155337952
+  src_addr_jpn2: 2155338016
+  src_addr_ntsc: &id048 2155338256
+  src_addr_ntsc2: 2155338320
+  src_addr_pal: *id048
+  src_addr_pal2: 2155338320
+  target_func: DFNiceWorldName
+  type: branch_insn
+- branch_type: b
+  name: DefaultSavefileInfo
+  src_addr_jpn: 2148327312
+  src_addr_jpn2: 2148327312
+  src_addr_ntsc: 2148327440
+  src_addr_ntsc2: 2148327440
+  src_addr_pal: &id049 2148327680
+  src_addr_pal2: *id049
+  target_func: DefaultSavefileInfo
+  type: branch_insn
+- branch_type: b
+  name: FixUpExistingSavefile
+  src_addr_jpn: 2148333456
+  src_addr_jpn2: 2148333464
+  src_addr_ntsc: 2148333584
+  src_addr_ntsc2: 2148333592
+  src_addr_pal: 2148333824
+  src_addr_pal2: 2148333832
+  target_func: FixUpExistingSavefile
+  type: branch_insn
+source_files:
+- ../src/fileselect.S

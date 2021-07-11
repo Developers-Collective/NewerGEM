@@ -1,0 +1,31 @@
+hooks:
+- name: BuildThundercloud
+  src_addr_jpn: 2157450996
+  src_addr_jpn2: 2157451012
+  src_addr_ntsc: &id001 2157452812
+  src_addr_ntsc2: 2157452828
+  src_addr_pal: *id001
+  src_addr_pal2: 2157452828
+  target_func: dThunderCloud::build()
+  type: add_func_pointer
+- name: ThundercloudSpriteFileInfo
+  src_addr_jpn: 2150738164
+  src_addr_jpn2: 2150738164
+  src_addr_ntsc: 2150738644
+  src_addr_ntsc2: 2150738644
+  src_addr_pal: &id002 2150739436
+  src_addr_pal2: *id002
+  target_func: TLCarcNameList
+  type: add_func_pointer
+- addr_jpn: 2150676640
+  addr_jpn2: 2150676640
+  addr_ntsc: 2150677120
+  addr_ntsc2: 2150677120
+  addr_pal: &id003 2150677888
+  addr_pal2: *id003
+  data: 02A6 0000  00000000 00000000  00000000 00000000 00000200 00000200  0030 0030
+    0000 0000  0000 0000
+  name: UpdateThundercloudSpriteInfo
+  type: patch
+source_files:
+- ../src/thundercloud.cpp

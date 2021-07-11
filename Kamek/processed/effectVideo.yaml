@@ -1,0 +1,23 @@
+hooks:
+- name: EffectVideoAdd
+  src_addr_jpn: 2157352800
+  src_addr_jpn2: 2157352816
+  src_addr_ntsc: &id001 2157354616
+  src_addr_ntsc2: 2157354632
+  src_addr_pal: *id001
+  src_addr_pal2: 2157354632
+  target_func: EffectVideo::build()
+  type: add_func_pointer
+- branch_type: b
+  name: BreffLoadPatch
+  src_addr_jpn: 2157051692
+  src_addr_jpn2: 2157051708
+  src_addr_ntsc: &id002 2157052396
+  src_addr_ntsc2: 2157052412
+  src_addr_pal: *id002
+  src_addr_pal2: 2157052412
+  target_func: BreffLoadPatch
+  type: branch_insn
+source_files:
+- ../src/effectvideo.cpp
+- ../src/effectvideo.S

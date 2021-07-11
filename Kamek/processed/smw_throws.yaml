@@ -1,0 +1,83 @@
+hooks:
+- branch_type: b
+  name: DropShellWhenDownIsPressed
+  src_addr_jpn: &id001 2147723112
+  src_addr_jpn2: *id001
+  src_addr_ntsc: *id001
+  src_addr_ntsc2: *id001
+  src_addr_pal: *id001
+  src_addr_pal2: *id001
+  target_func: MakeTheShellNotMove
+  type: branch_insn
+- branch_type: bl
+  name: ThrowUpWhenUpIsPressed
+  src_addr_jpn: &id002 2147726056
+  src_addr_jpn2: *id002
+  src_addr_ntsc: *id002
+  src_addr_ntsc2: *id002
+  src_addr_pal: *id002
+  src_addr_pal2: *id002
+  target_func: ThrowShellInTheAir
+  type: branch_insn
+- branch_type: bl
+  name: SleepIfNotMoving
+  src_addr_jpn: &id003 2147727808
+  src_addr_jpn2: *id003
+  src_addr_ntsc: *id003
+  src_addr_ntsc2: *id003
+  src_addr_pal: *id003
+  src_addr_pal2: *id003
+  target_func: SleepIfNotMoving
+  type: branch_insn
+- area_jpn: &id004 2147727792
+  area_jpn2: *id004
+  area_ntsc: *id004
+  area_ntsc2: *id004
+  area_pal: *id004
+  area_pal2: *id004
+  name: FixSOTInstantSleep
+  type: nop_insn
+- branch_type: bl
+  name: PlayerCollisionFix
+  src_addr_jpn: &id005 2147715684
+  src_addr_jpn2: *id005
+  src_addr_ntsc: *id005
+  src_addr_ntsc2: *id005
+  src_addr_pal: *id005
+  src_addr_pal2: *id005
+  target_func: AddUpthrowCheck
+  type: branch_insn
+- branch_type: bl
+  name: BreakBlockFix
+  src_addr_jpn: &id006 2147726956
+  src_addr_jpn2: *id006
+  src_addr_ntsc: *id006
+  src_addr_ntsc2: *id006
+  src_addr_pal: *id006
+  src_addr_pal2: *id006
+  target_func: BreakBlocksFromBelow
+  type: branch_insn
+- branch_type: bl
+  name: DoBombUpThrow
+  src_addr_jpn: 2157753736
+  src_addr_jpn2: 2157753768
+  src_addr_ntsc: 2157755560
+  src_addr_ntsc2: 2157755592
+  src_addr_pal: 2157755528
+  src_addr_pal2: 2157755560
+  target_func: ThrowBombUp
+  type: branch_insn
+- branch_type: bl
+  name: ThrowThatGlow
+  src_addr_jpn: 2156225592
+  src_addr_jpn2: 2156225608
+  src_addr_ntsc: &id007 2156226216
+  src_addr_ntsc2: 2156226232
+  src_addr_pal: *id007
+  src_addr_pal2: 2156226232
+  target_func: GlowThrowUp
+  type: branch_insn
+source_files:
+- ../src/smw_shellThrow.S
+- ../src/smw_bombThrow.S
+- ../src/smw_glowThrow.S

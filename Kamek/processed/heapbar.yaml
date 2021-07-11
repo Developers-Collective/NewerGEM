@@ -1,0 +1,14 @@
+hooks:
+- branch_type: b
+  name: heapbar_draw
+  src_addr_jpn: &id001 2148207424
+  src_addr_jpn2: *id001
+  src_addr_ntsc: *id001
+  src_addr_ntsc2: *id001
+  src_addr_pal: *id001
+  src_addr_pal2: *id001
+  target_func: doHeapBar
+  type: branch_insn
+source_files:
+- ../src/heapbar.S
+- ../src/heapbar.cpp

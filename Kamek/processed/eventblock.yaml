@@ -1,0 +1,12 @@
+hooks:
+- name: BuildEventBlock
+  src_addr_jpn: 2157381280
+  src_addr_jpn2: 2157381296
+  src_addr_ntsc: &id001 2157383096
+  src_addr_ntsc2: 2157383112
+  src_addr_pal: *id001
+  src_addr_pal2: 2157383112
+  target_func: daEnEventBlock_c::build()
+  type: add_func_pointer
+source_files:
+- ../src/eventblock.cpp

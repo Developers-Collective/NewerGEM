@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Version 2.033-->
+<!-- &lt; = < -->
+<!-- &gt; = > -->
+<!-- $amp; = & -->
+<!-- &quot; = " -->
+<!-- &lt;font color=&quot;COLOR&quot;&gt;TEXT TEXT TEXT.&lt;/font&gt; = Colored Text -->
+<!-- &lt;bgt;TEXT TEXT TEXT.&lt;/b&gt; = Bold Text -->
+<!-- &lt;br&gt; = New Line -->
+<!-- Opinion on each dualbox to determine if it should be dualbox or if it should revert to being a list or checkbox. -->
+<!-- idtypes: Star Set, Path Movement, Rotation, Two Way Line, Water Ball, Mushroom, Line, Bolt, Target Event, Triggering Event, Collection, Location, Physics, Message, Path, Path Movement, Red Coin, Hill, Stretch, Ray, Dragon, Bubble Cannon, Burner, Wiggling, Panel, Colony -->
+<!-- idtypes - Sprites with multiple Target Events or Triggering Events may need a secondary idtype, so that the primary Target/Triggering can be displayed in the sprite's display box. -->
+<!-- idtypes - Sprites with idtypes should have their idtype displayed within their blue box, usually in the lower right corner. (primary) Target Event should usually be in the lower right, and Triggering Event should usually be in the lower left. Secondary values like AND controller's second+ Triggering Event, and IF controller's secondary Location ID should be displayed in the top right corner or otherwise not displayed at all. -->
+<!-- Sample sprite with full settings -->
+<!-- <sprite id="#" name="Sprite Name" asmhacks="True" sizehacks="True" phonebook="Actors/Effects" noyoshi="True" yoshinotes="Talk about how it interacts with Yoshi. Advanced Only." notes="Talk about how to use this sprite in a basic sense." advancednotes="Talk about how to use this sprite in an advanced sense. Advanced Only."> -->
+<!--   <dependency notes="Talk about the dependencies."> -->
+<!--     <required sprite="#" /> -->
+<!--     <suggested sprite="#" /> -->
+<!--   </dependency> -->
+<!--   <checkbox bit="#" title="What it does when checked." comment="Information about it." comment2="Another bit of commentary." advanced="True" advancedcomment="Wordy complicated information about it. Advanced Only." idtype="ID Type etc." requiredbit="#-#, #-#" requiredval="#-#, #-#" /> Checkbox is ALWAYS bit - EXCEPT: #38, IF Controller, when setting 'ignore player/enemy'... -->
+<!--   <dualbox bit="#" title1="What it does when unchecked." title2="What it does when checked." comment="All of that stuff above here is an option." /> -->
+<!--   <value bit="#-# or" nybble="# or" multibit="#-#, #-#" title="What it's for." comment="Etc." /> -->
+<!--   <list bit="#-# or" nybble="#" title="What it's for." comment="Etc."> -->
+<!--     <entry value="#">Name</entry> -->
+<!--   </list> -->
+<!--   <multidualbox bit="#-#" title="What it's for." comment="Etc." /> -->
+<!-- </sprite> -->
+<!-- Sizehacks Check - 63, 98, 113, 156, 357 -->
+<!-- Stopped after Line 7046 / 10755 (#230) -->
+<sprites>
+  <sprite id="46" name="Lava Bubble (Podoboo)" asmhacks="True" sizehacks="True" notes="The Lava Bubble (Podoboo) is a firey enemey that will jump up from the lava to the height it is placed at. It can only jump a maximum of 15 blocks above the lava.">
+    <dependency notes="The Podoboo requires [139] Lava within 15 blocks underneath it in order to appear.">
+      <required sprite="139"/> <!-- Requires Lava -->
+    </dependency>
+    <list nybble="6" title="Color" comment="This determines the color of the Podoboo.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">Black</entry>
+      <entry value="8">White</entry>
+      <entry value="9">Blooper (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Bullet Bill (by StupidMarioBros1Fan)</entry>
+      <entry value="12">Fishbone (by StupidMarioBros1Fan)</entry>
+      <entry value="13">Jellyfish (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Spiky Cheep Cheep (by StupidMarioBros1Fan)</entry>
+    </list>
+    <value nybble="12" title="Delay Between Jumps" comment="This determines the delay between each of the Podoboo's jumps." comment2="Each value is approximately 1 game second. Podoboos first load in the air at the top of their jump, so a Podoboo with a large delay value may not even interact with the player as they run by."/>
+    <checkbox bit="42" title="Unknown Flag 11 (4)" comment="An unknown flag for Nybble 11." advanced="True" advancedcomment="Used in Retail: 08-06 A1"/>
+    <checkbox bit="43" title="Unknown Flag 11 (2)" comment="An unknown flag for Nybble 11." advanced="True" advancedcomment="Used in Retail: 08-06 A1"/>
+  </sprite> <!-- #46: Lava Bubble (Podoboo) -->
+  
+  <sprite id="47" name="Thwomp" asmhacks="True" sizehacks="True" noyoshi="True" notes="A normal sized Thwomp that will try to crush the player when it is nearby or underneath. Thwomps are not capable of destroying tileset objects unless set to Crush Forever.">
+    <dualbox bit="47" title1="Drop and Return" title2="Crush Forever" comment="This determines if the Thwomp will return to its starting position or if it will continue to crush the terrain until dropping out of the level." comment2="If you use Crush Forever, the Thwomp must be able to fall completely through and well beyond the bottom border of the Zone, or the falling sound effect and rumble will not stop."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the style of the Thwomp.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Icy</entry>
+      <entry value="2">Dark Red Thwomp (8forrest)</entry>
+      <entry value="3">Shadow Thwomp (MnSG)</entry>
+    </list>
+    <checkbox bit="48" title="Unknown Flag 12 (1)" comment="An unknown setting for Nybble 12." advanced="True" advancedcomment="Bit 47-48 may be a list, but only value 2 has been defined. Value 3 is confirmed to CRASH the game, so do not activate this with Crush Forever. However, value 1 may provide different effects. Experimenting and testing are required."/>
+  </sprite> <!-- #47: Thwomp -->
+  
+  <sprite id="52" name="Auto-Rotating 4-Platform" asmhacks="True" notes="This platform is similar to the Reznor platforms from Super Mario World. It consists of four 6x1 platforms that rotate around the center point. &lt;font color=&quot;green&quot;&gt;NewerGEM added several new models to the sprite.&lt;/font&gt;">
+    <dualbox bit="32" title1="Counter-Clockwise" title2="Clockwise" comment="This determines which way the platform will rotate."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the model or texture used for the sprite." >
+		  <entry value="0">Yellow and black blocks</entry>
+		  <entry value="1">Beach Bridge</entry>
+		  <entry value="2">Bone Platform</entry>
+		  <entry value="3">Ice blocks</entry>
+		  <entry value="4">Silver Platform</entry>
+		  <entry value="5">Golden Platform</entry>
+	  </list>
+  </sprite> <!-- #52: Auto-Rotating 4-Platform -->
+  
+  <!-- Determine the scope of this event controller with a video showcasing its behavior with a delay of 6 and 10 Red Coins. Create a Zone that the player will stand in and an IF controller that governs the Looper. Stand in it until the coins have come on, and all gone off, at least twice (assuming they turn off). If they do not turn off, exit the location and observe the behavior. If they do turn off, exit the location after half of the coins have come on and observe the behavior. -->
+  <!-- My descriptions here are operating under the assumption that it proceeds to disable each event after having activated it before it proceeds to the next. It also assumes that it must complete the full sequence before deactivating even when the Triggering Event ID is deactivated. -->
+  <sprite id="79" name="Event Controller - Looper (While X, do Y THEN Z+, Repeat)"  notes="Similar to the Multi-Chainer, this controller will activate a sequence of Events ranging from [Target Event ID Start] through [Target Event ID End]. However, it will only activate one event at a time. After activating one event, it will deactivate it and activate the next event. Once it has done this for all events, if the [Triggering Event ID] is still activated, it will return to [Target Event ID Start] and begin again.">
+    <value bit="33-40" title="Triggering Event ID" comment="This event will activate the Event Looper going from the Start ID to the End ID, and back again so long as this event is still active." idtype="Triggering Event"/>
+    <value bit="17-24" title="Target Event ID Start" comment="When the Triggering Event is activated, this Event ID will be activated first. It will then run until it reaches [Target Event ID End]." idtype="Target Event"/>
+    <value bit="25-32" title="Target Event ID End" comment="After enabling and disabling this event, if the Triggering Event is still activated, the Looper will return to [Target Event ID Start] and repeat the loop."/>
+    <value nybble="11-12" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;Delay: &lt;/font&gt;&lt;/b&gt;" comment="This determines the amount of frames the Looper will wait between activating/deactivating each event. &lt;br&gt; &lt;br&gt; The code for this has been improved for NewerGEM. &lt;br&gt;&lt;br&gt;0 = 1 frame&lt;br&gt;1 = 10 frames&lt;br&gt;2 = 20 frames&lt;br&gt;...&lt;br&gt;6 = 60 frames&lt;br&gt;...&lt;br&gt;249 = 2490 frames (42.5 seconds)&lt;br&gt;250 = 60 seconds&lt;br&gt;251 = 90 sec&lt;br&gt;252 = 120 sec&lt;br&gt;253 = 150 sec&lt;br&gt;254 = 180 sec&lt;br&gt;255 = 210 sec"/>
+  </sprite> <!-- #79: Event Looper -->
+  
+  <sprite id="80" name="Fire Bro" sizehacks="True" notes="A standard Brothers enemy that shoots fireballs at the player.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Fire Bro.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Normal (2)</entry>
+      <entry value="2">Custom (by 8forrest)</entry>
+      <entry value="3">Sledge (by StupidMarioBros1Fan)</entry>
+    </list>
+  </sprite> <!-- #80: Fire Bro -->
+  
+  <sprite id="88" name="Actor Spawner" asmhacks="True" phonebook="Actors" notes="Use this to spawn any actor into the game! Anything spawned by the Actor Spawner will need to be respawned each time the player changes Zones.">
+
+    <dependency notes="This Actor Spawner requires a linked &lt;b&gt;[88] Actor Spawner&lt;/b&gt; in Data Bank Mode to store the settings that will be used by the spawned actor.&lt;br&gt;&lt;br&gt;Additionally, the actor that will be spawned must be placed as a sprite somewhere else in the level in order for the game to know to load the required assets. When trying to spawn an actor without an equivalent sprite, place a sprite that can create that actor into the level." />
+
+
+    <!-- Colors taken from the comment button colors. -->
+    <dualbox bit="9" title1="&lt;font color=&quot;#dd4f2e&quot;&gt;NewerSMBW Compatibility Mode&lt;/font&gt;" title2="&lt;font color=&quot;blue&quot;&gt;Better Actor Spawner Mode&lt;/font&gt;" comment="This option exists for compatibility with the original NewerSMBW levels. Choose the second option to access new and improved settings!" />
+
+    <!-- COMPATIBILITY MODE -->
+    <value bit="17-20" title="Triggering Event ID" comment="When this event is activated, the Actor Spawner will create one copy of the actor at the location of the spawner. Keep in mind that some sprites have abnormal placement so expect a lot of testing to make sure that everything works correctly." comment2="The Triggering Event ID is limited to only the first 15 Event IDs." idtype="Triggering Event" requiredbit="9" requiredval="0"/>
+    <checkbox bit="21" title="Automatically Respawn" comment="When the actor spawned by this spawner is deleted or missing, and the event is triggered, another actor with the same settings will be spawened. This also stops the spawned actor from despawning when the event is deactivated." requiredbit="9" requiredval="0"/>
+    <value bit="22-32" title="Actor ID - Number Entry" comment="Please enter the extension that you wish to dial. If your party cannot be reached, please dial a different number. Thank you." comment2="Do not use an Actor ID that does not return a value on the list below." idtype="Actor" requiredbit="9" requiredval="0"/> <!-- ID type is used so that the number can be shown on the sprite display. -->
+    <external type="actors" bit="22-32" title="Actor ID" comment="Use this external window to select your Actor ID."  requiredbit="9" requiredval="0"/>
+    <value bit="33-34" title="Nybble 5" requiredbit="9" requiredval="0" />
+    <value bit="35-36" title="Nybble 6" requiredbit="9" requiredval="0" />
+    <value bit="37-38" title="Nybble 7" requiredbit="9" requiredval="0" />
+    <value bit="39-40" title="Nybble 8" requiredbit="9" requiredval="0" />
+    <value bit="41-42" title="Nybble 9" requiredbit="9" requiredval="0" />
+    <value bit="43-44" title="Nybble 10" requiredbit="9" requiredval="0" />
+    <value bit="45-46" title="Nybble 11" requiredbit="9" requiredval="0" />
+    <value bit="47-48" title="Nybble 12" requiredbit="9" requiredval="0" />
+    <!-- END COMPATIBILIY MODE -->
+
+
+
+    <dualbox bit="57" title1="Spawner Mode" title2="Data Bank Mode" comment="A version of this sprite in Spawner Mode will pull data from another version of this sprite in Data Bank Mode with a matching Search ID. Nybbles 1-12 of the Data Bank will be used by the actor spawned by the Actor Spawner." requiredbit="9" requiredval="1" />
+
+    <value bit="58-64" title="Search ID" comment="Match this ID with a corresponding &lt;b&gt;[88] Actor Spawner&lt;/b&gt;.  The Actor Spawner will pull nybbles 1-12 from the Data Bank for use when spawning an actor." comment2="Works with values 00 through FF." requiredbit="9" requiredval="1" />
+
+    <value bit="1-8" title="Triggering Event ID" comment="When this event is activated, the Actor Spawner will create the specified actor at its location." idtype="Triggering Event" requiredbit="9, 57" requiredval="1, 0" />
+
+    <value bit="17-28" title="Actor ID (Numerical Entry)" comment="Enter the Actor ID of the actor you wish to spawn here. If you don't know the ID, use the selection box below." requiredbit="9, 57" requiredval="1, 0" />
+
+    <external type="actors" bit="17-28" title="Actor ID" comment="Use this to find the Actor ID of any actor." requiredbit="9, 57" requiredval="1, 0" />
+
+    <checkbox bit="32" title="Multi-Spawn Mode" comment="When checked, the Actor Spawner will not keep track of the actors it spawns, meaning the event can be toggled on and off to spawn more actors." requiredbit="9, 57" requiredval="1, 0" />
+
+    <checkbox bit="29" title="Respawn Automatically" comment="When checked, the Actor Spawner will automatically respawn the actor if it is deleted or missing." requiredbit="9, 57, 32" requiredval="1, 0, 0" />
+
+    <checkbox bit="30" title="Despawn Without Event" comment="When checked, the Actor Spawner will despawn the actor it spawned when its event is turned off." requiredbit="9, 57, 32" requiredval="1, 0, 0" />
+
+    <checkbox bit="31" title="Save Despawn Position" comment="When checked, when the Actor Spawner despawns an actor due to its event being turned off it will move to the position the actor was just in. If the event is turned back on, the new actor will be spawned at that position." requiredbit="9, 57, 30, 32" requiredval="1, 0, 1, 0" />
+
+    <list bit="33-36" title="Spawn Delay" comment="When not set to Manual, this option will cause the Actor Spawner to wait the specified number of frames after initially spawning an actor before spawning another one. The event will stay on the whole time." comment2="When set to Manual, this option will cause the Actor Spawner to disable its triggering event after spawning an actor so that it can be manually turned back on." advancedcomment="Using Manual will not work when trying to use two Actor Spawners triggered by the same event, because one will disable the event before the other can execute." requiredbit="9, 57, 32" requiredval="1, 0, 1">
+      <entry value="0">Manual (Infinite Delay)</entry>
+      <entry value="1">1 Frame</entry>
+      <entry value="2">10 Frames</entry>
+      <entry value="3">20 Frames</entry>
+      <entry value="4">30 Frames (0.5 Seconds)</entry>
+      <entry value="5">60 Frames (1 Second)</entry>
+      <entry value="6">90 Frames (1.5 Seconds)</entry>
+      <entry value="7">120 Frames (2 Seconds)</entry>
+      <entry value="8">150 Frames (2.5 Seconds)</entry>
+      <entry value="9">180 Frames (3 Seconds)</entry>
+      <entry value="10">210 Frames (3.5 Seconds)</entry>
+      <entry value="11">240 Frames (4 Seconds)</entry>
+      <entry value="12">270 Frames (4.5 Seconds)</entry>
+      <entry value="13">300 Frames (5 Seconds)</entry>
+      <entry value="14">330 Frames (5.5 Seconds)</entry>
+      <entry value="15">360 Frames (6 Seconds)</entry>
+    </list>
+
+
+
+    <value nybble="1" title="Nybble 1" comment="Edit the value of nybble 1 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="2" title="Nybble 2" comment="Edit the value of nybble 2 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="3" title="Nybble 3" comment="Edit the value of nybble 3 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="4" title="Nybble 4" comment="Edit the value of nybble 4 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+
+    <value nybble="5" title="Nybble 5" comment="Edit the value of nybble 5 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="6" title="Nybble 6" comment="Edit the value of nybble 6 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="7" title="Nybble 7" comment="Edit the value of nybble 7 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="8" title="Nybble 8" comment="Edit the value of nybble 8 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="9" title="Nybble 9" comment="Edit the value of nybble 9 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="10" title="Nybble 10" comment="Edit the value of nybble 10 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="11" title="Nybble 11" comment="Edit the value of nybble 11 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+    <value nybble="12" title="Nybble 12" comment="Edit the value of nybble 12 in the spawned actor. For easier edits, use the Modify Raw Data box." requiredbit="9, 57" requiredval="1, 1" />
+
+  </sprite>
+  
+  <sprite id="94" name="Boomerang Bro" sizehacks="True" notes="A standard Brothers enemy that throws Boomerangs at the player.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Boomerang Bro.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Normal (2)</entry>
+      <entry value="2">Custom (by 8forrest)</entry>
+      <entry value="3">Sledge (by StupidMarioBros1Fan)</entry>
+    </list>
+  </sprite> <!-- #94: Boomerang Bro" -->
+  
+  <sprite id="95" name="Hammer Bro Plus" asmhacks="True" sizehacks="True" notes="A standard Brothers enemy that throws hammers (or other objects!) at the player.">
+    <dependency notes="The Hammer Bro will first calculate where the nearest solid ground is. This is defined as a terrain object with solid block collision. With a platform limit of one, he can jump onto any passthrough terrain or brick blocks above this solid ground at a distance of 4. With a platform limit of two, he can jump between this platform and another one above it. When on the top of this platform limit, he will not try and jump upwards. He can also jump down from passthrough terrain set higher than 8 blocks above the solid ground, though he will not be able to return."/>
+    <dualbox bit="48" title1="Uses 2 Platforms" title2="Uses 1 Platform" comment="This determines the number of Platforms the AI of the Hammer Bro tries to make use of. See Dependency Notes for more information."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Hammer Bro.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Black</entry>
+      <entry value="2">Custom (by 8forrest)</entry>
+      <entry value="3">Cyan (by StupidMarioBros1Fan)</entry>
+    </list>
+    <list nybble="10" title="Thrown Object" comment="This determines which object will be thrown by the Hammer Bro Plus.">
+      <entry value="0">Hammers</entry>
+      <entry value="1">Bob-omb</entry>
+      <entry value="2">Goomba</entry>
+      <entry value="3">Spiny</entry>
+      <entry value="4">Coins/Random Power-up</entry>
+      <entry value="5">Lemmy Ball</entry>
+    </list>
+  </sprite> <!-- #95: Hammer Bro Plus -->
+
+  <sprite id="99" name="Pipe Enemy Generator" asmhacks="True" notes="Use this to spawn waves of either Goombas or Bob-Ombs from a pipe.">
+    <dependency notes="The spawner must be placed directly on the edge of the pipe in order to function. If spawning Left or Right, place it directly on the bottom square. If spawning Up or Down, place it directly on the left square."/>
+    <dualbox bit="44" title1="Spawns Goombas" title2="Spawns Bob-Ombs" comment="This determines which enemy will be spawned from the pipe."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color and style of the Spawned Goombas." requiredbit="44" requiredval="0">
+      <entry value="0">Normal</entry>
+      <entry value="1">Gloomba</entry>
+      <!--<entry value="2">Hyper</entry>-->
+      <entry value="3">Bella</entry>
+      <entry value="4">Red</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Gray</entry>
+      <entry value="7">Santa</entry>
+      <entry value="8">Gray Santa</entry>
+    </list> <!-- Appears when Spawns Goombas is set -->
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Spawned Bob-Ombs.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">White</entry>
+      <entry value="8">Pink</entry>
+      <entry value="9">Bomb Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Bomb Goomba (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Dark (by 8forrest)</entry>
+      <entry value="12">Grey (by Python)</entry>
+      <entry value="13">King (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Mecha Koopa (by Weland1234)</entry>
+    </list> <!-- Appears when Spawns Bob-Ombs is set -->
+    <list nybble="12" title="Exit Direction" commnet="This determines which direction the enemy will spawn from the pipe." comment2="The spawner must be correctly positioned or it will not function. See Dependency Notes for more information.">
+      <entry value="0">Up</entry>
+      <entry value="1">Down</entry>
+      <entry value="2">Left</entry>
+      <entry value="3">Right</entry>
+    </list>
+    <list bit="32" title="Number of Enemies Spawned" comment="This determines how many enemies will be spawned in a row before a delay occurs.">
+      <entry value="1">2 Enemies, then Delay</entry>
+      <entry value="0">3 Enemies, then Delay</entry>
+    </list>
+  </sprite> <!-- #99: Pipe Enemy Generator -->
+  
+  <sprite id="101" name="Bob-Omb" asmhacks="True" sizehacks="True" notes="A standard Bob-Omb enemy. It will spawn walking towards the player and will fall off of ledges. When stepped on or struck with a fireball, it will eventually explode damaging certain types of blocks, terrain, and enemies.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Bob-Omb.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">White</entry>
+      <entry value="8">Pink</entry>
+      <entry value="9">Bomb Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Bomb Goomba (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Dark (by 8forrest)</entry>
+      <entry value="12">Grey (by Python)</entry>
+      <entry value="13">King (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Mecha Koopa (by Weland1234)</entry>
+    </list> <!-- Update [99] Pipe Enemy Generator when new items are added to this list! -->
+    <list nybble="5" title="Load-In Animation" comment="This determines what animation state is used by the Bob-Omb when it is first loaded. Changing this value is not recommended." comment2="Frozen in Ice (Minus Ice): The Bob-Omb is placed at a random angle in a random spot inside a square of 3x3 blocks, the sprite's placement it the middle block. It appears somewhere between Layer 1 and Layer 2, and cannot be interacted with in any way.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Pipe Spawn</entry>
+      <entry value="2">Frozen in Ice (Minus Ice)</entry>
+      <entry value="3">Cannon Spawn</entry>
+    </list>
+    <list bit="47-48" title="Unknown Value 12" advanced="True" advancedcomment="ASM shows Nybble 12 might affect something.">
+      <entry value="0">???</entry>
+      <entry value="1">???</entry>
+      <entry value="2">???</entry>
+      <entry value="3">???</entry>
+    </list>
+  </sprite> <!-- #101: Bob-Omb -->
+  
+  <sprite id="102" name="Broozer" sizehacks="True" notes="A ghost house enemy that behaves similarly to Chargin' Chuck from Super Mario World. He must be stepped on twice in order to be defeated. He will also destroy certain types of blocks and terrain with his flailing attack. Please note that he can only destroy tileset bricks and not sprite bricks.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the broozer's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Charging Chuck (Titovision1)</entry>
+      <entry value="2">Shadow Broozer (Wario358)</entry>
+    </list>
+  </sprite> <!-- #102: Broozer -->
+  
+  <sprite id="113" name="Goal Pole and Fortress" notes="The invisible wall does not extend below the Goal Pole.">
+    <dualbox bit="20" title1="Normal Exit" title2="Secret Exit"/>
+    <checkbox bit="48" title="Snowy Castle"/>
+    <checkbox bit="44" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; No Invisible Wall" notes="This setting deactivates the invisible wall. Players can jump over the Goal Pole and activate it from the other side."/>
+  </sprite> <!-- #113: Goal Pole and Fortress -->
+  
+  <sprite id="134" name="Crowber Crow" sizehacks="True" notes="A purple crow enemy called a Crowber that will fly around in the skies above the player.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the crow's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Green (Weland1234)</entry>
+    </list>
+  </sprite> <!-- #134: Crowber Crow -->
+  
+  <sprite id="152" name="Message Box" notes="A block that the player can hit which will display a custom message. Messages are defined in Message.py.">
+    <dependency notes="The Message Box Controller must be included in each Zone for Message Boxes to function correctly.">
+      <required sprite="107"/>
+    </dependency>
+	<value nybble="3-4" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; Triggering Event ID" comment="Select an Event ID that triggers the message. " idtype="Message"/>
+    <value nybble="9-12" title="Message ID" comment="Messages defined in Message.py. Add 256 to the value shown in the Newer Message Editor program." idtype="Message"/>
+  </sprite> <!-- 152: Message Box -->
+  
+  <sprite id="158" name="Fire Snake" yoshinotes="While Yoshi cannot safely jump on this enemy, if he eats one he will spit out a fireball." notes="A hopping fire enemy that will also affect the lighting in a dark Zone.">
+    <checkbox bit="48" title="Hides and Waits" comment="When enabled, the Fire Snake will be a stationary ball of fire until the player approaches it."/>
+    <checkbox bit="44" title="Unknown Flag 11 (1)" advanced="True" advancedcomment="ASM shows Nybble 11 might affect something."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the fire Snake's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Paper Mario Style (by 8forest)</entry>
+    </list>
+  </sprite> <!-- #158: Fire Snake -->
+  
+  <sprite id="171" name="Mushroom in a Bubble" notes="&lt;font color=&quot;orange&quot;&gt;This sprite is not recommended for use, and it WILL crash the game if used with invalid settings.&lt;/font&gt;" advancednotes="This is capable of spawning both items and players inside of bubbles. Unfortunately it was not designed to be called on for stand-alone functions.">
+    <checkbox bit="40" title="Spawns Mushroom in a Bubble" comment="When enabled, this will spawn a Mushroom floating in a bubble."/>
+    <dualbox bit="43" title1="Floats in from Right" title2="Spawns at Sprite/Player" comment="This determines how the floating bubble will appear. "/>
+    <list bit="47-48" title="Spawns Player in a Bubble" advanced="True" advancedcomment="Unfortunately, this doesn't work as cleanly as it needs to in order to be usable. If the right player doesn't exist when this loads, the game will crash. It could potentially respawn a dead player who has zero lives, or with the multiplayer bubbles deactivated, except that there is no way to only load the players you actually need. Thus, this function is completely and totally unreliable unless requiring all 4 players to play a particular level." requiredbit="40" requiredval="0">
+      <entry value="0">Spawns Mario</entry>
+      <entry value="1">Spawns Luigi</entry>
+      <entry value="2">Spawns ToadA</entry>
+      <entry value="3">Spawns ToadB</entry>
+    </list>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the bubble's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Green (by 8forest)</entry>
+    </list>
+  </sprite> <!-- #171: Mushroom in a Bubble -->
+  
+  <sprite id="175" name="Flying &quot;?&quot; Block" asmhacks="True" noyoshi="True" notes="A '?' Block with wings that flies around until opened, remaining in place afterwards.">
+    <list bit="35-36" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines which color the '?' Block will use.">
+      <entry value="0">Overworld (Yellow)</entry>
+      <entry value="1">Underground (Blue)</entry>
+      <entry value="2">Snow (Gray)</entry>
+      <entry value="3">Lava (Red)</entry>
+    </list>
+    <list nybble="6" title="Color (2)&lt;br&gt;&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM&lt;/font&gt;&lt;/b&gt;" comment="Changes the block's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Dark (by 8forest)</entry>
+    </list>
+    <list bit="43-44" title="Direction" comment="This determines which direction the '?' Block will fly in.">
+      <entry value="0">Right</entry>
+      <entry value="1">Left + Right</entry>
+      <entry value="2">Up + Down</entry>
+    </list>
+    <checkbox bit="40" title="Reverse Direction" comment="When enabled, Direction will be reversed."/>
+    <list nybble="12" title="Contains" comment="This determines what item the '?' Block will contain." advancedcomment="Unlisted values are Empty.">
+      <entry value="0">Empty</entry>
+      <entry value="1">1 Coin</entry>
+      <entry value="3">Fire Flower</entry>
+      <entry value="15">Ice Flower</entry>
+      <entry value="4">Propeller Shroom</entry>
+      <entry value="5">Penguin Suit</entry>
+      <entry value="2">Hammer Suit</entry>
+      <entry value="6">Mini Mushroom</entry>
+      <entry value="7">Star</entry>
+      <entry value="11">1-Up</entry>
+    </list>
+    <checkbox bit="20" title="Unknown Flag 5 (1)" advanced="True" advancedcomment="Used in Retail: 06-05 A2. Possibly distance related."/>
+  </sprite> <!-- #175: Flying "?" Block -->
+  
+  <sprite id="176" name="Roulette Block" notes="A large roulette style block that will award either a Star, a 1-Up, a Mushroom, or a specific power-up item. It should be noted that it makes a moderate amount of noise when it's on screen.">
+    <list bit="47-48" title="Power-up" comment="This determines which power-up the block can provide.">
+      <entry value="0">Fire Flower</entry>
+      <entry value="1">Propeller Shroom</entry>
+      <entry value="2">Ice Flower</entry>
+      <entry value="3">Penguin Suit</entry>
+    </list>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the block's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Dark (by 8forest)</entry>
+      <entry value="2">Grey (by CloudyLuigi)</entry>
+      <entry value="3">White (by John Telstra)</entry>
+    </list>
+  </sprite> <!-- #176: Roulette Block -->
+  
+  <sprite id="191" name="Tile God Event" notes="The Tile God can Create / Change / Destroy tiles within a specified area when an Event is activated.">
+    <dependency notes="The Tile God sprite can be placed no more than one block outside of the Zone it is being activated in for it to function."/>
+    <value bit="9-16" title="Triggering Event ID" comment="When this Event ID is activated, the tiles affected by the Tile God's area will be created or destroyed, depending on the Mode." idtype="Triggering Event"/>
+    <value nybble="11" title="Width" comment="This determines the width of the area that is affected."/>
+    <value nybble="12" title="Height" comment="This determines the height of the area that is affected."/>
+    <dualbox bit="40" title1="Destroys Tiles" title2="Creates Tiles" comment="This determines how the Tile God will act when the Triggering Event is activated." comment2="When creating, the Tile God will place these tiles on top of existing tiles instead of replacing them."/>
+    <dualbox bit="20" title1="Reverse Action when Deactivated" title2="Permanent" comment="This determines how the Tile God will act when the Triggering Event is deactivated" comment2="When set to Reverse, previously created tiles will be destroyed, and locations where tiles were destroyed will be filled by the creation settings of the Tile God."/>
+    <checkbox bit="30" title="Disable Effects" comment="When enabled, the visual effect for Tile Creation/Destruction will be removed."/>
+    <checkbox bit="29" title="Disable Sounds" comment="When enabled, the sound effect for Tile Creation/Destruction will be removed."/>
+    <list bit="31-32" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;Pattern&lt;/font&gt;&lt;/b&gt;" comment="This determines the fill pattern for the Tile God's selected area.&lt;br&gt;&lt;br&gt;&lt;font color=&quot;blue&quot;&gt;Pattern and NoSfx/NoGfx fixed in NewerGEM.&lt;/&gt;" comment2="A checkered pattern and reverse checked pattern overlapping will create the same effect as a regular fill. This is sometimes useful for its visual effect.">
+      <entry value="0">Fill</entry>
+      <entry value="1">Checkers</entry>
+      <entry value="2">Reverse Checkers</entry>
+    </list>
+    <list bit="33-36" title="Tile" comment="This determines what terrain tile will appear at the Tile God's selected area">
+      <entry value="0">Red Block (Pa0 3,7) (Object #57)</entry>
+      <entry value="1">Brick Block (Pa0 3,0) (Object #26)</entry>
+      <entry value="3">Stone Block (Pa0 3,4) (Object #51)</entry>
+      <entry value="4">Wooden Block (Pa0 3,3) (Object #50)</entry>
+      <entry value="6">Pa0 2,13</entry>
+      <entry value="14">Pa1 0,0</entry>
+      <entry value="12">Pa3 4,3</entry>
+    </list>
+  </sprite> <!-- #191: Tile God Event -->
+  
+  <sprite id="207" name="? Block" asmhacks="True" sizehacks="True" notes="Your most basic, most flexible, standard Question Block. When spawning power-ups, it will spawn enough for every player! Such a generous block~">
+    <dependency notes="If pairing the ?-Block for movement or other features, you'll likely need one of the sprites listed in the Dependency List.">
+      <suggested sprite="159"/>
+      <suggested sprite="260"/>
+      <suggested sprite="474"/>
+      <suggested sprite="172"/>
+      <suggested sprite="382"/>
+    </dependency>
+    <list bit="25-28" title="Movement Type" comment="This determines which type of movement the Block will be assigned." comment2="Movement Types 2, and 9+ are unused or otherwise unknown. Movement Type 3 and Type 8 only function with Coins. If you want to experiment with unknown Types, you'll need to modify the Raw Data.">
+      <entry value="0">None / [159] Path Controlled</entry>
+      <entry value="1">[260] Two-Way Line</entry>
+      <entry value="4">[474] Dancing</entry>
+      <entry value="7">[474] Dancing (Reversed)</entry>
+      <entry value="5">[172] Mushroom with Bolt Main</entry>
+      <entry value="6">[382] Mushroom with Bolt Pair</entry>
+    </list>
+    <value bit="17-24" title="Path Movement ID" comment="If pairing the ?-Block with Sprite 159, match the Path Movement ID to enable Path controlled movement." requiredbit="25-28" requiredval="0" idtype="Path Movement"/> <!-- Appears if [Movement Type] = 0 -->
+    <value bit="17-24" title="Two Way Line ID" comment="If pairing the ?-Block with sprite 260, match the Two Way Line ID to enable Two Way synchronized movement." requiredbit="25-28" requiredval="1" idtype="Two Way Line"/> <!-- Appears if [Movement Type] = 1 -->
+    <value bit="17-24" title="Set to Zero" comment="If pairing the ?-Block with sprite 474, no further action is needed to create Dancing syncronized movement." requiredbit="25-28" requiredval="4"/> <!-- Appears if [Movement Type] = 4 -->
+    <value bit="17-24" title="Set to Zero" comment="If pairing the ?-Block with sprite 474, no further action is needed to create Dancing syncronized movement." requiredbit="25-28" requiredval="7"/> <!-- Appears if [Movement Type] = 7 -->
+    <value bit="17-24" title="Mushroom ID" comment="If pairing the ?-Block with sprite 172, match the Mushroom ID to enable Mushroom Bolt controlled movement. It will be paired to the platform with the Bolt." requiredbit="25-28" requiredval="5" idtype="Mushroom"/> <!-- Appears if [Movement Type] = 5 -->
+    <value bit="17-24" title="Mushroom ID" comment="If pairing the ?-Block with sprite 382, match the Mushroom ID to enable Mushroom Bolt controlled movement. It will be paired to the platform without the Bolt." requiredbit="25-28" requiredval="6" idtype="Mushroom"/> <!-- Appears if [Movement Type] = 6 -->
+    <list nybble="12" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;Block Contains: &lt;/font&gt;&lt;/b&gt;" comment="This determines what item the block contains." comment2="This block will release as many items as there are players.">
+      <entry value="0">Empty</entry>
+      <entry value="1">1 Coin</entry>
+      <entry value="10">10-Coin</entry>
+      <entry value="14">Mushroom (if small)</entry>
+      <entry value="3">Fire Flower</entry>
+      <entry value="15">Ice Flower</entry>
+      <entry value="4">Propeller Shroom</entry>
+      <entry value="5">Penguin Suit</entry>
+      <entry value="2">Hammer Suit</entry>
+      <entry value="6">Mini Mushroom</entry>
+      <entry value="7">Star</entry>
+      <entry value="8">Continuous Star</entry>
+      <entry value="9">Yoshi Egg (Types/NewerGEM)</entry>
+      <entry value="11">1-Up</entry>
+      <entry value="12">Vine</entry>
+      <entry value="13">Spring</entry>
+    </list>
+    <list nybble="11" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;Yoshi Color (Types)&lt;/font&gt;&lt;/b&gt;" comment="This determines the color the Yoshi will have that spawns from the egg.
+    &lt;br&gt;Please note that the special behavior requires a shell of the same color in Yoshi's mouth. For example, the blue Yoshi needs to swallow a blue shell in order to fly.
+    &lt;br&gt;Special behaviors &quot;Stomp&quot; and &quot;Fly&quot; are time-gated.
+    &lt;br&gt;Yoshi can now drop the shell to the ground by pressing &quot;Down&quot; and &quot;Spit&quot;." requiredbit="45-48" requiredval="9">
+      <entry value="10">Random Neutral Yoshi</entry>
+      <entry value="0">Light Blue (Ice)</entry>
+      <entry value="5">Red (Fire)</entry>
+      <entry value="2">Yellow (Stomp)</entry>
+      <entry value="4">Blue (Fly)</entry>
+      <entry value="3">Green (Neutral)</entry>
+      <entry value="1">Pink (Neutral)</entry>
+      <entry value="6">Orange (Neutral)</entry>
+      <entry value="7">Brown (Neutral)</entry>
+      <entry value="8">White (Neutral)</entry>
+      <entry value="9">Purple (Neutral)</entry>
+    </list>
+    <checkbox bit="32" title="Place Behind Other Sprites" comment="When enabled, this changes the relative Z-order of the ?-Block placing it further behind other sprites." comment2="This will place the ?-Block behind even Chainlink Fence and Layer 1 terrain."/>
+    <checkbox bit="40" title="Follows Lines" comment="When enabled, the ?-Block will attempt to follow Lines." advanced="True" advancedcomment="It is recommended to use [402] Line Controlled ? Block instead."/>
+    <dualbox bit="36" title1="Start Right/Up" title2="Start Left/Down" comment="This determines which direction the ?-Block will move based on the Line that it is connected to." advanced="True" advancedcomment="It is recommended to use [402] Line Controlled ? Block instead."/>
+  </sprite> <!-- #207: ? Block -->
+  
+  <sprite id="223" name="Checkered Spring Block" asmhacks="True" notes="A block with a spring-like effect that allows the player to jump on it and bounce off of it in order to jump higher.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color and style of the Spring Block." requiredbit="48" requiredval="0">
+      <entry value="0">Green Checkers</entry>
+      <entry value="1">♪</entry>
+      <entry value="2">Red Checkers</entry>
+      <entry value="3">Blue Diamonds</entry>
+      <entry value="4">♪ (Alternate)</entry>
+      <entry value="5">Purple Checkers</entry>
+      <entry value="6">White Concrete</entry>
+    </list>
+    <list nybble="6" title="Alternate &lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color and style of the Spring Block when the Alternate Color Pattern is enabled." requiredbit="48">
+      <entry value="0">Green Inverted Checkers</entry>
+      <entry value="1">♫</entry>
+      <entry value="2">Red Inverted Checkers</entry>
+      <entry value="3">Light Blue Dots</entry>
+      <entry value="4">♪ (Alternate)</entry>
+      <entry value="5">Purple Inverted Checkers</entry>
+      <entry value="6">White Concrete</entry>
+    </list>
+    <checkbox bit="48" title="Alternate Color Pattern" comment="When enabled, it will use the alternate color." comment2="Using an Inverted Checkers variant allows you to string together a line of Spring Blocks and have them look nice."/>
+  </sprite> <!-- #223: Checkered Spring Block -->
+  
+  <sprite id="259" name="D-Pad Door" sizehacks="True" noyoshi="True" notes="A standard door with a D-Pad symbol on it that can have an Entrance placed on it." advancednotes="The door can also be paired with a Rotation Controller, but the results are moderately glitchy with many combinations not functioning and several restrictions on getting them to work as actual doors.">
+    <list bit="35-36" title="Orientation" comment="This determines which direction the door will be facing." comment2="A door can only be entered if it is upright." advancedcomment="As decoration, this is fine. Actually making it properly associate its corresponding Entrance is either impossible or very functionally strange.">
+      <entry value="0">Upright</entry>
+      <entry value="1">Left</entry>
+      <entry value="2">Down</entry>
+      <entry value="3">Right</entry>
+    </list>
+    <checkbox bit="40" title="Rotation Controlled (Buggy)" comment="When enabled, the door will only function when paired with a Rotation ID." advanced="True" advancedcomment="'Function' is perhaps misleading. There are only a few ways you can successfully utilize a Rotation Controller door. For starters, you can only enter the door while it is almost fully upright. There is also a peculiarity with how the Entrance is placed. The most reliable way to use a Rotation Controlled Door is to place it with an already activated Spinning controller that returns to its original position when deactivated."/>
+    <value nybble="11-12" title="Rotation ID" comment="This pairs the Door to a matching rotation controller." advanced="True" idtype="Rotation"/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the door's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Exit Door (Dark, by 8forest)</entry>
+      <entry value="2">Yellow + Red (by CloudyLuigi)</entry>
+      <entry value="3">Ghost House (by LORBSheddy)</entry>
+    </list>
+  </sprite> <!-- #259: D-Pad Door -->
+  
+  <sprite id="269" name="Parachute Bob-Omb" asmhacks="True" sizehacks="True" notes="A parachuting Bob-Omb enemy that will turn into a standard Bob-Omb after it lands.">
+    <dependency notes="The Y-position of the Bob-Omb has no effect. It will always appear directly above the top edge of the screen."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Bob-Omb.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">White</entry>
+      <entry value="8">Pink</entry>
+      <entry value="9">Bomb Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Bomb Goomba (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Dark (by 8forrest)</entry>
+      <entry value="12">Grey (by Python)</entry>
+      <entry value="13">King (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Mecha Koopa (by Weland1234)</entry>
+    </list>
+  </sprite> <!-- #269: Parachute Bob-Omb -->
+  
+  <sprite id="270" name="Parachute Bob-Omb Spawn Area" asmhacks="True" notes="Assigns a spawn area where parachuting Bob-Ombs will fall from the sky while a player is inside it.">
+    <value nybble="12" title="Location ID" comment="The parachuting Bob-Ombs will only spawn while a player is in this location."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Bob-Omb.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">White</entry>
+      <entry value="8">Pink</entry>
+      <entry value="9">Bomb Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Bomb Goomba (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Dark (by 8forrest)</entry>
+      <entry value="12">Grey (by Python)</entry>
+      <entry value="13">King (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Mecha Koopa (by Weland1234)</entry>
+    </list>
+    <list nybble="11" title="Unknown Value 11" advanced="True" advancedcomment="Used in Retail: 08-05 A1 as 3, 2, 1.">
+      <entry value="0">???</entry>
+      <entry value="1">???</entry>
+      <entry value="2">???</entry>
+      <entry value="3">???</entry>
+    </list>
+  </sprite> <!-- #270: Parachute Bob-Omb Spawn Area -->
+  
+  <sprite id="272" name="Ice Bro" sizehacks="True" notes="A standard Brothers enemy that shoots ice balls at the player.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Ice Bro.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Normal (2)</entry>
+      <entry value="2">Custom (by 8forrest)</entry>
+      <entry value="3">Sledge (by StupidMarioBros1Fan)</entry>
+    </list>
+  </sprite> <!-- #272: Ice Bro -->
+  
+  <sprite id="280" name="Giant Ice Block" asmhacks="True" notes="A large 3x3 ice block that can be broken with an explosion.">
+    <list bit="47-48" title="Frozen Inside" comment="This determines what type of object is frozen inside the block." comment2="Bob-Omb ice blocks will explode to other nearby ice blocks.">
+      <entry value="0">Nothing</entry>
+      <entry value="1">Bob-Omb</entry>
+      <entry value="2">Spiked Ball</entry>
+    </list>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Bob-Omb.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">White</entry>
+      <entry value="8">Pink</entry>
+      <entry value="9">Bomb Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Bomb Goomba (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Dark (by 8forrest)</entry>
+      <entry value="12">Grey (by Python)</entry>
+      <entry value="13">King (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Mecha Koopa (by Weland1234)</entry>
+    </list> <!-- Appears when Spawns Bob-Ombs is set -->
+    <list nybble="6" title="Color" comment="This determines the color and style of the frozen Spiked Ball." requiredbit="47-48" requiredval="2">
+      <entry value="0">Normal</entry>
+      <entry value="1">Snowball</entry>
+    </list> <!-- Appears when Spiked Ball is set -->
+  </sprite> <!-- #280: Giant Ice Block -->
+  
+  <sprite id="289" name="Wooden and Metal Boxes" notes="Wooden boxes can be opened if Ground-Pounded, struck from below, etc. and can award the player with an item. Metal boxes can instantly kill the player, cannot be destroyed, and make a POW sound when falling. They also have odd issues when it comes to respawning if they have moved from their original location.">
+    <dualbox bit="40" title1="Wooden Box" title2="Metal Box" comment="This determines the type of box."/>
+	<list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Wooden Box." requiredbit="40" requiredval="0">
+      <entry value="0">Original</entry>
+      <entry value="1">Ghost-Themed (by LORBSheddy)</entry>
+      <entry value="2">Realistic (by CloudyLuigi)</entry>
+    </list>
+    <list bit="43-44" title="Size" comment="This determines the size of the box.">
+      <entry value="0">Small Square (2x2)</entry>
+      <entry value="1">Long and Short (2x4)</entry>
+      <entry value="2">Tall and Skinny (4x2)</entry>
+      <entry value="3">Big Square (4x4)</entry>
+    </list>
+    <list nybble="12" title="Wooden Box Contains" comment="This determines what the Wooden Box contains." comment2="Unlisted values contain Mushrooms.">
+      <entry value="0">Empty</entry>
+      <entry value="1">1 Coin</entry>
+      <entry value="10">5 Coins</entry>
+      <entry value="2">Mushroom</entry>
+      <entry value="3">Fire Flower</entry>
+      <entry value="15">Ice Flower</entry>
+      <entry value="4">Propeller Shroom</entry>
+      <entry value="5">Penguin Suit</entry>
+      <entry value="6">Mini Mushroom</entry>
+      <entry value="7">Star</entry>
+      <entry value="9">Yoshi Egg + Fire Flower</entry>
+      <entry value="11">1-Up</entry>
+      <entry value="14">Key</entry>
+    </list>
+    <value nybble="5" title="Unknown Value 5" advanced="True" advancedcomment="ASM shows Nybble 5 might affect something."/>
+  </sprite> <!-- #289: Wooden and Metal Boxes -->
+  
+  <sprite id="299" name="45° Cannon" asmhacks="True" notes="A cannon that will fire ammo in a 45° direction, and can fire either cannonballs or Bob-Ombs.">
+    <list nybble="7" title="Camera Influenced Trajectory" comment="This determines if the cannonball will be influenced by the camera's actions, such as when using [399] Airship Rocking.">
+      <entry value="0">No?</entry>
+      <entry value="1">Yes?</entry>
+      <entry value="2">???</entry> <!-- Nintendo uses this in 8-Airship -->
+      <entry value="3">???</entry>
+    </list>
+    <list bit="35-36" title="Ammo Type" comment="This determines what the cannon will fire.">
+      <entry value="0">Cannon Ball</entry>
+      <entry value="1">Bob-Omb; Low arc</entry>
+      <entry value="2">Bob-Omb; High arc</entry>
+    </list>
+    <value nybble="8" title="Bob-Omb Delay" comment="This determines how long the cannon will wait between each time it launches a Bob-Omb." comment2="This value is measured in game seconds." requiredbit="35-36"/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Bob-Omb.">
+      <entry value="0">Original</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Orange</entry>
+      <entry value="3">Yellow</entry>
+      <entry value="4">Green</entry>
+      <entry value="5">Blue</entry>
+      <entry value="6">Violet</entry>
+      <entry value="7">White</entry>
+      <entry value="8">Pink</entry>
+      <entry value="9">Bomb Boo (by StupidMarioBros1Fan)</entry>
+      <entry value="10">Bomb Goomba (by StupidMarioBros1Fan)</entry>
+      <entry value="11">Dark (by 8forrest)</entry>
+      <entry value="12">Grey (by Python)</entry>
+      <entry value="13">King (by StupidMarioBros1Fan)</entry>
+      <entry value="14">Mecha Koopa (by Weland1234)</entry>
+    </list>
+    <checkbox bit="44" title="Upside-Down" comment="When enabled, the cannon is upside-down and can be placed against the ceiling."/>
+    <checkbox bit="40" title="Rotating Cannon" comment="When enabled, the cannon will rotate in the opposite direction after each time it fires."/>
+    <dualbox bit="48" title1="Faces Right" title2="Faces Left" comment="This determines which direction the cannon will face." requiredbit="40" requiredval="0"/>
+    <dualbox bit="48" title1="Faces Right First" title2="Faces Left First" comment="This determines which direction the cannon will fire first." requiredbit="40"/>
+  </sprite> <!-- #299: 45° Cannon -->
+  
+  <sprite id="303" name="Monty Mole" notes="An energetic mole enemy that will pop out of the terrain after loading on screen and proceed to move quickly after the player. A Monty Hole is left behind after the mole jumps out.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Monty Mole.">
+      <entry value="0">Original</entry>
+      <entry value="1">Gray</entry>
+      <entry value="2">Black</entry>
+      <entry value="3">Boom Boom (StupidMarioBros1Fan)</entry>
+      <entry value="4">Grey Mole (cad111)</entry>
+    </list>
+    <checkbox bit="48" title="Loose Monty Mole" comment="When enabled, the Monty Mole will already be out of the wall running around, and does not leave behind a Monty Hole."/>
+  </sprite> <!-- #303: Monty Mole -->
+  
+<!-- Do we know what makes this one special compared to #95? -->
+  <sprite id="308" name="Platform Hammer Bro" asmhacks="True" sizehacks="True" notes="'En_Lift_HammerBros' - Likely allows it to be used on places where he shouldn't jump off.">
+    <dualbox bit="48" title1="Uses 2 Platforms" title2="Uses 1 Platform" comment="This determines the number of Platforms the AI of the Hammer Bro tries to make use of. See Dependency Notes for more information."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="This determines the color of the Hammer Bro.">
+      <entry value="0">Normal</entry>
+      <entry value="1">Black</entry>
+      <entry value="2">Custom (by 8forrest)</entry>
+      <entry value="3">Cyan (by StupidMarioBros1Fan)</entry>
+    </list>
+    <list nybble="10" title="Thrown Object" comment="This determines which object will be thrown by the Hammer Bro Plus.">
+      <entry value="0">Hammers</entry>
+      <entry value="1">Bob-omb</entry>
+      <entry value="2">Goomba</entry>
+      <entry value="3">Spiny</entry>
+      <entry value="4">Coins/Random Power-up</entry>
+      <entry value="5">Lemmy Ball</entry>
+    </list>
+  </sprite> <!-- #308: Platform Hammer Brother -->
+  
+<!-- Add a page within the level editor where the full list of effects and sounds can be referenced. Additionally, clean up the list so it's not littered with German. :P -->
+  <sprite id="332" name="Sound/Graphic Effects Spawner" asmhacks="True" phonebook="Effects" notes="Enables event-driven spawning of Sound Effects and Graphic Effects.&lt;br&gt;&lt;u&gt;Limitations&lt;/u&gt;&lt;br&gt; 1) Do not use 1000 or more sounds/effects per area&lt;br&gt; 2) A single Event ID can only trigger one sound/effect per area&lt;br&gt; 3) Only a specific number of sounds/effects can be active at the same time&lt;br&gt; 4) Only two BRSTMs can be active at the same time">
+	  <value nybble="5-6" title="Triggering Event ID" comment="When this Event ID is activated, the associated sound or affect will be played." idtype="Triggering Event"/>
+
+	  <external type="sfx" nybble="10-12" title="Sfx ID" comment="Use this external window to select your Sound Effect." requiredbit="32" requiredval="0"/>
+	  <external type="gfx_full" nybble="10-12" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;Gfx ID (Full Range/NewerGEM):&lt;/font&gt;&lt;/b&gt;" comment="Use this external window to select your Graphic Effect.&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;" requiredbit="32" requiredval="1"/>
+	  <dualbox bit="32" title1="Sound Effect" title2="Graphical Effect*" comment="This determines if you are spawning a sound effect or a graphical effect. &lt;b&gt;&lt;font color=&quot;blue&quot;&gt;(*) NewerGEM allows to choose from 1004 different Gfx.&lt;/font&gt;&lt;/b&gt;" comment2="The volume of the sound effect is relative to the distance of the placement of the spawner."/>
+	  <list nybble="7" title="Effect Scale" comment="This determines the size of the spawned graphic effect." requiredbit="32">
+		  <entry value="1">x0.25 (25%)</entry>
+		  <entry value="2">x0.5 (50%)</entry>
+		  <entry value="3">x0.75 (75%)</entry>
+		  <entry value="0">x1.0 (100%)</entry>
+		  <entry value="5">x1.25</entry>
+		  <entry value="6">x1.5</entry>
+		  <entry value="7">x1.75</entry>
+		  <entry value="8">x2.0 (200%)</entry>
+		  <entry value="9">x2.25</entry>
+		  <entry value="10">x2.5</entry>
+		  <entry value="11">x2.75</entry>
+		  <entry value="12">x3.0 (300%)</entry>
+		  <entry value="13">x3.25</entry>
+		  <entry value="14">x3.5</entry>
+		  <entry value="15">x3.75</entry>
+	  </list>
+	  <value nybble="9" title="Loop Delay" comment="This determines the number of seconds between activations of the sound or graphic effect." comment2="The effect will only activate once if the delay is left at 0."/>
+  </sprite> <!-- #332: Effect/Sound Spawner -->
+  
+  <sprite id="341" name="Giant Koopa Shell Cave" asmhacks="True" notes="A decorative large shell that can be used as a cave with the right arrangement of invisible blocks and settings.">
+    <dependency notes="Look in Retail 5-01 A1 for an example of how to use this sprite correctly. You will need to make use of Spotlight Lighting, Layer 0 tiles, and invisible collision blocks in order for it to look correct."/>
+    <checkbox bit="48" title="Remove Grass/Rocks" comment="When enabled, this will remove the decoration from the bottom of the Shell Cave."/>
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the shell's model.">
+      <entry value="0">Green</entry>
+      <entry value="1">Red</entry>
+      <entry value="2">Dark Blue (by 8forrest)</entry>
+      <entry value="3">Grey (by Weland1234)</entry>
+    </list>
+  </sprite> <!-- #341: Giant Turtle Shell Cave -->
+
+  <sprite id="359" name="Lighting - Fire Lamp" notes="A decorative fire lamp that generates light around it. It has no collision by default.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the fire lamp's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Simple Light (Python)</entry>
+    </list>
+  </sprite> <!-- #359: Lighting - Fire Lamp -->
+  
+  <sprite id="386" name="POW Block" notes="A grabbable POW block that is affected by gravity. It can be picked up and thrown by shaking the controller next to it. If it is thrown and it hits the ground, it will activate and cause the POW effect, killing many types of enemies, knocking coins loose, and other special effects.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" advanced="True" comment="A recolor for the Pow Block." advancedcomment="More effects can be added for your hack.">
+      <entry value="0">Original</entry>
+	  <entry value="1">BAN (by Python)</entry>
+	  <entry value="2">Black (by 8forrest)</entry>
+	  <entry value="3">Brick Block (by Mr. Luigi)</entry>
+	  <entry value="4">Green (by Yoshivert)</entry>
+	  <entry value="5">Red (by LifeMushroom)</entry>
+	  <entry value="6">Retro (by CloudyLuigi)</entry>
+    </list>
+  </sprite> <!-- #386: POW Block -->
+  
+  <sprite id="388" name="Barrel" notes="A grabbable barrel that is affected by gravity. It can be picked up and thrown by shaking the controller next to it. If it is thrown and it hits the ground, it will begin to roll until it hits an enemy or a wall. It can also hurt other players.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" advanced="True" comment="A recolor for the Barrel." advancedcomment="More effects can be added for your hack.">
+      <entry value="0">Original</entry>
+	  <entry value="1">Grey (by Python)</entry>
+    </list>
+  </sprite> <!-- #388: Barrel -->
+  
+  <sprite id="391" name="Lighting - Glow Block" asmhacks="True" notes="A grabbable glowing block that is affected by gravity. It can be picked up and thrown by shaking the controller next to it. If it is thrown and it hits the ground, it will bounce slightly. Its effect is severely dimished as anything other than a weapon of destruction if not using Full Darkness lighting.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" advanced="True" comment="A recolor for the Glow Block." advancedcomment="More effects can be added for your hack.">
+      <entry value="0">Yellow</entry>
+	  <entry value="1">Dark Purple</entry>
+	  <entry value="2">Vegetable (by CLF78)</entry>
+    </list>
+    <value nybble="12" title="Unknown Value 12" advanced="True" advancedcomment="ASM shows Nybble 12 might affect something."/>
+  </sprite> <!-- #391: Lighting - Glow Block -->
+  
+  <sprite id="393" name="Propeller Block" notes="A grabbable propeller block that is affected by gravity. It can be picked up and thrown by shaking the controller next to it. It can also boost the player into the air like a Propeller Cap if the player shakes their controller a second time while holding it. If it is thrown and it hits the ground, it will bounce slightly.">
+    <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the block's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Green (by DarkMoon Team)</entry>
+      <entry value="2">Orange (by CloudyLuigi)</entry>
+    </list>
+  </sprite> <!-- #393: Propeller Block -->
+  
+  <sprite id="452" name="Bowser Boss Door" sizehacks="True" noyoshi="True" notes="A very large green door that can have an Entrance placed on it." advancednotes="The door can also be paired with a Rotation Controller, but the results are moderately glitchy with many combinations not functioning and several restrictions on getting them to work as actual doors.">
+    <list bit="35-36" title="Orientation" comment="This determines which direction the door will be facing." comment2="A door can only be entered if it is upright." advancedcomment="As decoration, this is fine. Actually making it properly associate its corresponding Entrance is either impossible or very functionally strange.">
+      <entry value="0">Upright</entry>
+      <entry value="1">Left</entry>
+      <entry value="2">Down</entry>
+      <entry value="3">Right</entry>
+    </list>
+    <checkbox bit="40" title="Rotation Controlled (Buggy)" comment="When enabled, the door will only function when paired with a Rotation ID." advanced="True" advancedcomment="'Function' is perhaps misleading. There are only a few ways you can successfully utilize a Rotation Controller door. For starters, you can only enter the door while it is almost fully upright. There is also a peculiarity with how the Entrance is placed. The most reliable way to use a Rotation Controlled Door is to place it with an already activated Spinning controller that returns to its original position when deactivated."/>
+    <value nybble="11-12" title="Rotation ID" comment="This pairs the Door to a matching rotation controller." advanced="True" idtype="Rotation"/>
+	<list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; SpriteTex" comment="Changes the door's model.">
+      <entry value="0">Original</entry>
+      <entry value="1">Purple (by DarkMoon Team)</entry>
+    </list>
+  </sprite> <!-- #452: Bowser Boss Door -->
+  
+  <sprite id="468" name="Credits Controller" notes="Plays the credits in Newer.&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; A modification for the Credits Controller. It allows several new functions. Requires Credits Controller Mod tool by Grop.&lt;br&gt;&lt;br&gt;To activate system text: Needs 'Listen to Event and switch to Scene' used in Credits Editor Mod.&lt;br&gt;&lt;br&gt;To teleport players: Needs path, entrance, and 'Listen to Event' to function.">
+  <list nybble="6" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; Jump to new Scene" comment="Directly jumps to new scene ID specified below and in \NewerRes\StaffRoll.">
+      <entry value="0">Yes</entry>
+      <entry value="1">No</entry>y>
+    </list>
+  <value nybble="7-8" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; Scene ID" comment="&lt;br&gt;Directly loads a Scene ID from a custom SR_X.bin file. Make sure the file is placed in NewerRes\Staffroll. See 'Credits File ID'."/>
+  <value nybble="9-10" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; Triggering Event ID" comment="&lt;br&gt; The game will jump to the Scene ID specified below when this Event ID is triggered. This is an additional method to listen to an event and switch the scene accordingly. The same can be done with the Credits Editor Mod as well."/>
+  <value nybble="11-12" title="&lt;b&gt;&lt;font color=&quot;blue&quot;&gt;NewerGEM: &lt;/font&gt;&lt;/b&gt; Credits File ID" comment="&lt;br&gt; Value 0 loads the default file, NewerStaffRoll.bin. All other values load a new file that needs to be placed into the folder \NewerRes\StaffRoll with the filename SR_X.bin, where X is a number. Value 1 loads SR_1.bin, and so on."/>
+	<dependency notes="There are several dependencies involved here. See NewerGEM notes. The Staffroll credits themselves however have an editor available for them.">
+      <suggested sprite="436"/>
+    </dependency>
+  </sprite> <!-- #468: Cutscene Controller - Credits -->
+</sprites>
+<!-- Thank you so much for a-playing my game! -->

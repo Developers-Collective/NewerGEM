@@ -1,0 +1,51 @@
+hooks:
+- name: LineGodCreate
+  src_addr_jpn: 2157416024
+  src_addr_jpn2: 2157416040
+  src_addr_ntsc: &id001 2157417840
+  src_addr_ntsc2: 2157417856
+  src_addr_pal: *id001
+  src_addr_pal2: 2157417856
+  target_func: LineGod_Create(LineGod*)
+  type: add_func_pointer
+- name: LineGodExecute
+  src_addr_jpn: 2157416048
+  src_addr_jpn2: 2157416064
+  src_addr_ntsc: &id002 2157417864
+  src_addr_ntsc2: 2157417880
+  src_addr_pal: *id002
+  src_addr_pal2: 2157417880
+  target_func: LineGod_Execute(LineGod*)
+  type: add_func_pointer
+- branch_type: b
+  name: LineGodSpawnFix
+  src_addr_jpn: &id003 2148002456
+  src_addr_jpn2: *id003
+  src_addr_ntsc: *id003
+  src_addr_ntsc2: *id003
+  src_addr_pal: *id003
+  src_addr_pal2: *id003
+  target_func: BgActorSpawnFix
+  type: branch_insn
+- branch_type: b
+  name: BgActorSetInfoFix
+  src_addr_jpn: &id004 2148002400
+  src_addr_jpn2: *id004
+  src_addr_ntsc: *id004
+  src_addr_ntsc2: *id004
+  src_addr_pal: *id004
+  src_addr_pal2: *id004
+  target_func: BgActorSetInfoFix
+  type: branch_insn
+- addr_jpn: 2156496168
+  addr_jpn2: 2156496184
+  addr_ntsc: &id005 2156496792
+  addr_ntsc2: 2156496808
+  addr_pal: *id005
+  addr_pal2: 2156496808
+  data: 3860 0400
+  name: LineGodMemFix
+  type: patch
+source_files:
+- ../src/linegod.cpp
+- ../src/linegod.S

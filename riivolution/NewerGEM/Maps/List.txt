@@ -1,0 +1,14 @@
+/Maps/YoshiIsland.kpbin
+/Maps/Fullmap.kpbin
+/Maps/Sewer.kpbin
+/Maps/MountainBackside.kpbin
+/Maps/Flamesinside.kpbin
+/Maps/StarrySky.kpbin
+/Maps/KoopaPlanet.kpbin
+/Maps/KoopaPlanetUnd.kpbin
+/Maps/Goldwood.kpbin
+/Maps/Minimega.kpbin
+/Maps/CrystalCaverns.kpbin
+/Maps/SkyCity.kpbin
+/Maps/Bonus.kpbin
+/Maps/WSEL.kpbin

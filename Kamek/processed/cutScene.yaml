@@ -1,0 +1,51 @@
+hooks:
+- branch_type: bl
+  name: DoOpeningLevel
+  src_addr_jpn: 2157022996
+  src_addr_jpn2: 2157023012
+  src_addr_ntsc: &id001 2157023700
+  src_addr_ntsc2: 2157023716
+  src_addr_pal: *id001
+  src_addr_pal2: 2157023716
+  target_func: EnterOpeningLevel
+  type: branch_insn
+- name: BuildCutScene
+  src_addr_jpn: 2157495840
+  src_addr_jpn2: 2157495856
+  src_addr_ntsc: 2157497656
+  src_addr_ntsc2: 2157497672
+  src_addr_pal: 2157497624
+  src_addr_pal2: 2157497640
+  target_func: dScCutScene_c::build()
+  type: add_func_pointer
+- addr_jpn: 2148682412
+  addr_jpn2: 2148682412
+  addr_ntsc: 2148682908
+  addr_ntsc2: 2148682908
+  addr_pal: &id002 2148683228
+  addr_pal2: *id002
+  data: '28001234'
+  name: FixLastActorForCutScene
+  type: patch
+- branch_type: b
+  name: WrapExitStage
+  src_addr_jpn: 2148540896
+  src_addr_jpn2: 2148540896
+  src_addr_ntsc: 2148541024
+  src_addr_ntsc2: 2148541024
+  src_addr_pal: &id003 2148541296
+  src_addr_pal2: *id003
+  target_func: ExitStageWrapper
+  type: branch_insn
+- addr_jpn: 2150589432
+  addr_jpn2: 2150589432
+  addr_ntsc: 2150589912
+  addr_ntsc2: 2150589912
+  addr_pal: &id004 2150590680
+  addr_pal2: *id004
+  data: 00000000 00000000 00000000
+  name: DisableCutsceneMusic
+  type: patch
+source_files:
+- ../src/cutScene.cpp
+- ../src/sceneGlue.cpp

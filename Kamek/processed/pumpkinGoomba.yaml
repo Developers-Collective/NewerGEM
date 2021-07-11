@@ -1,0 +1,31 @@
+hooks:
+- name: BuildGoombaPie
+  src_addr_jpn: 2157459236
+  src_addr_jpn2: 2157459252
+  src_addr_ntsc: &id001 2157461052
+  src_addr_ntsc2: 2157461068
+  src_addr_pal: *id001
+  src_addr_pal2: 2157461068
+  target_func: dGoombaPie::build()
+  type: add_func_pointer
+- addr_jpn: 2150670800
+  addr_jpn2: 2150670800
+  addr_ntsc: 2150671280
+  addr_ntsc2: 2150671280
+  addr_pal: &id002 2150672048
+  addr_pal2: *id002
+  data: 027D 0000  00000008 00000010  00000000 FFFFFFF8 00000008 00000008  0000 0000
+    0000 0000  0000 0000
+  name: UpdateGoombaPieSpriteInfo
+  type: patch
+- name: GoombaPieSpriteFileInfo
+  src_addr_jpn: 2150737580
+  src_addr_jpn2: 2150737580
+  src_addr_ntsc: 2150738060
+  src_addr_ntsc2: 2150738060
+  src_addr_pal: &id003 2150738852
+  src_addr_pal2: *id003
+  target_func: GParcNameList
+  type: add_func_pointer
+source_files:
+- ../src/pumpkinGoomba.cpp

@@ -1,0 +1,13 @@
+hooks:
+- branch_type: b
+  name: InsertPauseWindowText
+  src_addr_jpn: 2148903216
+  src_addr_jpn2: 2148903216
+  src_addr_ntsc: 2148903712
+  src_addr_ntsc2: 2148903712
+  src_addr_pal: &id001 2148904032
+  src_addr_pal2: *id001
+  target_func: InsertPauseWindowText
+  type: branch_insn
+source_files:
+- ../src/layouthax.cpp

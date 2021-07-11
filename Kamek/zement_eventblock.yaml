@@ -1,0 +1,7 @@
+source_files: []
+hooks:
+  - name: UpdateEventBlockSpriteInfo
+    type: patch
+    addr_pal: 0x8030C874
+    #    (        8,    -16)(       0,       8,      16,      16)   0    0    0    0    2    0 | [2:Not Enemy]
+    data: '00000008 FFFFFFF0 00000000 00000008 00000010 00000010 0000 0000 0000 0000 0002 0000'

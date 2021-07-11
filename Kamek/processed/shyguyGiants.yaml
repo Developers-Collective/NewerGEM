@@ -1,0 +1,31 @@
+hooks:
+- name: ShyGuyGiantBuild
+  src_addr_jpn: 2157468916
+  src_addr_jpn2: 2157468932
+  src_addr_ntsc: &id001 2157470732
+  src_addr_ntsc2: 2157470748
+  src_addr_pal: *id001
+  src_addr_pal2: 2157470748
+  target_func: daShyGuyGiant::build()
+  type: add_func_pointer
+- addr_jpn: 2150676600
+  addr_jpn2: 2150676600
+  addr_ntsc: 2150677080
+  addr_ntsc2: 2150677080
+  addr_pal: &id002 2150677848
+  addr_pal2: *id002
+  data: 0297 0000  00000010 00000030  00000000 FFFFFFC0 00000010 00000040  0040 0040
+    0000 0000  0000 0000
+  name: UpdateShyGuyGiantSpriteInfo
+  type: patch
+- name: ShyGuyGiantSpriteFileInfo
+  src_addr_jpn: 2150738160
+  src_addr_jpn2: 2150738160
+  src_addr_ntsc: 2150738640
+  src_addr_ntsc2: 2150738640
+  src_addr_pal: &id003 2150739432
+  src_addr_pal2: *id003
+  target_func: SGGarcNameList
+  type: add_func_pointer
+source_files:
+- ../src/shyguyGiants.cpp

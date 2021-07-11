@@ -1,0 +1,12 @@
+hooks:
+- name: SpriteSpawnerTimedBuild
+  src_addr_jpn: 2159040272
+  src_addr_jpn2: 2159040304
+  src_addr_ntsc: 2159042096
+  src_addr_ntsc2: 2159042128
+  src_addr_pal: 2159042064
+  src_addr_pal2: 2159042096
+  target_func: SpriteSpawnerTimed::build()
+  type: add_func_pointer
+source_files:
+- ../src/spriteswapper.cpp

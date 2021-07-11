@@ -1,0 +1,12 @@
+hooks:
+- name: daSidestepper_cBuild
+  src_addr_jpn: 2159035280
+  src_addr_jpn2: 2159035312
+  src_addr_ntsc: 2159037104
+  src_addr_ntsc2: 2159037136
+  src_addr_pal: 2159037072
+  src_addr_pal2: 2159037104
+  target_func: daSidestepper_c::build()
+  type: add_func_pointer
+source_files:
+- ../src/test.cpp

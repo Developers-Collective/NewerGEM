@@ -1,0 +1,9 @@
+---
+# Replaces EN_HELPOS
+
+source_files: [../src/eventlooper_v2.cpp]
+hooks:
+  - name: BuildEventLooper
+    type: add_func_pointer
+    src_addr_pal: 0x80AEE178
+    target_func: 'daEventLooper_c::build()'

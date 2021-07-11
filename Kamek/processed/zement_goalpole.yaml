@@ -1,0 +1,14 @@
+hooks:
+- branch_type: bl
+  name: CheckDisableWall
+  src_addr_jpn: 2158007360
+  src_addr_jpn2: 2158007392
+  src_addr_ntsc: 2158009184
+  src_addr_ntsc2: 2158009216
+  src_addr_pal: 2158009152
+  src_addr_pal2: 2158009184
+  target_func: daEnGlpole_c_initInvisibleWallIfSet(ActivePhysics*, daEnGlpole_c*,
+    ActivePhysics::Info*)
+  type: branch_insn
+source_files:
+- ../src/goalPole.cpp

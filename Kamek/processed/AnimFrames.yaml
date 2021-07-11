@@ -1,0 +1,14 @@
+hooks:
+- branch_type: bl
+  name: ChangeBlockType
+  src_addr_jpn: &id001 2148041824
+  src_addr_jpn2: *id001
+  src_addr_ntsc: *id001
+  src_addr_ntsc2: *id001
+  src_addr_pal: *id001
+  src_addr_pal2: *id001
+  target_func: dBlockMgr_c_getBlockType(int, int)
+  type: branch_insn
+source_files:
+- ../src/AnimFrames.S
+- ../src/BlockAnim.cpp

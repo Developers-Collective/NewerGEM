@@ -1,0 +1,68 @@
+hooks:
+- name: SingAlongBuild
+  src_addr_jpn: 2157457284
+  src_addr_jpn2: 2157457300
+  src_addr_ntsc: &id001 2157459100
+  src_addr_ntsc2: 2157459116
+  src_addr_pal: *id001
+  src_addr_pal2: 2157459116
+  target_func: dSingAlong::build()
+  type: add_func_pointer
+- addr_jpn: 2150670520
+  addr_jpn2: 2150670520
+  addr_ntsc: 2150671000
+  addr_ntsc2: 2150671000
+  addr_pal: &id002 2150671768
+  addr_pal2: *id002
+  data: 0276 0000 00000010 00000010  00000000 00000000 00000200 00000200  0000 0000
+    0200 0200 0000 0000
+  name: UpdateSingAlongSpriteInfo
+  type: patch
+- name: SingAlongSpriteFileInfo
+  src_addr_jpn: 2150737552
+  src_addr_jpn2: 2150737552
+  src_addr_ntsc: 2150738032
+  src_addr_ntsc2: 2150738032
+  src_addr_pal: &id003 2150738824
+  src_addr_pal2: *id003
+  target_func: SAarcNameList
+  type: add_func_pointer
+- name: SongBlockBuild
+  src_addr_jpn: 2157456856
+  src_addr_jpn2: 2157456872
+  src_addr_ntsc: &id004 2157458672
+  src_addr_ntsc2: 2157458688
+  src_addr_pal: *id004
+  src_addr_pal2: 2157458688
+  target_func: dSongBlock::build()
+  type: add_func_pointer
+- addr_jpn: 2150670600
+  addr_jpn2: 2150670600
+  addr_ntsc: 2150671080
+  addr_ntsc2: 2150671080
+  addr_pal: &id005 2150671848
+  addr_pal2: *id005
+  data: 0275 0000 00000010 00000010  00000000 00000000 00000040 00000040  0000 0000
+    0040 0040 0000 0000
+  name: UpdateSingAlongSpriteInfo
+  type: patch
+- name: SingAlongSpriteFileInfo
+  src_addr_jpn: 2150737560
+  src_addr_jpn2: 2150737560
+  src_addr_ntsc: 2150738040
+  src_addr_ntsc2: 2150738040
+  src_addr_pal: &id006 2150738832
+  src_addr_pal2: *id006
+  target_func: SAarcNameList
+  type: add_func_pointer
+- name: SongPrizeBuild
+  src_addr_jpn: 2157464860
+  src_addr_jpn2: 2157464876
+  src_addr_ntsc: &id007 2157466676
+  src_addr_ntsc2: 2157466692
+  src_addr_pal: *id007
+  src_addr_pal2: 2157466692
+  target_func: dSongPrize::build()
+  type: add_func_pointer
+source_files:
+- ../src/bonusRoom.cpp

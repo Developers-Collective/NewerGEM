@@ -1,0 +1,32 @@
+hooks:
+- branch_type: b
+  name: QueryGlobal5758
+  src_addr_jpn: &id001 2148219728
+  src_addr_jpn2: *id001
+  src_addr_ntsc: *id001
+  src_addr_ntsc2: *id001
+  src_addr_pal: *id001
+  src_addr_pal2: *id001
+  target_func: Query5758Replacement
+  type: branch_insn
+- name: BuildMsgManager
+  src_addr_jpn: 2158989304
+  src_addr_jpn2: 2158989336
+  src_addr_ntsc: 2158991128
+  src_addr_ntsc2: 2158991160
+  src_addr_pal: 2158991096
+  src_addr_pal2: 2158991128
+  target_func: dMsgBoxManager_c::build()
+  type: add_func_pointer
+- name: BuildMsgBlock
+  src_addr_jpn: 2158875024
+  src_addr_jpn2: 2158875056
+  src_addr_ntsc: 2158876848
+  src_addr_ntsc2: 2158876880
+  src_addr_pal: 2158876816
+  src_addr_pal2: 2158876848
+  target_func: daEnMsgBlock_c::build()
+  type: add_func_pointer
+source_files:
+- ../src/msgbox.S
+- ../src/msgbox.cpp

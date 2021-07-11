@@ -1,0 +1,31 @@
+hooks:
+- name: BuildFlipBlock
+  src_addr_jpn: 2157455388
+  src_addr_jpn2: 2157455404
+  src_addr_ntsc: &id001 2157457204
+  src_addr_ntsc2: 2157457220
+  src_addr_pal: *id001
+  src_addr_pal2: 2157457220
+  target_func: daEnFlipBlock_c::build()
+  type: add_func_pointer
+- addr_jpn: 2150682680
+  addr_jpn2: 2150682680
+  addr_ntsc: 2150683160
+  addr_ntsc2: 2150683160
+  addr_pal: &id002 2150683928
+  addr_pal2: *id002
+  data: 0299 0000  00000008 FFFFFFF8  00000000 00000000 00000100 00000100  0000 0000
+    0000 0000  0000 0000
+  name: UpdateFlipBlockSpriteInfo
+  type: patch
+- name: FlipBlockSpriteFileInfo
+  src_addr_jpn: 2150738768
+  src_addr_jpn2: 2150738768
+  src_addr_ntsc: 2150739248
+  src_addr_ntsc2: 2150739248
+  src_addr_pal: &id003 2150740040
+  src_addr_pal2: *id003
+  target_func: FlipBlockFileList
+  type: add_func_pointer
+source_files:
+- ../src/flipblock.cpp

@@ -1,0 +1,31 @@
+hooks:
+- name: SamurshaiBuild
+  src_addr_jpn: 2157481372
+  src_addr_jpn2: 2157481388
+  src_addr_ntsc: &id001 2157483188
+  src_addr_ntsc2: 2157483204
+  src_addr_pal: *id001
+  src_addr_pal2: 2157483204
+  target_func: daSamurshai::build()
+  type: add_func_pointer
+- name: SamurshaiSpriteFileInfo
+  src_addr_jpn: 2150737568
+  src_addr_jpn2: 2150737568
+  src_addr_ntsc: 2150738048
+  src_addr_ntsc2: 2150738048
+  src_addr_pal: &id002 2150738840
+  src_addr_pal2: *id002
+  target_func: SSarcNameList
+  type: add_func_pointer
+- addr_jpn: 2150670680
+  addr_jpn2: 2150670680
+  addr_ntsc: 2150671160
+  addr_ntsc2: 2150671160
+  addr_pal: &id003 2150671928
+  addr_pal2: *id003
+  data: 0290 0000 00000010 00000010  00000000 00000000 00000040 00000040  0000 0000
+    0040 0040 0000 0000
+  name: UpdateSamurshaiSpriteInfo
+  type: patch
+source_files:
+- ../src/bossSamurshai.cpp

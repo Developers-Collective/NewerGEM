@@ -1,0 +1,14 @@
+---
+source_files: [../src/TS.S]
+hooks:
+  - name: TitleScreenHook
+    type: branch_insn
+    branch_type: b
+    src_addr_pal: 0x80782288
+    target_func: 'TitleScreenExec'
+
+  - name: InfiniteTitleScreen
+    type: patch
+    addr_pal: 0x80782390
+    data: '60000000'
+

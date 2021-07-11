@@ -1,0 +1,35 @@
+hooks:
+- name: BuildWorldMap
+  src_addr_jpn: 2157499896
+  src_addr_jpn2: 2157499912
+  src_addr_ntsc: 2157501712
+  src_addr_ntsc2: 2157501728
+  src_addr_pal: 2157501680
+  src_addr_pal2: 2157501696
+  target_func: dScNewerWorldMap_c::build()
+  type: add_func_pointer
+- addr_jpn: 2148536464
+  addr_jpn2: 2148536464
+  addr_ntsc: 2148536592
+  addr_ntsc2: 2148536592
+  addr_pal: &id001 2148536864
+  addr_pal2: *id001
+  data: 4E800020
+  name: StockItemFix
+  type: patch
+- addr_jpn: 2157077824
+  addr_jpn2: 2157077840
+  addr_ntsc: &id002 2157078528
+  addr_ntsc2: 2157078544
+  addr_pal: *id002
+  addr_pal2: 2157078544
+  data: '60000000'
+  name: WMDrawFuncFix
+  type: patch
+source_files:
+- ../src/worldmap.cpp
+- ../src/fileload.cpp
+- ../src/levelinfo_old.cpp
+- ../src/layoutlib.S
+- ../src/scene.S
+- ../src/boss.cpp

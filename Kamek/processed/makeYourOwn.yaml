@@ -1,0 +1,22 @@
+hooks:
+- name: BuildYourOwnModel
+  src_addr_jpn: 2157477468
+  src_addr_jpn2: 2157477484
+  src_addr_ntsc: &id001 2157479284
+  src_addr_ntsc2: 2157479300
+  src_addr_pal: *id001
+  src_addr_pal2: 2157479300
+  target_func: dMakeYourOwn::build()
+  type: add_func_pointer
+- addr_jpn: 2150670360
+  addr_jpn2: 2150670360
+  addr_ntsc: 2150670840
+  addr_ntsc2: 2150670840
+  addr_pal: &id002 2150671608
+  addr_pal2: *id002
+  data: 029E 0000  00000000 00000000  FFFFFC00 FFFFFC00 00000400 00000400  0400 0400
+    0000 0000  0008 0000
+  name: UpdateModelSpriteInfo
+  type: patch
+source_files:
+- ../src/makeYourOwnModelSprite.cpp

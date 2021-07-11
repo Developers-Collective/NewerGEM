@@ -1,0 +1,21 @@
+hooks:
+- name: MegaGoombaBuild
+  src_addr_jpn: 2157258488
+  src_addr_jpn2: 2157258504
+  src_addr_ntsc: &id001 2157260304
+  src_addr_ntsc2: 2157260320
+  src_addr_pal: *id001
+  src_addr_pal2: 2157260320
+  target_func: daMegaGoomba_c::build()
+  type: add_func_pointer
+- name: MegaGoombaSpriteFileInfo
+  src_addr_jpn: 2150739132
+  src_addr_jpn2: 2150739132
+  src_addr_ntsc: 2150739612
+  src_addr_ntsc2: 2150739612
+  src_addr_pal: &id002 2150740404
+  src_addr_pal2: *id002
+  target_func: MGarcNameList
+  type: add_func_pointer
+source_files:
+- ../src/bossMegaGoomba.cpp

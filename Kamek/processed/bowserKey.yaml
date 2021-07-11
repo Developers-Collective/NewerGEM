@@ -1,0 +1,31 @@
+hooks:
+- branch_type: bl
+  name: endKeyLevel
+  src_addr_jpn: 2155890044
+  src_addr_jpn2: 2155890060
+  src_addr_ntsc: &id001 2155890668
+  src_addr_ntsc2: 2155890684
+  src_addr_pal: *id001
+  src_addr_pal2: 2155890684
+  target_func: endKeyLevel(dStageActor_c*)
+  type: branch_insn
+- name: startEndKeyLevel
+  src_addr_jpn: 2157304644
+  src_addr_jpn2: 2157304660
+  src_addr_ntsc: &id002 2157306460
+  src_addr_ntsc2: 2157306476
+  src_addr_pal: *id002
+  src_addr_pal2: 2157306476
+  target_func: startEndKeyLevel(dStageActor_c*)
+  type: add_func_pointer
+- name: soundsEndKeyLevel
+  src_addr_jpn: 2157304680
+  src_addr_jpn2: 2157304696
+  src_addr_ntsc: &id003 2157306496
+  src_addr_ntsc2: 2157306512
+  src_addr_pal: *id003
+  src_addr_pal2: 2157306512
+  target_func: soundsEndKeyLevel(dStageActor_c*)
+  type: add_func_pointer
+source_files:
+- ../src/bowserKey.cpp

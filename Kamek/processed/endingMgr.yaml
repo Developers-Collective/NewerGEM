@@ -1,0 +1,28 @@
+hooks:
+- name: BuildEndingMgr
+  src_addr_jpn: 2157299968
+  src_addr_jpn2: 2157299984
+  src_addr_ntsc: &id001 2157301784
+  src_addr_ntsc2: 2157301800
+  src_addr_pal: *id001
+  src_addr_pal2: 2157301800
+  target_func: dEndingMgr_c::build()
+  type: add_func_pointer
+- area_jpn: 2159319328
+  area_jpn2: 2159319360
+  area_ntsc: 2159321152
+  area_ntsc2: 2159321184
+  area_pal: 2159321120
+  area_pal2: 2159321152
+  name: DisablePeachThankMP
+  type: nop_insn
+- area_jpn: 2159318912
+  area_jpn2: 2159318944
+  area_ntsc: 2159320736
+  area_ntsc2: 2159320768
+  area_pal: 2159320704
+  area_pal2: 2159320736
+  name: DisablePeachDmEscort
+  type: nop_insn
+source_files:
+- ../src/endingMgr.cpp

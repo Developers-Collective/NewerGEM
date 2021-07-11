@@ -1,0 +1,10 @@
+---
+# Replaces EN_BOYON
+
+source_files: [../src/ActorSpawner.cpp]
+hooks:
+  - name: BuildActorSpawner
+    type: add_func_pointer
+    src_addr_pal: 0x80ADEA00
+    target_func: 'dActorSpawner_c::build()'
+       

@@ -1,0 +1,128 @@
+hooks:
+- branch_type: bl
+  name: MakeKoopasIntoFire
+  src_addr_jpn: 2148857592
+  src_addr_jpn2: 2148857592
+  src_addr_ntsc: 2148858088
+  src_addr_ntsc2: 2148858088
+  src_addr_pal: &id001 2148858408
+  src_addr_pal2: *id001
+  target_func: addMoreFireBalls
+  type: branch_insn
+- addr_jpn: 2148839640
+  addr_jpn2: 2148839640
+  addr_ntsc: 2148840136
+  addr_ntsc2: 2148840136
+  addr_pal: &id002 2148840456
+  addr_pal2: *id002
+  data: 386017FC
+  name: ExpandYoshiStruc
+  type: patch
+- addr_jpn: 2156995368
+  addr_jpn2: 2156995384
+  addr_ntsc: &id003 2156996072
+  addr_ntsc2: 2156996088
+  addr_pal: *id003
+  addr_pal2: 2156996088
+  data: '38600508'
+  name: MakeMoreRoom
+  type: patch
+- branch_type: bl
+  name: MakeFireMove
+  src_addr_jpn: 2156996380
+  src_addr_jpn2: 2156996396
+  src_addr_ntsc: &id004 2156997084
+  src_addr_ntsc2: 2156997100
+  src_addr_pal: *id004
+  src_addr_pal2: 2156997100
+  target_func: GetThoseSiblingsMoving
+  type: branch_insn
+- addr_jpn: 2157172940
+  addr_jpn2: 2157172956
+  addr_ntsc: &id005 2157173644
+  addr_ntsc2: 2157173660
+  addr_pal: *id005
+  addr_pal2: 2157173660
+  data: '40800000'
+  name: EditXSpeedPositiveFloat
+  type: patch
+- addr_jpn: 2157172944
+  addr_jpn2: 2157172960
+  addr_ntsc: &id006 2157173648
+  addr_ntsc2: 2157173664
+  addr_pal: *id006
+  addr_pal2: 2157173664
+  data: C0800000
+  name: EditXSpeedNegativeFloat
+  type: patch
+- name: Yoshi_DoJaugesChecks
+  src_addr_jpn: 2150786332
+  src_addr_jpn2: 2150786332
+  src_addr_ntsc: 2150786996
+  src_addr_ntsc2: 2150786996
+  src_addr_pal: &id007 2150787836
+  src_addr_pal2: *id007
+  target_func: daYoshi_c::newOnExecute()
+  type: add_func_pointer
+- branch_type: bl
+  name: disableShellTrigger
+  src_addr_jpn: 2148861468
+  src_addr_jpn2: 2148861468
+  src_addr_ntsc: 2148861964
+  src_addr_ntsc2: 2148861964
+  src_addr_pal: &id008 2148862284
+  src_addr_pal2: *id008
+  target_func: disableShellTrigger
+  type: branch_insn
+- name: GDisplay_EnableHideJauges
+  src_addr_jpn: 2150790240
+  src_addr_jpn2: 2150790240
+  src_addr_ntsc: 2150790904
+  src_addr_ntsc2: 2150790904
+  src_addr_pal: &id009 2150791744
+  src_addr_pal2: *id009
+  target_func: dGameDisplay_c::newOnCreate()
+  type: add_func_pointer
+- name: GDisplay_ProcessHideJauges
+  src_addr_jpn: 2150790264
+  src_addr_jpn2: 2150790264
+  src_addr_ntsc: 2150790928
+  src_addr_ntsc2: 2150790928
+  src_addr_pal: &id010 2150791768
+  src_addr_pal2: *id010
+  target_func: dGameDisplay_c::newOnExecute()
+  type: add_func_pointer
+- branch_type: b
+  name: TriggerPowEffectWhenGroundpoundStage4
+  src_addr_jpn: &id011 2147784000
+  src_addr_jpn2: *id011
+  src_addr_ntsc: *id011
+  src_addr_ntsc2: *id011
+  src_addr_pal: *id011
+  src_addr_pal2: *id011
+  target_func: daPlBase_c::newHipAttackStage4()
+  type: branch_insn
+- name: ResetPowEffectFlagWhenGroundpoundEnds
+  src_addr_jpn: 2150787080
+  src_addr_jpn2: 2150787080
+  src_addr_ntsc: 2150787744
+  src_addr_ntsc2: 2150787744
+  src_addr_pal: &id012 2150788584
+  src_addr_pal2: *id012
+  target_func: daYoshi_c::newEndState_HipAttack()
+  type: add_func_pointer
+- branch_type: b
+  name: BlueYoshiFly
+  src_addr_jpn: &id013 2147830600
+  src_addr_jpn2: *id013
+  src_addr_ntsc: *id013
+  src_addr_ntsc2: *id013
+  src_addr_pal: *id013
+  src_addr_pal2: *id013
+  target_func: flyNowMyCuteYoshi
+  type: branch_insn
+source_files:
+- ../src/yoshiFire.S
+- ../src/yoshiFly.cpp
+- ../src/yoshiFly.S
+- ../src/yoshiStomp.cpp

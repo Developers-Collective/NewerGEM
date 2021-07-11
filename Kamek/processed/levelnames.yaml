@@ -1,0 +1,13 @@
+hooks:
+- branch_type: b
+  name: CallNameHack
+  src_addr_jpn: 2159459720
+  src_addr_jpn2: 2159459752
+  src_addr_ntsc: 2159461544
+  src_addr_ntsc2: 2159461576
+  src_addr_pal: 2159461512
+  src_addr_pal2: 2159461544
+  target_func: DoNames(int)
+  type: branch_insn
+source_files:
+- ../src/levelnames.cpp

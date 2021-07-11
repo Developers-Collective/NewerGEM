@@ -1,0 +1,113 @@
+hooks:
+- name: dDroppedBombBuild
+  src_addr_jpn: 2157465076
+  src_addr_jpn2: 2157465092
+  src_addr_ntsc: &id001 2157466892
+  src_addr_ntsc2: 2157466908
+  src_addr_pal: *id001
+  src_addr_pal2: 2157466908
+  target_func: dDroppedBomb::build()
+  type: add_func_pointer
+- name: BombDropBuild
+  src_addr_jpn: 2157452824
+  src_addr_jpn2: 2157452840
+  src_addr_ntsc: &id002 2157454640
+  src_addr_ntsc2: 2157454656
+  src_addr_pal: *id002
+  src_addr_pal2: 2157454656
+  target_func: dBombDrop::build()
+  type: add_func_pointer
+- addr_jpn: 2150670560
+  addr_jpn2: 2150670560
+  addr_ntsc: 2150671040
+  addr_ntsc2: 2150671040
+  addr_pal: &id003 2150671808
+  addr_pal2: *id003
+  data: 02A1 0000 00000010 00000010  00000000 00000000 00000200 00000200  0000 0000
+    0200 0200 0000 0000
+  name: UpdatedBombDropSpriteInfo
+  type: patch
+- name: dBombDropSpriteFileInfo
+  src_addr_jpn: 2150737556
+  src_addr_jpn2: 2150737556
+  src_addr_ntsc: 2150738036
+  src_addr_ntsc2: 2150738036
+  src_addr_pal: &id004 2150738828
+  src_addr_pal2: *id004
+  target_func: BDarcNameList
+  type: add_func_pointer
+- name: BowserBridgeCollision
+  src_addr_jpn: 2159534340
+  src_addr_jpn2: 2159534372
+  src_addr_ntsc: 2159536164
+  src_addr_ntsc2: 2159536196
+  src_addr_pal: 2159536132
+  src_addr_pal2: 2159536164
+  target_func: BowserDoomSpriteCollision(dEn_c*, ActivePhysics*, ActivePhysics*)
+  type: add_func_pointer
+- addr_jpn: 2159283836
+  addr_jpn2: 2159283868
+  addr_ntsc: 2159285660
+  addr_ntsc2: 2159285692
+  addr_pal: 2159285628
+  addr_pal2: 2159285660
+  data: '60000000'
+  name: RemoveBowserAnimationCheck
+  type: patch
+- name: BowserBridgeHammerCollision
+  src_addr_jpn: 2159534408
+  src_addr_jpn2: 2159534440
+  src_addr_ntsc: 2159536232
+  src_addr_ntsc2: 2159536264
+  src_addr_pal: 2159536200
+  src_addr_pal2: 2159536232
+  target_func: ReturnNone
+  type: add_func_pointer
+- name: PatchMagicStart
+  src_addr_jpn: 2157266136
+  src_addr_jpn2: 2157266152
+  src_addr_ntsc: &id005 2157267952
+  src_addr_ntsc2: 2157267968
+  src_addr_pal: *id005
+  src_addr_pal2: 2157267968
+  target_func: BowserDoomStart(dStageActor_c*)
+  type: add_func_pointer
+- name: PatchMagicExecute
+  src_addr_jpn: 2157266140
+  src_addr_jpn2: 2157266156
+  src_addr_ntsc: &id006 2157267956
+  src_addr_ntsc2: 2157267972
+  src_addr_pal: *id006
+  src_addr_pal2: 2157267972
+  target_func: BowserDoomExecute(dStageActor_c*)
+  type: add_func_pointer
+- name: PatchMagicEnd
+  src_addr_jpn: 2157266144
+  src_addr_jpn2: 2157266160
+  src_addr_ntsc: &id007 2157267960
+  src_addr_ntsc2: 2157267976
+  src_addr_pal: *id007
+  src_addr_pal2: 2157267976
+  target_func: BowserDoomEnd(dStageActor_c*)
+  type: add_func_pointer
+- name: PatchBattleStartEnd
+  src_addr_jpn: 2157266108
+  src_addr_jpn2: 2157266124
+  src_addr_ntsc: &id008 2157267924
+  src_addr_ntsc2: 2157267940
+  src_addr_pal: *id008
+  src_addr_pal2: 2157267940
+  target_func: BowserStartEnd(dStageActor_c*)
+  type: add_func_pointer
+- addr_jpn: 2159297104
+  addr_jpn2: 2159297136
+  addr_ntsc: 2159298928
+  addr_ntsc2: 2159298960
+  addr_pal: 2159298896
+  addr_pal2: 2159298928
+  data: '38000001'
+  name: BowserFireballPatch
+  type: patch
+source_files:
+- ../src/bossBridgeBowser.cpp
+- ../src/bossBombDrop.cpp
