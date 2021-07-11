@@ -49,11 +49,9 @@ The actual resources (tilesets) are already included in the game patch.
 ### Kamek (Clang) ###
 All tools should be available to build NewerGEM yourself.
 Please follow the steps on the Newer Kamek repository.
-
+https://github.com/Newer-Team/NewerSMBW
 
 ## Credits ##
-- Nintendo - www.nintendo.com
-
 - B1_Gaming - Tileset Pack
 - CLF78 - Game Patch, Tileset Pack - https://github.com/CLF78
 - Danster64 - Tileset Pack - https://github.com/Danster64
@@ -63,3 +61,5 @@ Please follow the steps on the Newer Kamek repository.
 - Titovision - Tileset Pack
 
 - Newer Team - https://github.com/Newer-Team
+
+- Nintendo - www.nintendo.com
