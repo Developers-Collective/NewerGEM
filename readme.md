@@ -63,6 +63,9 @@ https://github.com/Newer-Team/NewerSMBW
 - Danster64 - Tileset Pack - https://github.com/Danster64
 - God4Live - Tileset Pack
 - Grop - Reverse Engineering, Coding - https://github.com/TheGrop
+- LiQ - Coding - https://github.com/realLiQ
+- Mullkaw - Quick Restart - https://github.com/mullkaw
+- Nin0 - Reverse Engineering, Coding - https://github.com/N-I-N-0
 - RedStoneMatt, RSM - Reverse Engineering, Coding - https://github.com/RedStoneMatt
 - Titovision - Tileset Pack
 
