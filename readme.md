@@ -7,6 +7,8 @@ Please note that two different branches are planned for NewerGEM:
 - The Power-Up Jam branch, which will have new features, several new power-ups, etc...
 
 ## Features ##
+https://docs.google.com/spreadsheets/d/1vdP5paaEpaex__L8Ilwrtho3x7xQSwvWYRiCC-fHjj8/edit?pli=1#gid=0
+
 - More SpriteTex (additional models for sprites; by RSM)
 - Throw some actors in the air (Shells, Bob-omb, Glow Block; by Grop)
 - Yoshi Mod (blue = fly, yellow = stomp, light blue = ice, red = fire, all others = neutral; see ? block; by Grop and RSM)
