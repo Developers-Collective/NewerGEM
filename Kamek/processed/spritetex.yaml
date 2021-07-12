@@ -1183,16 +1183,6 @@ hooks:
   target_func: TEX_BarrelTwo
   type: branch_insn
 - branch_type: bl
-  name: TEX_WoodenCrate
-  src_addr_jpn: 2158803120
-  src_addr_jpn2: 2158803152
-  src_addr_ntsc: 2158804944
-  src_addr_ntsc2: 2158804976
-  src_addr_pal: 2158804912
-  src_addr_pal2: 2158804944
-  target_func: TEX_WoodenCrate
-  type: branch_insn
-- branch_type: bl
   name: TEX_BoomerangBro
   src_addr_jpn: 2155637412
   src_addr_jpn2: 2155637428
