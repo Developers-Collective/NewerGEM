@@ -8,6 +8,7 @@ Please note that two different branches are planned for NewerGEM:
 
 ## Features ##
 See here for a more comprehensive list of features:
+
 https://docs.google.com/spreadsheets/d/1vdP5paaEpaex__L8Ilwrtho3x7xQSwvWYRiCC-fHjj8/edit?pli=1#gid=0
 
 - More SpriteTex (additional models for sprites; by RSM)
