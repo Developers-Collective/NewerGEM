@@ -18,6 +18,7 @@ Please note that two different branches are planned for NewerGEM:
 - Event Block Mod
 - Actor Spawner Mod (by Chickensaver): https://github.com/Bahlph/actor-spawner
 - Event Looper Fix (by Grop and RSM)
+- Tile God Fix (by RSM)
 - Restart Feature (Quick level restart; by RSM, idea by Mullkaw)*
 - More Sprite IDs Mod*
 - Mod for custom Pa0 Bricks and ?-Blocks that are not on the usual spot
