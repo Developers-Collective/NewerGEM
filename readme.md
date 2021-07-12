@@ -25,6 +25,7 @@ https://docs.google.com/spreadsheets/d/1vdP5paaEpaex__L8Ilwrtho3x7xQSwvWYRiCC-fH
 - More Sprite IDs Mod*
 - Mod for custom Pa0 Bricks and ?-Blocks that are not on the usual spot
 - Better block_anime Animation (more frames for Brick Block)
+
 *Ready to be included for next version
 
 ## Resource ##
