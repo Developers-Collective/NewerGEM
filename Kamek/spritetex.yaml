@@ -982,11 +982,11 @@ hooks:
     src_addr_pal: 0x807C19C4
     target_func: 'TEX_BarrelTwo'
 
-#  - name: TEX_WoodenCrate
-#    type: branch_insn
-#    branch_type: bl
-#    src_addr_pal: 0x80ACBFB0
-#    target_func: 'TEX_WoodenCrate'
+  - name: TEX_WoodenCrate
+    type: branch_insn
+    branch_type: bl
+    src_addr_pal: 0x80ACBFB0
+    target_func: 'TEX_WoodenCrate'
 
   - name: TEX_BoomerangBro
     type: branch_insn
