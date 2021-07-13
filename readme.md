@@ -30,7 +30,7 @@ https://docs.google.com/spreadsheets/d/1vdP5paaEpaex__L8Ilwrtho3x7xQSwvWYRiCC-fH
 
 *Ready to be included for next version
 
-## Resource ##
+## Resources ##
 Tileset packs:
 - Tileset Pack by B1_Gaming (NSMBU) V1.03
 - Tileset Pack by B1_Gaming (NSMBW) V1.03
@@ -57,6 +57,9 @@ All tools should be available to build NewerGEM yourself.
 Please follow the steps on the Newer Kamek repository.
 
 https://github.com/Newer-Team/NewerSMBW
+
+### Newer Credits Editor Mod by Grop ###
+This modification is required to use the NewerGEM features of the Credits Controller.
 
 ## Credits ##
 - B1_Gaming - Tileset Pack
