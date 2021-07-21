@@ -18,7 +18,7 @@ https://docs.google.com/spreadsheets/d/1vdP5paaEpaex__L8Ilwrtho3x7xQSwvWYRiCC-fH
 - Credits Controller Mod (show system text, teleport players; by Grop)
 - Sfx/Gfx Mod (full range of 1600 Gfx can be spawned)
 - Music Slots Mod (40 additional music slots)
-- Goal Pole Mod (disable barrier)
+- Goal Pole Mod (disable barrier) - Patch (provided by CLF78, made by Meatball132)
 - Event Block Mod
 - Actor Spawner Mod (by Chickensaver): https://github.com/Bahlph/actor-spawner
 - Event Looper Fix (by Grop and RSM)
@@ -69,6 +69,7 @@ This modification is required to use the NewerGEM features of the Credits Contro
 - God4Live - Tileset Pack
 - Grop - Reverse Engineering, Coding - https://github.com/TheGrop
 - LiQ - Coding - https://github.com/realLiQ
+- Meatball132 - Reverse Engineering, Coding - https://github.com/Meatball132
 - Mullkaw - Quick Restart - https://github.com/mullkaw
 - Nin0 - Reverse Engineering, Coding - https://github.com/N-I-N-0
 - RedStoneMatt, RSM - Reverse Engineering, Coding - https://github.com/RedStoneMatt
