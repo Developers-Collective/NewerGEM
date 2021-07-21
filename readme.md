@@ -18,7 +18,7 @@ https://docs.google.com/spreadsheets/d/1vdP5paaEpaex__L8Ilwrtho3x7xQSwvWYRiCC-fH
 - Credits Controller Mod (show system text, teleport players; by Grop)
 - Sfx/Gfx Mod (full range of 1600 Gfx can be spawned)
 - Music Slots Mod (40 additional music slots)
-- Goal Pole Mod (disable barrier) - Patch (provided by CLF78, made by Meatball132)
+- Goal Pole Mod (disable barrier) - Patch (provided by CLF78, made by Meatball132, flag added by Grop)
 - Event Block Mod
 - Actor Spawner Mod (by Chickensaver): https://github.com/Bahlph/actor-spawner
 - Event Looper Fix (by Grop and RSM)
