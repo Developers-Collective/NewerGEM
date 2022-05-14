@@ -1,3 +1,6 @@
+![NewerGEM-532x300](https://user-images.githubusercontent.com/11998834/168448349-3986d3d5-6761-48ef-9b1c-c7545303297b.png)
+
+
 # Newer General Engine Mod (NewerGEM) Main Branch #
 NewerGEM aims to unify different mods and patches made for Newer Super Mario Bros. Wii.
 In addition to this, NewerGEM also includes tilesets from all major tileset packs.
