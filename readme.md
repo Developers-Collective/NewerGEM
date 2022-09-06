@@ -2,6 +2,7 @@
 
 
 # Newer General Engine Mod (NewerGEM) Main Branch #
+# PAL Version only!! #
 NewerGEM aims to unify different mods and patches made for Newer Super Mario Bros. Wii.
 In addition to this, NewerGEM also includes tilesets from all major tileset packs.
 
