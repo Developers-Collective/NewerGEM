@@ -66,6 +66,9 @@ https://github.com/Newer-Team/NewerSMBW
 This modification is required to use the NewerGEM features of the Credits Controller.
 
 ## Credits ##
+- Nintendo - www.nintendo.com
+- Newer Team - Treeki, Tempus, megazig, Pop006, skawo - https://github.com/Newer-Team
+
 - B1_Gaming - Tileset Pack
 - Bahlph (Chickensaver) - Reverse Engineering, Coding - https://github.com/Bahlph/actor-spawner
 - CLF78 - Game Patch, Tileset Pack, Reverse Engineering, Coding - https://github.com/CLF78
@@ -79,6 +82,5 @@ This modification is required to use the NewerGEM features of the Credits Contro
 - RedStoneMatt, RSM - Reverse Engineering, Coding - https://github.com/RedStoneMatt
 - Titovision - Tileset Pack
 
-- Newer Team - Treeki, Tempus, megazig, Pop006, skawo - https://github.com/Newer-Team
-
-- Nintendo - www.nintendo.com
+[NewerGEM Intro Игорь Кезля и Андрей Моргунов Дельфин.webm](https://user-images.githubusercontent.com/11998834/189497338-00fd3bdd-84a9-4447-9635-b224b8c26a1c.webm)
+NewerGEM Intro Music: https://www.youtube.com/watch?v=R1j2rAXKe0c
