@@ -82,8 +82,6 @@ This modification is required to use the NewerGEM features of the Credits Contro
 - RedStoneMatt, RSM - Reverse Engineering, Coding - https://github.com/RedStoneMatt
 - Titovision - Tileset Pack
 
-[NewerGEM Intro Игорь Кезля и Андрей Моргунов Дельфин.webm]
-
-(https://user-images.githubusercontent.com/11998834/189497338-00fd3bdd-84a9-4447-9635-b224b8c26a1c.webm)
+[NewerGEM Intro Игорь Кезля и Андрей Моргунов Дельфин.webm](https://user-images.githubusercontent.com/11998834/189497338-00fd3bdd-84a9-4447-9635-b224b8c26a1c.webm)
 
 https://www.youtube.com/watch?v=R1j2rAXKe0c
