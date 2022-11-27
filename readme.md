@@ -75,6 +75,7 @@ This modification is required to use the NewerGEM features of the Credits Contro
 - Danster64 - Tileset Pack - https://github.com/Danster64
 - God4Live - Tileset Pack
 - Grop - Reverse Engineering, Coding - https://github.com/TheGrop
+- L-DEV - Logo - https://github.com/L-Dev31
 - LiQ - Coding - https://github.com/realLiQ
 - Meatball132 - Reverse Engineering, Coding - https://github.com/Meatball132
 - Mullkaw - Quick Restart - https://github.com/mullkaw
