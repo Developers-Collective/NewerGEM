@@ -1005,7 +1005,6 @@
         <category name="Pa3 Tilesets by Titovision Danster God4Live">
             <tileset filename="Pa3_rail_TDG" name="NSMBWII (Rails Extras)" />
 			<tileset filename="Pa3_rail_white_TDG" name="NSMBWII (Rails)" />
-			<tileset filename="" name="" />
         </category>
 	</slot>
 </tilesets>
